@@ -2,7 +2,12 @@
 layout: default
 ---
 
-# About this page 
+# Aleksandar Kircanski
+
+![image](images/smurf2.jpg)
+
+Hi, welcome to my homepage! I am a researcher interested in security bug hunting,
+cryptography and software development.
 
 Blog post list example
 
