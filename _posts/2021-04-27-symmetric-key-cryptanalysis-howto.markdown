@@ -6,9 +6,9 @@ categories: cryptanalysis
 excerpt: hello
 ---
 
-I'm hoping that this blog post could be helpful to someone who decided to work in
-symmetric key crypto. During my symmetric-key cryptanalysis journey in my grad school
-I had a fair amount of zig-zag-ing, so here, I'll distill the key steps that enabled
+I'm hoping that this blog post could be helpful to someone who has decided to work in
+the area of symmetric key crypto. During my symmetric-key cryptanalysis journey in my grad
+school I had a fair amount of zig-zag-ing. Here, I'll try to distill the key steps that enabled
 me to be productive in this area. 
 
 By symmetric key cryptanalysis considered are attacks on schemes such as block ciphers,
@@ -40,7 +40,6 @@ Work in cryptanalysis is useful because:
 * It provides insight into why proprietary or state-constructed designs look what they look.
   The seemingly irrelevant nuances on order of operations, boolean mappings and weirdly chosen
   constants suddenly start making sense. It's like suddenly hearing music in cacophony
-* It empowers engineers and community by equiping it with a variety of efficient and secure designs
 * Some believed secure primitives actually do get badly broken after a number of years
 * Techniques and zeal from symmetric key cryptanalysis spills outside symmetric key crypto
   into other areas of security research. If a person is capable of staring at a couple of
@@ -58,7 +57,6 @@ is flawed. Not all constructions get broken, lots of standardized crypto will li
 * The ability to break symmetric key primitives will not land jobs in industry and enable
 someone to support a family. The ability to construct new symmetric key primitives likely
 won't either. 
-
 
 # TODO: Learn Symetric Key Cryptanalysis
 
@@ -144,7 +142,7 @@ a reason to be disappointed: adjust the paper and submit to a different venue.
 Once you feel like you've written a good job in the previous step, you're ready to move on to,
 potentially, pure innovation. This is a fascinating aspect of computer security research.
 To illustrate, let's start by recalling a quote listed in issue #10
-on the [DASP](https://dasp.co/)  web site, a quote _totally inaccurate_, but interesting as
+on the [DASP](https://dasp.co/)  web site, a quote totally inaccurate, but interesting as
 it touches upon a key issue in security bug hunting:
 
 > We believe more security audits or more tests would have made no difference. The main problem was that reviewers did not know what to look for. 
