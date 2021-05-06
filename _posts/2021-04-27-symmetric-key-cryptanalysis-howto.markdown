@@ -139,26 +139,25 @@ a reason to be disappointed: adjust the paper and submit to a different venue.
 
 ## Step 4: Search for the unknown 
 
-Once you feel like you've written a good job in the previous step, you're ready to move on to,
+Once you feel like you've done a good job in the previous step, you're ready to move on to,
 potentially, pure innovation. This is a fascinating aspect of computer security research.
-To illustrate, let's start by recalling a quote listed in issue #10
-on the [DASP](https://dasp.co/)  web site, a quote totally inaccurate, but interesting as
-it touches upon a key issue in security bug hunting:
+To illustrate, let's start by recalling a quote listed in issue #10 on the [DASP project](https://dasp.co/).
 
 > We believe more security audits or more tests would have made no difference. The main problem was that reviewers did not know what to look for. 
 
-This assumes that the security researcher goes through a list of known attacks (just as described
-above) and tries to apply them. Well, to fill in a daily routine, one has to start with something
-material and a list of known techniques is just that. Such a list also serves a purpose of filling
-out time sheets in various forms, such as, summarizing daily work at a job.
+Now, this quote is somewhat misleading. It assumes that the security researcher goes through a list of known
+attacks (just as described above) and tries to apply them. In some sense this is correct. To fill in
+a daily routine, one has to start with something material and a list of known techniques is just that. Such a list
+also serves a purpose of filling out time sheets in various forms, such as, summarizing daily work at a job.
 
-However, the fact is, while doing that, hope is that something surprising and unpredictable
-will happen. A security reviewer goes through the list of known attacks to ensure that none
-apply, but is hoping to find the unknown unknown. 
+In another sense, such a view is inaccurate: while getting coverage on known attacks, the hope is that something
+surprising and unpredictable will happen. A security reviewer goes through the list of known attacks to ensure
+that none apply, but is hoping to find the unknown unknown. 
 
-While you're evaluating your attack arsenal against a primitive, you may find an unrelated, surprising
-things. If that happens, you may drive your research on that primitive in a completely different direction.
+In this phase, you are doing your day job now and that is to match primitives with attacks and, are which one
+work the best and to push the boundaries. While doing that, the hope is that you'll run into a gem that wasn't
+planned ahead. If that happens, you may drive your research on that primitive in a completely different direction.
 Once that happens, congratulations, you've nailed symmetric key cryptanalysis.
 
-Happy symmetric key bug hunting! If I can help in any step, or to decide whether that's doable,
-please ping me, I will be more than happy to discuss. 
+Happy symmetric key bug hunting! If I could help in any step, or help decide whether the journey makes sense in
+given circumstances, please ping me and I'll try to help best I can. 
