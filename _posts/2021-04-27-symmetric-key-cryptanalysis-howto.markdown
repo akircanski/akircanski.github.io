@@ -154,10 +154,10 @@ In another sense, such a view is inaccurate: while getting coverage on known att
 surprising and unpredictable will happen. A security reviewer goes through the list of known attacks to ensure
 that none apply, but is hoping to find the unknown unknown. 
 
-In this phase, you are doing your day job now and that is to match primitives with attacks and, are which one
-work the best and to push the boundaries. While doing that, the hope is that you'll run into a gem that wasn't
-planned ahead. If that happens, you may drive your research on that primitive in a completely different direction.
-Once that happens, congratulations, you've nailed symmetric key cryptanalysis.
+In this phase, you are doing your day job now and that is to match primitives with attacks, decide which one
+work the best and try to push their boundaries. While doing that, the hope is that you'll run into a gem that wasn't
+planned ahead. That would drive your research on that primitive in a completely different direction. Once that
+happens, congratulations, you've nailed symmetric key cryptanalysis.
 
 Happy symmetric key bug hunting! If I could help in any step, or help decide whether the journey makes sense in
-given circumstances, please ping me and I'll try to help best I can. 
+given circumstances, please email me and I'll try to help best I can. 
