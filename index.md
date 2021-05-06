@@ -6,10 +6,9 @@ layout: default
 
 ![image](images/smurf2.jpg)
 
-Hi, welcome to my homepage! I am a researcher interested in security bug hunting,
-cryptography and software development.
+Hi, welcome to my homepage! My interests are security bug hunting, software development and cryptography. 
 
-Blog post list example
+Blog posts:
 
 <ul class="posts">
 {% for post in site.posts %}
