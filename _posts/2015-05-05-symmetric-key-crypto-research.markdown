@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My previous symmetric-key crypto research"
+title:  "Symmetric-key crypto research paper catch-all"
 date:   2015-05-05 14:21:19 -0400
 categories: cryptanalysis
 excerpt: hello
