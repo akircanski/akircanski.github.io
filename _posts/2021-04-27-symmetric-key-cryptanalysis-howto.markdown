@@ -151,7 +151,7 @@ To illustrate, let's start by recalling a quote listed in issue #10 on the [DASP
 
 > We believe more security audits or more tests would have made no difference. The main problem was that reviewers did not know what to look for. 
 
-The DASP project uses the quote to motivate the section which discusses searching for unknown attacks. 
+The DASP project employs this quote to motivate the section which discusses searching for unknown attacks. 
 The quote assumes that the security researcher goes through a list of known attacks (just as described above)
 and tries to apply them. In some sense this is correct. To fill in a daily routine, one has to start
 with something material and a list of known techniques is just that. Such a list also serves a purpose
