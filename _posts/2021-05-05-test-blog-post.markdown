@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How I Learned Symmetric-Key Cryptanalysis"
+title:  "Test blog post"
 date:   2021-04-27 14:21:19 -0400
 categories: cryptanalysis
 excerpt: hello
