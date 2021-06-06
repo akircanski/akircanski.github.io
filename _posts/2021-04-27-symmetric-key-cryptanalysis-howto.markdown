@@ -26,7 +26,7 @@ are mostly resistant to differential cryptanalysis, which by itself is a very in
 fact - DES was made to be resistant to differential cryptanalysis. Other publically known
 attacks discovered in the next 50 years did not break DES.
 
-This demonstrates a simple fact about symmetric key crypto. Researchers have been succesful
+This demonstrates a simple fact about symmetric key crypto. Researchers have been successful
 in creating a mostly resistant symmetric key primitive 50 years ago. Mixing independent
 transformations to remove input-output correlation does not turn out to be that hard, which is
 maybe not a very surprising fact. 
@@ -58,15 +58,15 @@ through grad school or another institution that can support it
 is flawed. Not all constructions get broken, lots of standardized crypto will likely not get broken
 (not getting into the quantum computer discussion here).
 
-# TODO: Learn Symetric Key Cryptanalysis
+# TODO: Learn Symmetric Key Cryptanalysis
 
 Say that TODO is in your list. You'll need some math background, but not too much. Say, a half
 a regular bachelor math degree: some probability theory, mathematical logic and group theory
 and other general math stuff. The main point here is that this is not hard core graduate
 mathematics, such as deep number theory or elliptical curve geometry. Symmetric key cryptanalysis
-is mostly light on math and the math it usually relies on can even concievably be self-taught.
+is mostly light on math and the math it usually relies on can even conceivably be self-taught.
 
-What you need is free time. I personally think that doing this as a side project without time alotted
+What you need is free time. I personally think that doing this as a side project without time allotted
 doesn't make much sense, but I may be wrong here, since it's impossible to foresee all the possible
 scenarios in which this may happen and may work. Anyway, say you've fixated you want to do this
 one way or another, where do you start? 
@@ -74,7 +74,7 @@ one way or another, where do you start?
 ## Step 1: Decide if you like symmetric key crypto
 
 The purpose here is to get a feel whether you'll like this line of work
-or not. During the 90ties, this tutorial saw the light of day:
+or not. During the 90's, this tutorial saw the light of day:
 ["A Self-Study Course in Block Cipher Cryptanalysis"](https://www.schneier.com/wp-content/uploads/2016/02/paper-self-study.pdf).
 by B.Schneier.
 
@@ -115,10 +115,10 @@ papers without pressure to generate something.
 ## Step 3: Publish a paper in cryptanalysis
 
 Your next goal is to publish a paper at a crypto conference. Time to wear a somewhat of a
-_beaurocratic_ hat. Identify a couple of proposed primitives that have relevance (e.g., they may be
+_bureaucratic_ hat. Identify a couple of proposed primitives that have relevance (e.g., they may be
 competing in a public standardization effort, be proposed for some particular type of environment, etc).
 Look at the reduced-round variant of these primitives and figure out what attack technique performs the
-best. Remember, in the previous phase you learned not only how cryptanlaytic techniques work, you also
+best. Remember, in the previous phase you learned not only how cryptanalytic techniques work, you also
 looked at the symmetric key conference papers and identified which attack techqniues fare best taking into
 account a certain primitive's design (e.g. ARX or S-box based). 
 
@@ -164,7 +164,9 @@ that none apply, but is hoping to find the unknown unknown.
 In this phase, you are doing your day job now and that is to match primitives with attacks, decide which one
 work the best and try to push their boundaries. While doing that, the hope is that you'll run into a gem that wasn't
 planned ahead. That would drive your research on that primitive in a completely different direction. Once that
-happens, congratulations, you've nailed symmetric key cryptanalysis.
+happens, congratulations, _you've nailed symmetric key cryptanalysis.
 
 Happy symmetric key bug hunting! If I could help in any step, or help decide whether the journey makes sense in
-given circumstances, please email me and I'll try to help best I can. 
+given circumstances, please email me and I'll try to help as best I can (akircanski at gmail).
+
+Note: HN thread for this blog post: <https://news.ycombinator.com/item?id=27406888>
