@@ -146,7 +146,7 @@ a reason to be disappointed: adjust the paper and submit to a different venue.
 ## Step 4: Search for the unknown 
 
 Once you feel like you've done a good job in the previous step, you're ready to move on to,
-potentially, pure innovation. This is a fascinating aspect of computer security research.
+potentially, _pure innovation_. This is a fascinating aspect of computer security research.
 To illustrate, let's start by recalling a quote listed in issue #10 on the [DASP project](https://dasp.co/).
 
 > We believe more security audits or more tests would have made no difference. The main problem was that reviewers did not know what to look for. 
@@ -164,9 +164,10 @@ that none apply, but is hoping to find the unknown unknown.
 In this phase, you are doing your day job now and that is to match primitives with attacks, decide which one
 work the best and try to push their boundaries. While doing that, the hope is that you'll run into a gem that wasn't
 planned ahead. That would drive your research on that primitive in a completely different direction. Once that
-happens, congratulations, _you've nailed symmetric key cryptanalysis.
+happens, congratulations, _you've nailed symmetric key cryptanalysis_.
 
 Happy symmetric key bug hunting! If I could help in any step, or help decide whether the journey makes sense in
 given circumstances, please email me and I'll try to help as best I can (akircanski at gmail).
 
-Note: HN thread for this blog post: <https://news.ycombinator.com/item?id=27406888>
+HN thread for this blog post: <https://news.ycombinator.com/item?id=27406888>. Thanks @alexdowad for review.
+
