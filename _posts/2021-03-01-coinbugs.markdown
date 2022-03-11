@@ -1,0 +1,8 @@
+---
+layout: post
+title:  Paper: "Coinbugs: Enumerating Common Blockchain Implementation-Level Vulnerabilities" (Co-authered with T. Tarvis)
+date:   2022-02-01 14:21:19 -0400
+categories: blockchain
+excerpt: hello
+redirect_to: https://arxiv.org/abs/2104.06540
+
