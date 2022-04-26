@@ -4,7 +4,7 @@ layout: default
 
 # Aleksandar Kircanski
 
-![image](images/smurf2.jpg)
+<img src="images/smurf2.jpg" width="100" height="70" alt="hi" class="inline"/>
 
 Hi, welcome to my homepage! My interests are security bug hunting, software development and cryptography. 
 
