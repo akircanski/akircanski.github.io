@@ -95,7 +95,9 @@ My advice is to try to solve these without reading much about symmetric key cryp
 after a week or so of trying, read a bit about differential cryptanalysis and revisit the problems.  Once finished,
 drop the tutorial and go onto the next step. Don't let the amount of time you're spending disappoint you,
 time doesn't play a big role here (assumption is, you have it). As long as you can sustain focus and you
-find the work enjoyable, you're good.
+find the work enjoyable, you're good. Once I went through this, I sent emails to crypto labs and university professors
+out there and landed in [this](https://users.encs.concordia.ca/~youssef/) wonderful lab, where I had full support to
+spend several years working just on symmetric key cryptanalysis. 
 
 ## Step 2: Master several cryptanalytic attack techniques 
 
