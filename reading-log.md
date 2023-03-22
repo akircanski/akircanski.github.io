@@ -9,6 +9,6 @@ The 'mother' of all such transitions is described in this book, particularly, by
 
 <img src="images/books/1-universal-computer-1.png" class="inline"/>
 
-The book describes how in the early days of computers, it has not dawned on everyone that the universal computer is what needs to be built. That's the first quote. The second quote appears to be on an altogether different level: not only it suggests not only that a universal computer is what needs to be built, but is based on a research of _what "fully programmable/computable" actually means_, a research conducted by Turing and others in the 30ties and leading up to the Church-Turing thesis. 
+The book describes how in the early days of computers, it has not dawned on everyone that the universal computer is what needs to be built. That's the first quote. The second quote appears to be on an altogether different level: not only it suggests that a universal computer is what needs to be built, but is based on a research of _what "fully programmable" actually means_, a research conducted by Turing and others in the 30ties and leading up to the Church-Turing thesis. 
 
 
