@@ -15,8 +15,7 @@ Blog posts:
   <li><span class="hero">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 
-<br></br>
-
+<br>
 Reading <a href="./reading-log">log</a> <3
 
 
