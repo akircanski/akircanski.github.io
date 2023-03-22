@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Symmetric-Key Crypto Research Paper Catch-All"
+title:  "Symmetric-Key Crypto Research Papers"
 date:   2015-05-05 14:21:19 -0400
 categories: cryptanalysis
 excerpt: hello
