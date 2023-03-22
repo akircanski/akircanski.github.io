@@ -2,7 +2,7 @@
 title: thoughts etc
 email: akircanski at google's mail service
 description: > # this means to ignore newlines until "baseurl:"
-  This is a personal web-page yay
+  personal web-log
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://akircanski.github.io/" # the base hostname & protocol for your site
 
