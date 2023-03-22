@@ -1,5 +1,5 @@
 
-I've been working from a public library a lot, sitting by shelfs filled with amazing books. Here is some fascinating content which hopefully doesn't break any copyright laws. 
+I've been working from a public library a lot, sitting by shelves filled with amazing books. Here is some fascinating content which hopefully doesn't break any copyright laws. 
 
 #### The Universal Computer (Martin Davis, 2000)
 
