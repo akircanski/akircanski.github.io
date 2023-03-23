@@ -15,7 +15,7 @@ The book describes how in the early days of computers, it has not dawned on ever
 
 From Leibniz to Hilbert:
 
-<img src="images/books/1-turing1.png" class="inline"/> 
+<img src="images/books/1-turing1.jpeg" class="inline"/> 
 
 A condensed account on:
 
@@ -26,13 +26,13 @@ ift" which is roughly translated to "concept script". A _concept script_!
 
 Early non-believers in such a possibility include:
 
-<img src="images/books/1-turing2.png" class="inline"/> 
+<img src="images/books/1-turing2.jpeg" class="inline"/> 
 
 To fill in the missing parts of Leibniz's dream and Hilbert's problem, in  during the 1930-ties, Turing modeled a human that performs steps by writing in a notebook, coming up with the concept of a Turing machine. Admittedly, **it is a rather unusual object to model mathematically - a, human, or an entity that is able to follow pre-defined steps, writing in a notebook**. 
 
 Rough outline of the proof that there exists an input set for which no algorithm can decide:
 
-<img src="images/books/1-turing3.png" class="inline"/>
+<img src="images/books/1-turing3.jpeg" class="inline"/>
  
 Such an input set is defined in reference to all computable set, using the Cantor's diagonalization method. Somewhat contrived, but does the job and the overarching blanket aspiration of having a general algorithm gets a reality check. 
 
