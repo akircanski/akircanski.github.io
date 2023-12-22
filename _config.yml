@@ -11,3 +11,5 @@ markdown: kramdown
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-katex
+
