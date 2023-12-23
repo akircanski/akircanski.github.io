@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A primer on slowable encoders"
+title:  "A Primer on Slowable Encoders"
 date:   2023-03-01 14:21:19 -0400
 categories: crypto
 excerpt: hello
