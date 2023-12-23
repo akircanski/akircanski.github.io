@@ -95,7 +95,7 @@ $$c_{(k+1)N}\ldots c_{(k+2)N-1} = CBCEnc(IV, c_{kN}\ldots c_{(k+1)N-1}), 0\leq k
 Considering each block to be a node in a graph, for 2-layer 8-block layered CBC mode, we have the following block 
 dependency structure: 
 
-<p align="center"><img src="./images/cbc-1.png" alt="drawing" width="400" height="300"/>
+<p align="center"><img src="../images/cbc-1.png" alt="drawing" width="400" height="300"/>
 
 An honest storage provider is expected to store the bottom 8 blocks $c_{16},\ldots c_{23}$. An adversary may instead 
 store blocks $c_4$, $c_{12}$ and $c_{20}$ and optionally store some of the $c_0$, $c_8$, $c_{16}$ blocks (these
@@ -120,7 +120,7 @@ $$c_{(k+1)N}\ldots c_{(k+2)N-1} = CBCEnc(IV, c_{\pi(kN)}\ldots c_{\pi((k+1)N-1)}
 This is similar to a block-cipher cipher construction where the base function $E$ plays a role of an S-Box. Consider 
 a 2-layer 8-block instance of this shuffled CBC mode with permutation $\pi$ specified by the arrows on the picture:
 
-<p align="center"><img src="./images/cbc-2.png" alt="drawing" width="400" height="300"/>
+<p align="center"><img src="../images/cbc-2.png" alt="drawing" width="400" height="300"/>
 
 Suppose again an adversary stores the blocks colored in green. Consider how long it takes to compute $c_{23}$, assuming 
 a 2-CPU parallel computer. The computation of $c_{23}$ now cannot be localized inside the right-hand rectangle and it 
@@ -135,7 +135,7 @@ graphs is a topic of a number of papers; for a sample, see [1,2,3,4,5]. In short
 as an overlay of simpler graphs, including [expander](https://en.wikipedia.org/wiki/Expander_graph) and [depth-robust](https://mathweb.ucsd.edu/~ronspubs/75_07_dense_paths.pdf) graphs. Below is a picture taken from [5], representing an example of a "stacked" 
 Depth Robust Graph (DRG).
 
-<p align="center"><img src="./images/cbc-3.png" alt="drawing" width="350" height="250"/>
+<p align="center"><img src="../images/cbc-3.png" alt="drawing" width="350" height="250"/>
 
 Due to the newly added edges, such constructions are expected to not suffer from issues similar to the ones
 previously described. When it comes to the data encoding function, it may be advantageous to use an encoding
