@@ -95,7 +95,7 @@ $$c_{(k+1)N}\ldots c_{(k+2)N-1} = CBCEnc(IV, c_{kN}\ldots c_{(k+1)N-1}), 0\leq k
 Considering each block to be a node in a graph, for 2-layer 8-block layered CBC mode, we have the following block 
 dependency structure: 
 
-<p align="center"><img src="images/slowable-encoders/cbc-1.png" alt="drawing" width="400" height="300"/>
+<p align="center"><img src="../../../images/slowable-encoders/cbc-1.png" alt="drawing" width="400" height="300"/>
 
 An honest storage provider is expected to store the bottom 8 blocks $c_{16},\ldots c_{23}$. An adversary may instead 
 store blocks $c_4$, $c_{12}$ and $c_{20}$ and optionally store some of the $c_0$, $c_8$, $c_{16}$ blocks (these
