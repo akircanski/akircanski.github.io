@@ -6,7 +6,9 @@ categories: blockchain
 excerpt: hello
 ---
 
-**This article originally appeared on the NCC Group Cryptography Services blog. Gérald Doussot and I wrote it after performing a 3-week security analysis of an SGX-based blockchain implementation. TLDR this really comes down to: don't rely on TEE security if the TEEs will run under attacker's control, either hardware-wise or software-wise.**
+**This article originally appeared on the NCC Group Cryptography Services blog. Gérald Doussot and I wrote it after performing a 3-week security analysis of an SGX-based blockchain implementation.**
+
+**TLDR this really comes down to: don't rely on TEE security if the TEEs will run under attacker's control, either hardware-wise or software-wise.**
 
 Running smart contracts in a Trusted Execution Environment (TEE) such as Intel Software Guard Extensions (SGX) to preserve the confidentiality of blockchain transactions is a novel and not widely understood technique. In this blog post, we point out several bug classes that we observed in confidential smart contract designs and implementations in our recent client engagements. We argue that the infrastructure underpinning the execution of confidential smart contracts is challenging to implement securely and that confidential smart contracts are prone to misuse by users.
 
