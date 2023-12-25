@@ -26,7 +26,7 @@ such functions. We'll detail on why some basic constructions based on CBC encryp
 previously discussed in [1] do not work. The fact that these constructions do not work can be 
 seen as a doorway for research on how to build working and optimal ones - some of the papers 
 that do that job are linked to by the end of this blog post. Therefore, this blog post can be
-seen as an introductory read for problems papers such as `[1-5]` are trying to solve. 
+seen as an introductory read for problems papers such as [1-5] are trying to solve. 
 
 ### Why encode before storing?
  
@@ -77,7 +77,7 @@ Below are some primitives that do not satisfy such a tradeoff-resistance propert
 
 ### Building slowable encoders
 
-The following constructions mentioned in `[1]` build a data encoding function with an arbitrary input size from a smaller
+The following constructions mentioned in [1] build a data encoding function with an arbitrary input size from a smaller
 block encoder with fixed-size input $E$. Both constructions are insecure, but iterating on them can result in secure 
 ones. It should be mentioned that while the building block is a block cipher, there are no secrets in this context 
 and all the "keys" are public values.
@@ -129,8 +129,8 @@ on the next level. Again, a lower than intended computation time is achieved.
 
 The previously described issues may be remediated by adding more edges to the graph. Given specific function
 requirements (stemming from the upper layer, ie. the blockchain protocol), questions around constructing satisfactory
-graphs is a topic of a number of papers; for a sample, see `[1-5]`. In short, the desired final graph is constructed 
-as an overlay of simpler graphs, including [expander](https://en.wikipedia.org/wiki/Expander_graph) and [depth-robust](https://mathweb.ucsd.edu/~ronspubs/75_07_dense_paths.pdf) graphs. Below is a picture taken from `[5]`, representing an example of a "stacked" 
+graphs is a topic of a number of papers; for a sample, see [1-5]. In short, the desired final graph is constructed 
+as an overlay of simpler graphs, including [expander](https://en.wikipedia.org/wiki/Expander_graph) and [depth-robust](https://mathweb.ucsd.edu/~ronspubs/75_07_dense_paths.pdf) graphs. Below is a picture taken from [5], representing an example of a "stacked" 
 Depth Robust Graph (DRG).
 
 <p align="center"><img src="https://akircanski.github.io/images/slowable-encoders/cbc-3.png" alt="drawing" width="350" height="250"/></p>
@@ -138,8 +138,8 @@ Depth Robust Graph (DRG).
 Due to the newly added edges, such constructions are expected to not suffer from issues similar to the ones
 previously described. When it comes to the data encoding function, it may be advantageous to use an encoding
 that's slow in  one direction, but fast in the other (decoding) direction. That way, validating the encoded
-blocks can be  inexpensive for verifiers. Such functions include Sloth `[5]`, a construction in the Verifiable
-Delay Function paper `[6]`; see also early proposals in the blockchain context `[7]`. Finally, it would be
+blocks can be  inexpensive for verifiers. Such functions include Sloth [5], a construction in the Verifiable
+Delay Function paper [6]; see also early proposals in the blockchain context [7]. Finally, it would be
 interesting to research how would randomly generated edges of same average length perform here, as opposed 
 to a deterministic graph construction.
 
