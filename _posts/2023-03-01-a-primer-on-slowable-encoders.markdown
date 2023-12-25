@@ -82,9 +82,9 @@ block encoder with fixed-size input $$E$$. Both constructions are insecure, but 
 ones. It should be mentioned that while the building block is a block cipher, there are no secrets in this context 
 and all the "keys" are public values.
 
-Consider a simple "layered CBC mode". It depends on a constant, (publically known) key $K$ and constant $IV$ bound to 
+Consider a simple "layered CBC mode". It depends on a constant, (publically known) key $$K$$ and constant $$IV$$ bound to 
 the miner's identity and context (unimportant for this discussion). If the data that's being encoded is broken into blocks and the 
-block sequence denoted with $d_{0..N-1}$, we have:
+block sequence denoted with $$d_{0..N-1}$$, we have:
 
 $$c_0\ldots c_{N-1} = CBCEnc(IV, d_0\ldots d_{N-1})$$
 
@@ -95,36 +95,36 @@ dependency structure:
 
 <p align="center"><img src="https://akircanski.github.io/images/slowable-encoders/cbc-1.png" alt="drawing" width="400" height="300"/></p>
 
-An honest storage provider is expected to store the bottom 8 blocks $c_{16},\ldots c_{23}$. An adversary may instead 
-store blocks $c_4$, $c_{12}$ and $c_{20}$ and optionally store some of the $c_0$, $c_8$, $c_{16}$ blocks (these
+An honest storage provider is expected to store the bottom 8 blocks $$c_{16},\ldots c_{23}$$. An adversary may instead 
+store blocks $$c_4$$, $$c_{12}$$ and $$c_{20}$$ and optionally store some of the $$c_0$$, $$c_8$$, $$c_{16}$$ blocks (these
 blocks can be derived independently on the fly). The time to derive unknown blocks from the bottom should not be 
 significantly smaller than recomputing all of the graph nodes. 
 
-Consider the cost of deriving for example block $c_{23}$. First, observe that the derivation of that block can be 
-localized inside the right-hand rectangle on the picture which starts from $c_{4}$, $c_{12}$ and $c_{20}$. This already goes against
+Consider the cost of deriving for example block $$c_{23}$$. First, observe that the derivation of that block can be 
+localized inside the right-hand rectangle on the picture which starts from $$c_{4}$$, $$c_{12}$$ and $$c_{20}$$. This already goes against
 the original intent, as the blocks from the left-hand rectangle do not need to be computed. Observe also that it is 
-possible to derive blocks from that rectangle in parallel: first compute ${c_5}$ using one CPU, then compute $c_{13}$ 
-and $c_6$ using two CPUs in parallel, finally compute $c_{21}$, $c_{14}$ and $c_7$ in parallel using 3 CPUs and so on. 
+possible to derive blocks from that rectangle in parallel: first compute $${c_5}$$ using one CPU, then compute $$c_{13}$$ 
+and $$c_6$$ using two CPUs in parallel, finally compute $$c_{21}$$, $$c_{14}$$ and $$c_7$$ in parallel using 3 CPUs and so on. 
 Such parallelization is also an unwanted property, as it reduces the time needed to encode on the fly. 
 
 As such, there is too much regularity in the layered CBC mode construction. Let us try to remove some of 
-it by adding a block permutation in between the layers. Denote the permutation on $\{0,\ldots N-1\}$ with $\pi$ and 
+it by adding a block permutation in between the layers. Denote the permutation on $$\{0,\ldots N-1\}$$ with $$\pi$$ and 
 add it between layers:
 
 $$c_{0..N-1} = CBCEnc(IV, d_{0..N-1})$$
 
 $$c_{(k+1)N}\ldots c_{(k+2)N-1} = CBCEnc(IV, c_{\pi(kN)}\ldots c_{\pi((k+1)N-1)}), 0\leq k\leq l-1$$
 
-This is similar to a block-cipher cipher construction where the base function $E$ plays a role of an S-Box. Consider 
-a 2-layer 8-block instance of this shuffled CBC mode with permutation $\pi$ specified by the arrows on the picture:
+This is similar to a block-cipher cipher construction where the base function $$E$$ plays a role of an S-Box. Consider 
+a 2-layer 8-block instance of this shuffled CBC mode with permutation $$\pi$$ specified by the arrows on the picture:
 
 <p align="center"><img src="https://akircanski.github.io/images/slowable-encoders/cbc-2.png" alt="drawing" width="400" height="300"/></p>
 
-Suppose again an adversary stores the blocks colored in green. Consider how long it takes to compute $c_{23}$, assuming 
-a 2-CPU parallel computer. The computation of $c_{23}$ now cannot be localized inside the right-hand rectangle and it 
+Suppose again an adversary stores the blocks colored in green. Consider how long it takes to compute $$c_{23}$$, assuming 
+a 2-CPU parallel computer. The computation of $$c_{23}$$ now cannot be localized inside the right-hand rectangle and it 
 depends on all blocks at all layers  and re-deriving it appears harder. It is, however, 
-still possible to parallelize the computation. Using the knowledge of $c_0$ and $c_4$, compute $c_0,\ldots c_3$ and $c_4,\ldots c_7$ 
-in parallel, using 2 CPUs. Once the computation of $c_0,\ldots c_7$ is complete, it is possible to do the same thing
+still possible to parallelize the computation. Using the knowledge of $$c_0$$ and $$c_4$$, compute $$c_0,\ldots c_3$$ and $$c_4,\ldots c_7$$ 
+in parallel, using 2 CPUs. Once the computation of $$c_0,\ldots c_7$$ is complete, it is possible to do the same thing
 on the next level. Again, a lower than intended computation time is achieved. 
 
 The previously described issues may be remediated by adding more edges to the graph. Given specific function
