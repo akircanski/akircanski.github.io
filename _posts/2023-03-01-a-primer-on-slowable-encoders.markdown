@@ -23,7 +23,7 @@ of winning the consensus).
 
 In this blog post, we chat about the storage blockchain context and what motivates the need for 
 such functions. We'll detail on why some basic constructions based on CBC encryption mode 
-previously discussed in `[1]` do not work. The fact that these constructions do not work can be 
+previously discussed in [1] do not work. The fact that these constructions do not work can be 
 seen as a doorway for research on how to build working and optimal ones - some of the papers 
 that do that job are linked to by the end of this blog post. Therefore, this blog post can be
 seen as an introductory read for problems papers such as `[1-5]` are trying to solve. 
