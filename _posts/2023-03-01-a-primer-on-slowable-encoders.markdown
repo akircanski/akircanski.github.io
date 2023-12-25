@@ -78,7 +78,7 @@ Below are some primitives that do not satisfy such a tradeoff-resistance propert
 ### Building slowable encoders
 
 The following constructions mentioned in [1] build a data encoding function with an arbitrary input size from a smaller
-block encoder with fixed-size input $E$. Both constructions are insecure, but iterating on them can result in secure 
+block encoder with fixed-size input $$E$$. Both constructions are insecure, but iterating on them can result in secure 
 ones. It should be mentioned that while the building block is a block cipher, there are no secrets in this context 
 and all the "keys" are public values.
 
