@@ -6,6 +6,8 @@ categories: crypto
 excerpt: hello
 ---
 
+*This article originally appeared on the NCC Group Cryptography Services [blog](https://research.nccgroup.com/2023/02/20/a-primer-on-slowable-encoders/).* 
+
 There is a specific type of cryptographic transformation that arises in storage-oriented
 blockchains. The transformation is a "slowable" 1-1 mapping which does not involve any
 secrets and is tradeoff-resistant in the following sense: it should not be possible to partially 
