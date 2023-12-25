@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "Smart Contracts Inside SGX Enclaves: Common Security Bug Patterns (co-authored with G. Doussot)"
+title:  "Smart Contracts Inside SGX Enclaves: Common Security Bug Patterns"
 date:   2020-03-24 14:21:19 -0400
 categories: blockchain
 excerpt: hello
 ---
+
+**This article originally appeared on the NCC Group Cryptography Services blog. Gérald Doussot and I wrote it after performing a 3-week security analysis of a SGX private blockchain implementation.**
+
 
 Running smart contracts in a Trusted Execution Environment (TEE) such as Intel Software Guard Extensions (SGX) to preserve the confidentiality of blockchain transactions is a novel and not widely understood technique. In this blog post, we point out several bug classes that we observed in confidential smart contract designs and implementations in our recent client engagements. We argue that the infrastructure underpinning the execution of confidential smart contracts is challenging to implement securely and that confidential smart contracts are prone to misuse by users.
 
