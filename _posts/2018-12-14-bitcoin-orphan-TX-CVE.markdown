@@ -45,7 +45,7 @@ void AddOrphanTx(const CDataStream& vMsg)
 ```
 
 <p align="center">
-  <img src="/images/bitcoin-orphan-tx-cve/orphans-0.png" width="700" title="hover text">
+  <img src="https://akircanski.github.io/images/orphan-tx/orphans-0.png" width="700" title="hover text">
 </p>
 
 Given the `mapOrphanTransactionByPrev` map, when a new transaction arrives and is accepted to the mempool, it is now easy to look up what orphan transactions depend on it. Suppose that `orphan-tx-hash_3` (colored in red on the picture) is currently stored as orphan. Now assume its parent transaction `parent-tx-hash_2` arrives and is deemed to be valid. Since `orphan-tx-hash_3` depends only on `parent-tx-hash_2`, it can be unorphaned and erased from the orphan memory store. Now `orphan-tx-hash_3` is regarded as a new transaction that may unorphan other orphan transactions. The recursive unorphaning algorithm implemented in a form of a loop is [here](https://github.com/bitcoin/bitcoin/blob/v0.6.0/src/main.cpp#L2541). 
@@ -111,7 +111,7 @@ output indexes. Consider what happens if the victim client ends up with the `map
 described by the *left* side of the picture:
 
 <p align="center">
-  <img src="/images/bitcoin-orphan-tx-cve/orphans-1.png" width="900" title="hover text">
+  <img src="https://akircanski.github.io/images/orphan-tx/orphans-1.png" width="900" title="hover text">
 </p>
 
 The right column in the left side of the picture is basically one (non-existent) transaction repeated with different output indexes. 
