@@ -83,6 +83,6 @@ Arguably, when it comes to surprising computer applications, the bulk of the wor
 
 In school, they never taught that efficient general purpose computing is an botomless well, or perhaps a limitless ocean. Still, school taught us the basic distant principles on which all of that was build, so that's good. School is good. 
 
-*I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post. *
+*This blog post was inspired by the Martin Davis' book The Universal Computer and the work of [Nick Szabo](https://akircanski.github.io/cryptanalysis/2021/04/27/symmetric-key-cryptanalysis-howto.html). I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post. *
 
  
