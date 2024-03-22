@@ -47,7 +47,7 @@ Check out this very good [blog post](https://retool.com/blog/erp-for-engineers) 
 
 This is arguably what the payroll departments used to do. ERP blog post screenshot: 
 
-<img src="other-pics/erp-blog.png" alt="drawing" width="650"/>
+<img src="other-pics/erp-blog.png" alt="drawing" width="500"/>
 
 #### 2. Process optimization
 
