@@ -16,7 +16,5 @@ Blog posts:
 {% endfor %}
 
 
-Other:
 <br>
-<a href="./in-school">In school, they do (not) teach</a> 
-</br>
+Writing: <a href="./in-school">In school, they do (not) teach</a> 
