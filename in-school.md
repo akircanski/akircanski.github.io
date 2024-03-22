@@ -1,3 +1,5 @@
+# In school they do (not) teach
+
 In school they teach that the exponential function is surprising in that the speed at which it grows is counter-intuitive.  It explodes so fast that it never fails to surprise us. In the twinkling of an eye, it has fully propagated and we're left wondering **what just happened.** It models phenomena such as pandemics, chain reactions, avalanches, etc. 
 
 But there's another surprising thing that's not talked about in school, at least not in high school and apparently not in undergraduate school either. It has to do with the **scope** and **expresiveness** general purpose computing. Because of this expresivness, it can capture aspects of our society in unexpected ways and modify our life for good, or for bad. 
