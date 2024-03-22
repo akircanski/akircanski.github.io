@@ -18,7 +18,7 @@ This isn't  taught in school, there's usually no teachers in awe of Turing's mac
 
 Consider the opening quote from the book "The Universal Machine" by Martin Davis:
 
-![1-universal-computer](https://hackmd.io/_uploads/BJyRUWWCp.png)
+![1-universal-computer](other-pics/aiken-turing.png)
 
 My reading of the two quotes is as follows. Aiken and Turing talk about the same thing. They approach the same matter - the same realization, from two different sides. 
 
@@ -49,7 +49,7 @@ Check out this very good [blog post](https://retool.com/blog/erp-for-engineers) 
 
 This is arguably what the payroll departments used to do. ERP blog post screenshot: 
 
-![accounting](https://hackmd.io/_uploads/BJ4vFWWCp.png)
+![accounting](other-pics/erp-blog.png)
 
 
 
@@ -87,6 +87,6 @@ Arguably, when it comes to surprising computer applications, the bulk of the wor
 
 In school, they never taught that efficient general purpose computing is an botomless well, or perhaps a limitless ocean. Still, school taught us the basic distant principles on which all of that was build, so that's good. School is good. 
 
-*I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post.*
+*I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post. *
 
  
