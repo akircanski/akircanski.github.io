@@ -1,4 +1,5 @@
-I've been working from a public library a lot, sitting in between shelves filled with wonderful books. Also, recently I've read all of the work by Nick Szabo, which was very inspiring. I wrote this blog post, inspired by that. 
+I've been working from a public library a lot, sitting in between shelves filled with wonderful books. This blog post is inspired by the book by [Martin Davis](https://en.wikipedia.org/wiki/Martin_Davis_(mathematician)) ["The Universal Computer"](https://www.youtube.com/watch?v=ZVTgtODX0Nc) and also by the works of [Nick Szabo](https://nakamotoinstitute.org/authors/nick-szabo). I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post.
+
 
 ## In school they do (not) teach
 
@@ -85,6 +86,5 @@ Arguably, when it comes to surprising computer applications, the bulk of the wor
 
 In school, they never taught that efficient general purpose computing is an botomless well, or perhaps a limitless ocean. Still, school taught us the basic distant principles on which all of that was build, so that's good. School is good. 
 
-*I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post.*
 
  
