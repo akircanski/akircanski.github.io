@@ -16,9 +16,10 @@ Blog posts:
 {% endfor %}
 
 
-<br>
+
 Other:
 
+<br>
 <a href="./in-school">In school, they do (not) teach</a> 
 
 
