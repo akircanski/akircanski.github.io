@@ -3,9 +3,9 @@ title:  In school they do (not) teach
 ---
 In school they teach that the exponential function is surprising in that the speed at which it grows is counter-intuitive.  It explodes so fast that it never fails to surprise us. In the twinkling of an eye, it has fully propagated and we're left wondering **what just happened.** It models phenomena such as pandemics, chain reactions, avalanches, etc. 
 
-But there's another surprising thing that's not talked about in school, at least not in high school and apparently not in undergraduate school either. It has to do with the **scope** and **expresiveness** general purpose computing. Because of this expresivness, it can capture aspects of our society in unexpected ways and modify our life for good, or for bad. 
+But there's another surprising thing that's not talked about in school, at least not in high school and apparently not in undergraduate school either. It has to do with the **scope** and **expresiveness** of general purpose computing. A single-purpose computer is eg. a calculator which can only do numerical computations and a [general-purpose computer](https://www.computerhope.com/jargon/g/general-purpose-computer.htm) can simulate any single-purpose computer and also run any conceivable algorithm. Because of this expresivness, general purpose computation can capture aspects of our society in unexpected ways and modify our life for good, or for bad. 
 
-This isn't  taught in school, there's usually no teachers in awe of Turing's machine generality telling students what efficient general purpose computers can do - yet it's there, palpable and we seem to be discovering it, step by step. After all, the question that we're nowdays asking - whether [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) is possible - is related to this, which Turing seemed to [touch upon](https://redirect.cs.umbc.edu/courses/471/papers/turing.pdf) before 1950s. 
+This isn't taught in school, there's usually no teachers in awe of Turing machine's generality telling students what efficient general purpose computers can do - yet it's there, palpable and we seem to be discovering it, step by step. After all, the question that we're nowdays asking - whether [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) is possible - is related to this, which Turing seemed to [touch upon](https://redirect.cs.umbc.edu/courses/471/papers/turing.pdf) before 1950s. 
 
 <!-- He did this to answer David Hilbert's question if there exists a procedure that solves each instance of a certain kind of problem in algebra. If we're to show that there is or there isn't such a procedure, we have to know what a procedure is - that's where the Turing machine comes in.  -->
 
@@ -15,7 +15,7 @@ This isn't  taught in school, there's usually no teachers in awe of Turing's mac
 
 ### The Martin Davis book quote
 
-Consider the opening quote from the book "The Universal Machine" by Martin Davis:
+Consider the opening quote from the book "The Universal Machine" by [Martin Davis](https://en.wikipedia.org/wiki/Martin_Davis_(mathematician)):
 
 ![1-universal-computer](other-pics/aiken-turing.png)
 
@@ -54,7 +54,7 @@ This is arguably what the payroll departments used to do. ERP blog post screensh
 
 The previous example, payroll, can be thought of as a very coarse model for human activity, devoid of all details - a numerical summary of what we've been doing. As such, payroll automation models human behavior (at some level). 
 
-Going beyond the coarse level of describing state, there's a myraid of state machine templates and special-purpose programming langauges for specifying such state machines. I won't attempt to list them here, refreshing HN a couple of days in a row will result in a number of examples. A couple of years ago, I happened to workin at a startup. The job did not end up working out too well and I didn't really end up contributing to its product. Still, a part of the product was interesting - it was a language that expresses financial dependencies in a multi-party setting. It allowed financial institutions to write down in code what would otherwise have executed and overseen by employees of a financial institution. Not only it modeled common contracts, it allowed programming such contracts by third parties. Certain computation performed jointly by humans in the past is therefore simulated and executed by a computer. 
+Going beyond the coarse level of describing state, there's a myraid of state machine templates and special-purpose programming langauges for specifying such state machines. I won't attempt to list them here, refreshing [HN](https://news.ycombinator.com/) a couple of days in a row will result in a number of examples. A couple of years ago, I happened be working  at a startup. The job did not end up working out too well and I didn't really end up contributing to its product. Still, a part of the product was interesting - it was a language that expresses financial dependencies in a multi-party setting. It allowed financial institutions to write down in code what would otherwise have executed and overseen by employees of a financial institution. Not only it modeled common contracts, it allowed programming such contracts by third parties. Certain computation performed jointly by humans in the past is therefore simulated and executed by a computer. 
 
 #### 3. Cryptography, etc. 
 
