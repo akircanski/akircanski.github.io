@@ -1,8 +1,6 @@
-I've been working from a public library a lot, sitting in between shelves filled with wonderful books. This blog post is inspired by the book by [Martin Davis](https://en.wikipedia.org/wiki/Martin_Davis_(mathematician)) ["The Universal Computer"](https://www.youtube.com/watch?v=ZVTgtODX0Nc) and also by the works of [Nick Szabo](https://nakamotoinstitute.org/authors/nick-szabo). I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post.
-
-
-## In school they do (not) teach
-
+---
+title:  In school they do (not) teach
+---
 In school they teach that the exponential function is surprising in that the speed at which it grows is counter-intuitive.  It explodes so fast that it never fails to surprise us. In the twinkling of an eye, it has fully propagated and we're left wondering **what just happened.** It models phenomena such as pandemics, chain reactions, avalanches, etc. 
 
 But there's another surprising thing that's not talked about in school, at least not in high school and apparently not in undergraduate school either. It has to do with the **scope** and **expresiveness** general purpose computing. Because of this expresivness, it can capture aspects of our society in unexpected ways and modify our life for good, or for bad. 
@@ -87,4 +85,4 @@ Arguably, when it comes to surprising computer applications, the bulk of the wor
 In school, they never taught that efficient general purpose computing is an botomless well, or perhaps a limitless ocean. Still, school taught us the basic distant principles on which all of that was build, so that's good. School is good. 
 
 
- 
+Acknowledgments: I've been working from a public library a lot, sitting in between shelves filled with wonderful books. This blog post is inspired by the book by [Martin Davis](https://en.wikipedia.org/wiki/Martin_Davis_(mathematician)) ["The Universal Computer"](https://www.youtube.com/watch?v=ZVTgtODX0Nc) and also by the works of [Nick Szabo](https://nakamotoinstitute.org/authors/nick-szabo). I’d like to thank Miloš Milovanović and Vojin Jovanović for various discussions around topics in this blog post.
