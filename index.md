@@ -17,4 +17,4 @@ Blog posts:
 
 
 <br>
-Writing: <a href="./in-school-they-do-not-teach.md">In school, they do (not) teach</a> 
+Writing: <a href="./in-school-they-do-not-teach">In school, they do (not) teach</a> 
