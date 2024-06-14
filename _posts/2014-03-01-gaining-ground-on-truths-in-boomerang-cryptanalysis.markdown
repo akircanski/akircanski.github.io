@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gaining ground on truths in boomerang (symmetric-key) cryptanalysis"
+title:  "Gaining ground on truths in boomerang cryptanalysis"
 date:   2014-03-01 14:21:19 -0400
 categories: crypto
 excerpt: hello
