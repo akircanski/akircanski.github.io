@@ -34,7 +34,7 @@ When folks talk about boomerang or rectangle differential trails, it's all about
 
 As per boomerang attack setting, differences between the opposite faces of the boomerang are assumed to be exactly equal. As such, we only talk about "pairs of differential trails", not "quartets of differential trails". There's the question whether it's possible to have a boomerang trail that has a four different trails, turns out the answer is yes - a SAT solver found one for XTEA without problems:
 
-<p align="center"><img src="https://akircanski.github.io/images/boomerang/overlapping-trail.png" alt="drawing" width="300"/></p>
+<p align="center"><img src="https://akircanski.github.io/images/boomerang/overlapping-trail.png" alt="drawing"/></p>
 
 Once we've shown this is possible, the question is whether this type of "unaligned" trails can be useful in cryptanalysis. Intuition says that these trails will have lower probability than non-overlapping (regular) boomerang trails, however, I think it'd still be wortwhile playing with this and verifying how often such trails can occur in practice. 
 
