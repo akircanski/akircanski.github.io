@@ -6,7 +6,7 @@ categories: crypto
 excerpt: hello
 ---
 
-I'm back-dating this blog post to chat about some surprising things I discovered in the area of [boomerang cryptanalysis](https://en.wikipedia.org/wiki/Boomerang_attack), a sub-area of symmetric key cryptanalysis. This was while I was working on finding a zero-sum for the full HAS-160 compression function, paper [here](http://users.encs.concordia.ca/~youssef/Publications/Papers/A%20heuristic%20for%20finding%20compatible%20differential%20paths%20with%20application%20to%20HAS-160.pdf), during my PhD. I loved everything on this project; the research and the coding - even though it's not a very practical thing that's being done here. Nonetheless, this pretty non-pratical research on zero-sums resulted in somewhat surprising practical findings; check below. 
+This blog post is still TBD, in the works. I'm back-dating this blog post to chat about some surprising things I discovered in the area of [boomerang cryptanalysis](https://en.wikipedia.org/wiki/Boomerang_attack), a sub-area of symmetric key cryptanalysis. This was while I was working on finding a zero-sum for the full HAS-160 compression function, paper [here](http://users.encs.concordia.ca/~youssef/Publications/Papers/A%20heuristic%20for%20finding%20compatible%20differential%20paths%20with%20application%20to%20HAS-160.pdf), during my PhD. I loved everything on this project; the research and the coding - even though it's not a very practical thing that's being done here. Nonetheless, this pretty non-pratical research on zero-sums resulted in somewhat surprising practical findings; check below. 
 
 I also wanted to share the PoC source code (TBD, some minor clean up ongoing) that I used to derive the second order collision for HAS-160. It implements a boomerang differential trail search heuristic - I don't think folks did this previously; for regular differential search trails, the best two papers/tools I worked with was this [paper](https://mouha.be/wp-content/uploads/hasv.pdf) and the ARXTools open-source framework. 
 
@@ -48,7 +48,7 @@ The one on the left contains redundancy, as the words are repeated in two consec
 
 When it comes to differential trail representation, in the 2000-2012 papers with (contradictory) boomerang trails, a common way to represent differential trails was using tables, which look like this:
 
-<p align="center"><img src="https://akircanski.github.io/images/boomerang/table-trail.png" alt="drawing" width="400" height="300"/></p>
+<p align="center"><img src="https://akircanski.github.io/images/boomerang/table.png" alt="drawing" width="400" height="300"/></p>
 
 Compare this to this feedback-shift register representation of the trail (corresponding to the right-hand side of the picture):
 
