@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Gaining ground on truths in boomerang cryptanalysis"
+title:  "How's it going in the world of Boomerang Cryptanalysis"
 date:   2014-03-01 14:21:19 -0400
 categories: crypto
 excerpt: hello
 ---
 
-This blog post is still TBD, in the works. I'm back-dating this blog post to chat about some surprising things I discovered in the area of [boomerang cryptanalysis](https://en.wikipedia.org/wiki/Boomerang_attack), a sub-area of symmetric key cryptanalysis. This was while I was working on finding a zero-sum for the full HAS-160 compression function, paper [here](http://users.encs.concordia.ca/~youssef/Publications/Papers/A%20heuristic%20for%20finding%20compatible%20differential%20paths%20with%20application%20to%20HAS-160.pdf), during my PhD. I loved everything on this project; the research and the coding - even though it's not a very practical thing that's being done here. Nonetheless, this pretty non-pratical research on zero-sums resulted in somewhat surprising practical findings; check below. 
+I'm back-dating this blog post to chat about some surprising things I discovered in the area of [boomerang cryptanalysis](https://en.wikipedia.org/wiki/Boomerang_attack), a sub-area of symmetric key cryptanalysis. This was while I was working on finding a zero-sum for the full HAS-160 compression function, paper [here](http://users.encs.concordia.ca/~youssef/Publications/Papers/A%20heuristic%20for%20finding%20compatible%20differential%20paths%20with%20application%20to%20HAS-160.pdf), during my PhD. I loved everything on this project; the research and the coding - even though it's not a very practical thing that's being done here. Nonetheless, this pretty non-pratical research on zero-sums resulted in somewhat surprising practical findings; check below. 
 
 I also wanted to share the PoC source code (TBD, some minor clean up ongoing) that I used to derive the second order collision for HAS-160. It implements a boomerang differential trail search heuristic - I don't think folks did this previously; for regular differential search trails, the best two papers/tools I worked with was this [paper](https://mouha.be/wp-content/uploads/hasv.pdf) and the ARXTools open-source framework. 
 
@@ -14,7 +14,7 @@ The implementation is akin to a constrained-down SAT solver that's purposefully 
 
 Let's move on to the two surprising things I wanted to briefly chat about. Disclaimer: This blog post does not attempt to be self-contained, it assumes assumes familiarity with the topic; it's a quick writeup rather than a comprehensive one. 
 
-### Most boomerang attacks against ARX primitives 2000-2012 were flawed
+### 1. Most boomerang attacks against ARX primitives 2000-2012 were flawed
 
 Well, that's the surprising thing. After wrapping up with this [paper](http://users.encs.concordia.ca/~youssef/Publications/Papers/A%20heuristic%20for%20finding%20compatible%20differential%20paths%20with%20application%20to%20HAS-160.pdf) I realized that a SAT solver can be used to quickly all validate trails published in the litereature. Result: most of the boomerang attacks on ARX primitives from that period were based on contradictory trails. 
 
@@ -28,9 +28,9 @@ There's a parallel to be made with secure software development. Certain processe
 
 Some developments that came later (2018 and 2020): probabilistic (in)dependence has been studied not only to validate an existing attack, but as an amplification factor, see this [paper](https://eprint.iacr.org/2018/161.pdf) as well as this [one](https://eprint.iacr.org/2021/020.pdf). It seems that nowdays it's expected that proposed trails are validated programmatically, which is a good thing. 
 
-### "Unaligned" or "overlapping" boomerang trails
+### 2. "Unaligned" or "overlapping" boomerang trails
 
-When folks talk about boomerang or rectangle differential trails, it's all about differences in executions of quartets of primitives, as shown below:
+When folks talk about boomerang or rectangle differential trails, it's all about differences in executions of quartets of primitives, as shown on the previous figure. 
 
 As per boomerang attack setting, differences between the opposite faces of the boomerang are assumed to be exactly equal. As such, we only talk about "pairs of differential trails", not "quartets of differential trails". There's the question whether it's possible to have a boomerang trail that has a four different trails, turns out the answer is yes - a SAT solver found one for XTEA without problems:
 
@@ -38,7 +38,7 @@ As per boomerang attack setting, differences between the opposite faces of the b
 
 Once we've shown this is possible, the question is whether this type of "unaligned" trails can be useful in cryptanalysis. Intuition says that these trails will have lower probability than non-overlapping (regular) boomerang trails, however, I think it'd still be wortwhile playing with this and verifying how often such trails can occur in practice. 
 
-### Visual representation matters
+### 3. Visual representation matters
 
 This is not at all a new discovery or anything close to that, but I feel it really is worth saying. There are two ways to think about a SHA-like hash function:
 
