@@ -48,10 +48,10 @@ The one on the left contains redundancy, as the words are repeated in two consec
 
 When it comes to differential trail representation, in the 2000-2012 papers with (contradictory) boomerang trails, a common way to represent differential trails was using tables, which look like this:
 
-<p align="center"><img src="https://akircanski.github.io/images/boomerang/table.png" alt="drawing" width="400" height="300"/></p>
+<p align="center"><img src="https://akircanski.github.io/images/boomerang/table.png" alt="drawing" width="600" height="300"/></p>
 
 Compare this to this feedback-shift register representation of the trail (corresponding to the right-hand side of the picture):
 
-<p align="center"><img src="https://akircanski.github.io/images/boomerang/fsr-trail.png" alt="drawing" width="400" height="300"/></p>
+<p align="center"><img src="https://akircanski.github.io/images/boomerang/fsr-trail.png" alt="drawing" width="200" height="500"/></p>
 
 You can see the hash function lists registers one after another, as the execution progresses. There's no redundancy, it's just much more natural and pleasant for the human eye. 
