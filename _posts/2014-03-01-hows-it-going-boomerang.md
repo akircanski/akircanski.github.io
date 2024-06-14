@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How's it going in the world of Boomerang Cryptanalysis"
+title:  "How's it going in the world of boomerang cryptanalysis"
 date:   2014-03-01 14:21:19 -0400
 categories: crypto
 excerpt: hello
@@ -51,7 +51,5 @@ When it comes to differential trail representation, in the 2000-2012 papers with
 <p align="center"><img src="https://akircanski.github.io/images/boomerang/table.png" alt="drawing" width="600" height="300"/></p>
 
 Compare this to this feedback-shift register representation of the trail (corresponding to the right-hand side of the picture):
-
 <p align="center"><img src="https://akircanski.github.io/images/boomerang/fsr-trail.png" alt="drawing" width="200" height="500"/></p>
-
 You can see the hash function lists registers one after another, as the execution progresses. There's no redundancy, it's just much more natural and pleasant for the human eye. 
