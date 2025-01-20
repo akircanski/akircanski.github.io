@@ -2,7 +2,7 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the 80ties, he was dabbling in computers with some fluctuating amount of interest. This went on for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he got sucked deep into the world of computing. 
+Some years ago, a friend told me the following story. During the 80-ties, he dabbled in computers with some fluctuating amount of interest. This lasted for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he got sucked deep into the world of computing. 
 
 There's a another story related to young folks dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, independently of the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
 
@@ -31,7 +31,7 @@ To model the latter two properties, it's necessary to use further mathematical w
 
 ### 1. Why not just send some hash preimages over email
 
-Let's start with a simplest thing possible. Satisfy (G3) by having digital gold be represented as a solution to a hard-to-solve equation. The equation is public, there are no shortcuts; it's not hard to find such a puzzle, take for example inverting a [hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). This is called [Proof of Work](https://en.wikipedia.org/wiki/Proof_of_work).
+Let's start with a simplest thing possible. Satisfy (G3) by having digital gold be represented as a solution to a hard-to-solve equation. The equation is public, there are no shortcuts; it's not hard to find such a puzzle, take for example inverting a [hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). This is called [Proof of Work](https://en.wikipedia.org/wiki/Proof_of_work)[^1].
 
 What do you do with solutions that represent digital gold? Send them over email or chat apps to exchange them for goods? That wouldn't work, as such digital gold could be arbitrarily copied and re-spent once it's received. There's no notion of who owns what; and thus we arrive to the notion of a non-tamperable notebook of who owns what: a [_ledger_](https://en.wikipedia.org/wiki/Ledger). 
 
@@ -52,7 +52,7 @@ We can now visualize what we envisioned: the P2P network (on the left) and the s
  <img src="other-pics/bitcoin/wallet-tree.png" alt="drawing" width="350" height="250"/>
 </div>
 
-### 3. Inside the mines of Bitcoin
+### 3. Simulating the process of gold mining
 
 Note that in the wallet picture above, there's more than one root from which new digital gold emerges; these are instances where new digital gold was _mined_. Specifically, to simulate physical gold mining (G3), we introduce a special kind of transaction which doesn't reference a previous unspent output. Rather, it validates the `counter` solution for a hash puzzle such as:
 
@@ -75,14 +75,7 @@ A hash function such as SHA2 can be used to summarize the state of the ledger. I
  <img src="other-pics/bitcoin/chained-hashing.png" alt="drawing" width="350" height="250"/>
 </div>
 
-Note that on the left, transaction processing means repeated re-hashing of the whole ledger. To optimize, recursive or _chained_ hashing is introduced (picture on the right). Now, nodes only hash the previous ledger hash and the new transaction content, as opposed to constantly re-hashing the whole ledger, which is much better.
-
-This chained hashing scheme can be seen as a "unary tree" (as opposed to a binary tree) and a simplified variant of a [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), where the number of child nodes is set to one. Merkle trees and  such concepts arise when we're given a black box hash function, we hash a bunch of data and we ask questions such as:
-
-* What is the cost of _proving_ that a subportion of the hashed data participates in the hash?
-* What is cost of _updating_ the hash if we're given some modifications to the underlying data?
-
-These questions were tackled by Merkle in 1979, but let's leave this topic for other explorations. 
+Note that on the left, transaction processing means repeated re-hashing of the whole ledger. To optimize, recursive or _chained_ hashing is introduced[^2] (picture on the right). Now, nodes only hash the previous ledger hash and the new transaction content, as opposed to constantly re-hashing the whole ledger, which is much better[^3].
 
 Finally, to avoid ambiguity in transaction processing, we can also imagine for now that previous ledger hash is included inside each transaction. Also, each node will run a heuristic to ensure they're in sync with other nodes. Specifically, nodes occasionally exchange the last `n` hashes with neighbouring nodes and then fetch or contribute known transactions to establish the collective ledger.
 
@@ -103,7 +96,7 @@ Observe that here the probelm is _not_ to _decide which historical fork is the r
 
 Let's explore some ways how malicious history alteration could be mitigated. 
 
-### 6. Attempts to solve the double-spend problem
+### 6. Failing to solve the problem
 
 Attempts to defend against variants of the double-spend attack are below. 
 
@@ -115,7 +108,7 @@ None of the attempted solutions works, and it's unclear how to proceed.
 
 ### 7. "Bitcoin: A Peer-to-Peer Electronic Cash System"
 
-Satoshi's idea is to use the concept of "Proof of Work", which was an esoteric concept back in 2008[^1]. More specifically, his idea is to use PoW to establish a secure voting criterion on what's valid history. The criterion is such that it's secure (history is _sealed_ after a certain amount of events and thus prevents double-spend) and flexible (network forks get resolved and do not result in permanent splits). Satoshi introduces the following:
+Satoshi's idea is to use the concept of "Proof of Work", which was an esoteric concept back in 2008. More specifically, his idea is to use PoW to establish a secure voting criterion on what's valid history. The criterion is such that it's secure (history is _sealed_ after a certain amount of events and thus prevents double-spend) and flexible (network forks get resolved and do not result in permanent splits). Satoshi introduces the following:
 
 * Network nodes require a proof of work on each acceptance of new historical events
 * Transactions are grouped into _blocks_ and only blocks accompanied with a proof of work are accepted
@@ -135,6 +128,11 @@ Given that each block contains a solution to a proof of work puzzle, it is also 
 [^1]: Proof of work can be thought of "soft" or "flexible" cryptography. In "regular" cryptography, access is gated with an unattainable number of operations such as `2^128`, in order to e.g. forge a cryptographic signature. Therefore, "regular" cryptography is a sort of "all or nothing" access cryptography. It is worth noting that "traditional" cryptography idealizes what we have in the real world. In the real world, if someon _really_ wants to rob your house, they _could_ do so by paying a potentially high price and with lots of preparation. In the digital world, this could be modeled faithfully, by using a proof of work function instead of a "all or nothing" function. With proof of work, access is gained with a substantial, but attainable number of operations, such as `2^24` to `2^72`. It turns out that, in some situations, solving the problem simply necessitates this "flexible" type of cryptography and not traditional "all or nothing" cryptography. We've already seen an example of that when we mentioned simulating mining of gold (together with the crazy idea of sending such solutions over chat apps or email). Anyone _can_ mine gold and it's _attainable in practice_. Proof of work is simply the right key for that keyhole. 
 
 [^2]: The same idea of hash chains was used in this 1991 [paper](http://www.staroceans.org/e-book/Haber_Stornetta.pdf) by Haber and Stornetta: _How to Time-Stamp a Digital Document_. They tackled the question how to time-stamp documents in a trustless way. You could have a service that'll time-stamp documents just by cryptographically signing them with a timestamp as they arrive from users. In collusion with submitters, such a signer can forge time-stamps single-handedly. The idea is to have the time-stamping service provide signatures over _links_ of a _hash chain_, so that maliciously forward or back-dating documents would require _breaking the chain_. The chain is secured by trustworthiness of adjacent entities (humans, or organizations) in the chain, who aren't expected to attest to something that didn't happen. In that sense, the Haber and Stornetta chain was _sealed_ by trustworthiness. 
+
+[^3]: This chained hashing scheme can be seen as a "unary tree" (as opposed to a binary tree) and a simplified variant of a [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), where the number of child nodes is set to one. Merkle trees and  such concepts arise when we're given a black box hash function, we hash a bunch of data and we ask questions such as: (1) What is the cost of _proving_ that a subportion of the hashed data participates in the hash? (2) What is cost of _updating_ the hash if we're given some modifications to the underlying data? These  questions were tackled by Ralph Merkle in 1979, but we'll leave this topic for other explorations. 
+
+
+
 
 [1] _Bitcoin: A peer-to-peer electronic cash system_ https://bitcoin.org/bitcoin.pdf
 [2] _How to time-stamp a digital document_: Haber and Stornetta http://www.staroceans.org/e-book/Haber_Stornetta.pdf
