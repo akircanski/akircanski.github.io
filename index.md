@@ -8,17 +8,17 @@ layout: default
 
 Hi, welcome to my homepage! My interests include security bug hunting, cryptography and software development.
 
-Blog posts:
+Blog posts
 
 <ul class="posts">
 {% for post in site.posts %}
   <li><span class="hero">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
-
+</ul> 
 
 <br>
-Writing: 
+Writing
 
-<p><a href="./in-school-they-do-not-teach">In school, they do (not) teach</a> </p>
+<a href="./in-school-they-do-not-teach">In school, they do (not) teach</a> </p>
 
-<p><a href="./how-to-invent-bitcoin">How to invent Bitcoin</a> </p>
+<a href="./how-to-invent-bitcoin">How to invent Bitcoin</a> 

@@ -1,20 +1,18 @@
-# How to invent Bitcoin
+Some years ago, a friend told me the following story. During the 80ties, he was dabbling in computers with some fluctuating amount of interest. This went on for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he got sucked deep into the world of computing. 
 
-Some years ago, a friend told me the following story. During the 80ties, he was dabbling in computers with some fluctuating amount of interest. This went on for a while, his enthusiasm for computers oscillated, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he got sucked deep into the world of computing. 
-
-There's a another, related dream story. It's that a simple blob of bytes, residing solely in one's personal computer, has real world _value_, but independently of the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
+There's a another story related to young folks dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, independently of the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
 
 ### Introduction
 
-As we know, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper and the implementation. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
+As we know, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
 
-It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, let's attempt to unravel how Bitcoin may have been discovered, what's expected and what's unexpected in this effort. _Disclaimer_: this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and "in translation". I do believe that other solutions in the space now carry the torch of the original idea. 
+It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
 
 ### 0. Physical gold: the spec
 
-Consider the problem of modeling _physical gold in code_. We'd like to have information that behaves like gold and exist only in the digital sphere. Note that this appears impossible at a glance; physical gold is a tough nut to model. It's not _at all_ like a "typical" programming project, such as creating a ticketing system for tasks that employees ought to finish at some company, or a weather application that picks up data from a measuring station.
+Consider the problem of modeling _physical gold in code_. We'd like to have information that behaves like gold and exist only in the digital realm. Note that this appears impossible at a glance; physical gold is a tough nut to model. It's not _at all_ like a "typical" programming project, such as creating a ticketing system for tasks that employees ought to finish at some company, or a weather application that picks up data from a measuring station.
 
-Modeling physical gold is a thorny problem because of the following properties:
+Modeling physical gold is thorny because of the following properties:
 
 * (G1) You can exchange gold without any help or supervision from a third party
 * (G2) You cannot be prevented from exchanging gold; it is not censorable
@@ -46,8 +44,8 @@ Transactions are then signed messages that refer to existing entries on the ledg
 We can now visualize what we envisioned: the P2P network (on the left) and the state of the ledger (on the right). Nodes represent addresses (signature public keys) and edges represent transfers. This visualization does not capture entity ownership; in practice, many public keys can be held by a single entity (in fact, we can imagine that public keys are never reused). 
 
 <div style="display: flex; justify-content: space-between;">
- <img src="https://akircanski.github.io/images/bitcoin/p2p-network.png" alt="drawing" width="350" height="250"/>
- <img src="https://akircanski.github.io/images/bitcoin/wallet-tree.png" alt="drawing" width="350" height="250"/>
+ <img src="other-pics/bitcoin/p2p-network.png" alt="drawing" width="350" height="250"/>
+ <img src="other-pics/bitcoin/wallet-tree.png" alt="drawing" width="350" height="250"/>
 </div>
 
 ### 3. Inside the mines of Bitcoin
@@ -69,8 +67,8 @@ There's a problem, however: nodes are in the dark on what exactly other nodes se
 A hash function such as SHA2 can be used to summarize the state of the ledger. In the left-hand side of the picture, a hash of the whole ledger is computed after each transaction. A hash sequence thus uniquely represents the ledger's evolution: 
 
 <div style="display: flex; justify-content: space-between;">
- <img src="https://akircanski.github.io/images/bitcoin/independent-hashing.png" alt="drawing" width="350" height="250"/>
- <img src="https://akircanski.github.io/images/bitcoin/chained-hashing.png" alt="drawing" width="350" height="250"/>
+ <img src="other-pics/bitcoin/independent-hashing.png" alt="drawing" width="350" height="250"/>
+ <img src="other-pics/bitcoin/chained-hashing.png" alt="drawing" width="350" height="250"/>
 </div>
 
 Note that on the left, transaction processing means repeated re-hashing of the whole ledger. To optimize, recursive or _chained_ hashing is introduced (picture on the right). Now, nodes only hash the previous ledger hash and the new transaction content, as opposed to constantly re-hashing the whole ledger, which is much better.
@@ -90,7 +88,7 @@ Previous steps were not unexpected engineering moves. The main problem is now in
 
 The problem is that an arbitrary number of possible competing histories can be created, as shown in the picture. If you're a node in the network and a _different history_ is presented to you, how do you decide if that's your history, or not?
 
-<p> <img src="https://akircanski.github.io/images/bitcoin/event-timelines.png" alt="drawing" width="350" height="250"/></p>
+<p> <img src="other-pics/bitcoin/event-timelines.png" alt="drawing" width="350" height="250"/></p>
 
 For example, such an alternative history may curiously lack a _certain_ transaction, which was already billed out in the real world. Therefore, switching between histories is dangerous; it can mean loss of huge amounts of funds and renders the system completely useless. Another variant of this attack includes broadcasting a double spend transaction to intentionally split the network. The network must be able to recover from such a split. 
 
@@ -137,4 +135,6 @@ Given that each block contains a solution to a proof of work puzzle, it is also 
 [1] _Bitcoin: A peer-to-peer electronic cash system_ https://bitcoin.org/bitcoin.pdf
 [2] _How to time-stamp a digital document_: Haber and Stornetta http://www.staroceans.org/e-book/Haber_Stornetta.pdf
 [3] _Bit gold_, Nick Szabo https://nakamotoinstitute.org/authors/nick-szabo/
+
+**Disclaimer**: this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and "in translation". I do believe that other solutions in the space now carry the torch of the original idea. 
 
