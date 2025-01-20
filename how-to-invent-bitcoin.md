@@ -1,3 +1,7 @@
+---
+title:  How to invent Bitcoin
+---
+
 Some years ago, a friend told me the following story. During the 80ties, he was dabbling in computers with some fluctuating amount of interest. This went on for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he got sucked deep into the world of computing. 
 
 There's a another story related to young folks dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, independently of the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
@@ -37,11 +41,11 @@ The digital ledger records who owns what, by way of recording all transfers that
 
 In other words, the ledger ought to be replicated among peers who join the network at will. A [P2P](https://en.wikipedia.org/wiki/Peer-to-peer) network is the right thing here; have each participant store the ledger and broadcast transactions to neighbouring nodes as they arrive. The nodes update the ledger accordingly if transaction validation checks out. 
 
-Participants ougthn't be able to appropriate other users' funds; we need some way to authorize transfers. As there is no central authority or server, a [cryptographic signature](https://en.wikipedia.org/wiki/Digital_signature) is the right primitive here. With cryptographic signatures, participants hold secret keys, while the public can validate each signed transfer with a corresponding public key.
+Participants ougthn't be able to appropriate other users' funds; a way to authorize transfers is needed. As there's no central authority or server here, a [cryptographic signature](https://en.wikipedia.org/wiki/Digital_signature) is the correct primitive to use. With cryptographic signatures, participants hold secret keys, while the public can validate each signed transfer with a corresponding public key.
 
 Transactions are then signed messages that refer to existing entries on the ledger (so called _unspent outputs_ or [UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) in Bitcoin), spending the totality of a previous ledger entry and potentially sending it off to multiple new public keys. Transactions are broadcast on the network and in order to be in sync with the changes on the network, on each transaction, participants update their view of the ledger. 
 
-We can now visualize what we envisioned: the P2P network (on the left) and the state of the ledger (on the right). Nodes represent addresses (signature public keys) and edges represent transfers. This visualization does not capture entity ownership; in practice, many public keys can be held by a single entity (in fact, we can imagine that public keys are never reused). 
+We can now visualize what we envisioned: the P2P network (on the left) and the state of the ledger (on the right). Nodes represent addresses (signature public keys) and edges represent transfers. This visualization does not capture entity ownership; in practice, many public keys can be held by a single entity. In fact, we can imagine that public keys are never reused, therefore the concept of ownership is completely hidden in the picture.
 
 <div style="display: flex; justify-content: space-between;">
  <img src="other-pics/bitcoin/p2p-network.png" alt="drawing" width="350" height="250"/>
@@ -67,7 +71,7 @@ There's a problem, however: nodes are in the dark on what exactly other nodes se
 A hash function such as SHA2 can be used to summarize the state of the ledger. In the left-hand side of the picture, a hash of the whole ledger is computed after each transaction. A hash sequence thus uniquely represents the ledger's evolution: 
 
 <div style="display: flex; justify-content: space-between;">
- <img src="other-pics/bitcoin/independent-hashing.png" alt="drawing" width="350" height="250"/>
+ <img src="other-pics/bitcoin/indepedent-hashing.png" alt="drawing" width="350" height="250"/>
  <img src="other-pics/bitcoin/chained-hashing.png" alt="drawing" width="350" height="250"/>
 </div>
 
