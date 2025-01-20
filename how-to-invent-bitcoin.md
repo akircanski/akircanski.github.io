@@ -2,9 +2,9 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the 80-ties, he dabbled in computers with some fluctuating amount of interest. This lasted for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he got sucked deep into the world of computing. 
+Some years ago, a friend told me the following story. During the 80-ties, he dabbled in computers with some fluctuating amount of interest. This lasted for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he permanently got sucked into the world of computing. 
 
-There's a another story related folks' dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, independently of the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
+There's a another story related to a young person's dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, while being fairly disconnected from the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
 
 ### Introduction
 
@@ -52,7 +52,7 @@ We can now visualize what we envisioned: the P2P network (on the left) and the s
  <img src="other-pics/bitcoin/wallet-tree.png" alt="drawing" width="350" height="250"/>
 </div>
 
-### 3. Simulating the process of gold mining
+### 3. Modeling the process of (physical) mining
 
 Note that in the wallet picture above, there's more than one root from which new digital gold emerges; these are instances where new digital gold was _mined_. Specifically, to simulate physical gold mining (G3), we introduce a special kind of transaction which doesn't reference a previous unspent output. Rather, it validates the `counter` solution for a hash puzzle such as:
 
@@ -139,4 +139,4 @@ Given that each block contains a solution to a proof of work puzzle, it is also 
 
 **Disclaimer**: this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and "in translation". I do believe that other solutions in the space now carry the torch of the original idea. 
 
-Footnotes:
+
