@@ -2,7 +2,7 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the 80-ties, he dabbled in computers with some fluctuating amount of interest. This lasted for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he permanently got sucked into the world of computing. 
+Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers with a fluctuating amount of interest. This lasted for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he permanently got sucked into the world of computing. 
 
 There's a another story related to a young person's dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, while being fairly disconnected from the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
 
