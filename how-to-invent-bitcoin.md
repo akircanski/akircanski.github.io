@@ -92,7 +92,7 @@ Previous steps were not unexpected engineering moves. The main problem is now in
 
 The problem is that an arbitrary number of possible competing histories can be created, as shown in the picture. If you're a node in the network and a _different history_ is presented to you, how do you decide if that's your history, or not?
 
-<p> <img src="other-pics/bitcoin/event-timelines.png" alt="drawing" width="350" height="250"/></p>
+<p align="center"> <img src="other-pics/bitcoin/event-timelines.png" alt="alternative histories"/></p>
 
 For example, such an alternative history may curiously lack a _certain_ transaction, which was already billed out in the real world. Therefore, switching between histories is dangerous; it can mean loss of huge amounts of funds and renders the system completely useless. Another variant of this attack includes broadcasting a double spend transaction to intentionally split the network. The network must be able to recover from such a split. 
 
