@@ -17,4 +17,8 @@ Blog posts:
 
 
 <br>
-Writing: <a href="./in-school-they-do-not-teach">In school, they do (not) teach</a> 
+Writing: 
+
+<p><a href="./in-school-they-do-not-teach">In school, they do (not) teach</a> </p>
+
+<p><a href="./how-to-invent-bitcoin">How to invent Bitcoin</a> </p>
