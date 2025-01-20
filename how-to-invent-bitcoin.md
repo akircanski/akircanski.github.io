@@ -4,7 +4,7 @@ title:  How to invent Bitcoin
 
 Some years ago, a friend told me the following story. During the 80-ties, he dabbled in computers with some fluctuating amount of interest. This lasted for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he got sucked deep into the world of computing. 
 
-There's a another story related to young folks dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, independently of the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
+There's a another story related folks' dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, independently of the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
 
 ### Introduction
 
@@ -131,12 +131,12 @@ Given that each block contains a solution to a proof of work puzzle, it is also 
 
 [^3]: This chained hashing scheme can be seen as a "unary tree" (as opposed to a binary tree) and a simplified variant of a [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree), where the number of child nodes is set to one. Merkle trees and  such concepts arise when we're given a black box hash function, we hash a bunch of data and we ask questions such as: (1) What is the cost of _proving_ that a subportion of the hashed data participates in the hash? (2) What is cost of _updating_ the hash if we're given some modifications to the underlying data? These  questions were tackled by Ralph Merkle in 1979, but we'll leave this topic for other explorations. 
 
-
-
-
 [1] _Bitcoin: A peer-to-peer electronic cash system_ https://bitcoin.org/bitcoin.pdf
+
 [2] _How to time-stamp a digital document_: Haber and Stornetta http://www.staroceans.org/e-book/Haber_Stornetta.pdf
+
 [3] _Bit gold_, Nick Szabo https://nakamotoinstitute.org/authors/nick-szabo/
 
 **Disclaimer**: this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and "in translation". I do believe that other solutions in the space now carry the torch of the original idea. 
 
+Footnotes:
