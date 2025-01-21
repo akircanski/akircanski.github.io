@@ -116,7 +116,7 @@ This makes forging an alternative history difficult. If I'm an attacker trying t
 
 Note that the difficulty of the PoW puzzle dynamically increases or decreases, based on the participation in the mining process. ToIt's shown in section 11 of the Bitcoin paper that an attacker attempting to compete with the main network's fork drops exponentially. 
 
-We end up with the following: **the (honest) collective has a stronger say than a resourceful attacker**. Alternatively put, Bitcoin solves the anonymous voting problem, where what's being voted on contains a specific structure (it is not an independent set of events, as it would be in the case of e.g. a series of independent referendums). 
+We end up with the following: **the (honest) collective has a stronger say than a resourceful attacker**. Alternatively put, Bitcoin solves the anonymous voting problem, where what's being voted on contains a specific structure. The structure here is the chain and not an independent set of events, as it would be in the case of e.g. a series of independent referendums. 
 
 Finally, recall that we started by simulating (physical) gold mining with solving proof of work puzzles: if you're to create new gold, you have to mine. However, we've discovered that proof of work can be used for _an entirely different purpose_; and that is to seal a historical event line. We may then combine the two usages of proof of work:
 
