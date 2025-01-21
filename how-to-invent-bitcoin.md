@@ -6,7 +6,7 @@ Some years ago, a friend told me the following story. During the 80-ties and the
 
 If there's something _general_ in the picture of a computer connected to a telephone which triggered such a reaction, then the same matter is present in the idea that a short blob of bytes in one's personal computer can carry monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside some device. You could imagine a young soul being drawn into hacking or computer science just with that. 
 
-As it's known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
+As it's known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago, in which he realized that **this thing is actually possible** or **this may in fact work**. 
 
 It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
 
