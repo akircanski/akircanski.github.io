@@ -2,19 +2,17 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers with a fluctuating amount of interest. This lasted for a while, his enthusiasm for computers went up and down, but lingered. However, at some point in his early teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and he permanently got sucked into the world of computing. 
+Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers. He was a kid at the time and his enthusiasm for computers fluctuated up and down. However, at some point in his early teens, he saw a picture of _a computer connected to a telephone_ (in a local computer-related journal). That event triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
 
-There's a another story related to a young person's dreams about computers. It's that a simple blob of bytes, residing solely in one's personal computer, has real world value, while being fairly disconnected from the real world. It's a sort of thing where bytes on one's screen draw out into a different dimension; they're exclusively inside a (personal) computer and yet magically extend into reality. 
+If there's something general in the picture of a computer connected to a telephone, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can carry value. This is in fact a fullfilment of a dream - bytes that extend into the real world, even though exist exclusively inside a computer. 
 
-### Introduction
-
-As we know, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
+As we know, the key event for that was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
 
 It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
 
 ### 0. Physical gold: the spec
 
-Consider the problem of modeling _physical gold in code_. We'd like to have information that behaves like gold and exist only in the digital realm. Note that this appears impossible at a glance; physical gold is a tough nut to model. It's not _at all_ like a "typical" programming project, such as creating a ticketing system for tasks that employees ought to finish at some company, or a weather application that picks up data from a measuring station.
+Consider the problem of modeling physical gold in code, see the _Bit Gold_ [text](https://nakamotoinstitute.org/authors/nick-szabo/) from 2005 by Nick Szabo. We'd like to have information that behaves like gold and exist only in the digital realm. Note that this appears impossible at a glance; physical gold is a tough nut to model. It's not _at all_ like a "typical" programming project, such as creating a ticketing system for tasks that employees ought to finish at some company, or a weather application that picks up data from a measuring station.
 
 Modeling physical gold is thorny because of the following properties:
 
