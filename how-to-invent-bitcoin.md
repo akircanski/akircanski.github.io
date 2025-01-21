@@ -2,9 +2,9 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his early teens, he saw a picture of _a computer connected to a telephone_ (in a local, computer-related journal). That event triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
+Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his early teens, he saw a picture of _a computer connected to a telephone_ (in a local journal). That event triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
 
-If there's something _general_ in the picture of a computer connected to a telephone which triggered such a reaction, then the same matter is present in the idea that a short blob of bytes in one's personal computer can carry monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a computer. You could imagine a young soul being drawn into hacking or computer science just with that. 
+If there's something _general_ in the picture of a computer connected to a telephone which triggered such a reaction, then the same matter is present in the idea that a short blob of bytes in one's personal computer can carry monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside some device. You could imagine a young soul being drawn into hacking or computer science just with that. 
 
 As it's known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
 
@@ -33,7 +33,7 @@ Let's start with a simplest thing possible. Satisfy (G3) by having digital gold 
 
 What do you do with solutions that represent digital gold? Send them over email or chat apps to exchange them for goods? That wouldn't work, as such digital gold could be arbitrarily copied and re-spent once it's received. There's no notion of who owns what; and thus we arrive to the notion of a non-tamperable notebook of who owns what: a [_ledger_](https://en.wikipedia.org/wiki/Ledger). 
 
-### 2. What would a trustless ledger look like 
+### 2. What would a trustless ledger look like, if it existed
 
 The digital ledger records who owns what, by way of recording all transfers that ever took place in the past; it's an ever growing database. The ledger must not be stored and maintained by a single entity, as that entity could simply delete the ledger, ending the story right there (and violating G1, G2 and G3). 
 
