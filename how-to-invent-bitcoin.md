@@ -2,11 +2,11 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers. He was a kid at the time and his enthusiasm for computers fluctuated up and down. However, at some point in his early teens, he saw a picture of _a computer connected to a telephone_ (in a local computer-related journal). That event triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
+Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his early teens, he saw a picture of _a computer connected to a telephone_ (in a local, computer-related journal). That event triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
 
-If there's something general in the picture of a computer connected to a telephone, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can carry value. This is in fact a fullfilment of a dream - bytes that extend into the real world, even though exist exclusively inside a computer. 
+If there's something _general_ in the picture of a computer connected to a telephone which triggered such a reaction, then the same matter is present in the idea that a short blob of bytes in one's personal computer can carry monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a computer. You could imagine a young soul being drawn into hacking or computer science just with that. 
 
-As we know, the key event for that was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
+As it's known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago (it is now 2025), in which he realized that **this thing is actually possible** or **this may in fact work**. 
 
 It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
 
@@ -29,11 +29,11 @@ To model the latter two properties, it's necessary to use further mathematical w
 
 ### 1. Why not just send some hash preimages over email
 
-Let's start with a simplest thing possible. Satisfy (G3) by having digital gold be represented as a solution to a hard-to-solve equation. The equation is public, there are no shortcuts; it's not hard to find such a puzzle, take for example inverting a [hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). This is called [Proof of Work](https://en.wikipedia.org/wiki/Proof_of_work)[^1].
+Let's start with a simplest thing possible. Satisfy (G3) by having digital gold be represented as a solution to a hard-to-solve equation. The equation is public, there are no shortcuts; it's not hard to find such a puzzle, take for example inverting a [hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). This is called [Proof of Work](https://en.wikipedia.org/wiki/Proof_of_work)[^1] and is a widely known concept nowdays. 
 
 What do you do with solutions that represent digital gold? Send them over email or chat apps to exchange them for goods? That wouldn't work, as such digital gold could be arbitrarily copied and re-spent once it's received. There's no notion of who owns what; and thus we arrive to the notion of a non-tamperable notebook of who owns what: a [_ledger_](https://en.wikipedia.org/wiki/Ledger). 
 
-### 2. A trustless ledger
+### 2. What would a trustless ledger look like 
 
 The digital ledger records who owns what, by way of recording all transfers that ever took place in the past; it's an ever growing database. The ledger must not be stored and maintained by a single entity, as that entity could simply delete the ledger, ending the story right there (and violating G1, G2 and G3). 
 
@@ -50,7 +50,7 @@ We can now visualize what we envisioned: the P2P network (on the left) and the s
  <img src="other-pics/bitcoin/wallet-tree.png" alt="drawing" width="350" height="250"/>
 </div>
 
-### 3. Modeling the process of (physical) mining
+### 3. How to model the process of (physical) mining
 
 Note that in the wallet picture above, there's more than one root from which new digital gold emerges; these are instances where new digital gold was _mined_. Specifically, to simulate physical gold mining (G3), we introduce a special kind of transaction which doesn't reference a previous unspent output. Rather, it validates the `counter` solution for a hash puzzle such as:
 
