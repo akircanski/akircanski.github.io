@@ -4,7 +4,7 @@ title:  How to invent Bitcoin
 
 Some years ago, a friend told me the following story. During the eighties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his teens, he saw a picture of _a computer connected to a telephone_ (in a local journal). That triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
 
-If there's something _general_ in the picture of a computer connected to a telephone which had the potential to trigger such a reaction in a young person's mind, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can have monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a personal device. People will be attracted, only because of that and independently of any especially witty use-cases, stories of better future or admittedly high abuse potential of this technology. 
+If there's something _general_ in the picture of a computer connected to a telephone which had the potential to trigger such a reaction in a young person's mind, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can have monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a personal device. People will be attracted, only because of that and independently of any especially witty use-cases, stories of better future or, please no, high abuse potential of this technology. 
 
 As is known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto) published the Bitcoin [paper](https://bitcoin.org/bitcoin.pdf). Satoshi did not reveal his identity up to this point. We can, however, guess that at some point before that Satoshi had a moment, in which he realized that **this thing is actually possible** or **this may in fact work**. It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
 
@@ -94,7 +94,7 @@ Observe that here the problem is _not_ to _decide which historical fork is the r
 
 Let's explore some ways how malicious history alteration could be mitigated. 
 
-### 6. Failing to solve the problem
+### 6. How not to solve the problem
 
 Attempts to defend against variants of the double-spend attack are below. 
 
