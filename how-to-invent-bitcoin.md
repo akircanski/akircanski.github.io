@@ -8,7 +8,7 @@ If there's something _general_ in the picture of a computer connected to a telep
 
 As is known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that at some point before that Satoshi had a moment, in which he realized that **this thing is actually possible** or **this may in fact work**. It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
 
-**Note**: this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and am fairly tired of various bankers proclaiming that Bitcoin is digital gold. I do believe that other solutions in the space now carry the torch of the original idea. 
+**Note**: _this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and am fairly tired of various bankers proclaiming that Bitcoin is digital gold. I do believe that other solutions in the space now carry the torch of the original idea_. 
 
 ### 0. Physical gold: the spec
 
