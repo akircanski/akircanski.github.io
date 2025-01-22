@@ -1,5 +1,6 @@
 /**
  * Site header
+ * aleks changelog: increased font size in .post-content by 6 points. setting 'margin' didn't seem to work
  */
 
 hr{
@@ -227,7 +228,6 @@ hr{
 }
 
 .post-content {
-    margin: 1px;
     margin-bottom: $spacing-unit;
 
     h2 {
