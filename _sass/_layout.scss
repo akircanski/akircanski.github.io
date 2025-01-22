@@ -1,6 +1,5 @@
 /**
  * Site header
- * aleks changelog: increased font size in .post-content by 6 points. setting 'margin' didn't seem to work
  */
 
 hr{
@@ -234,7 +233,7 @@ hr{
         font-size: 36px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 36px;
         }
     }
 
@@ -242,7 +241,7 @@ hr{
         font-size: 30px;
 
         @include media-query($on-laptop) {
-            font-size: 22px;
+            font-size: 30px;
         }
     }
 
@@ -250,7 +249,7 @@ hr{
         font-size: 24px;
 
         @include media-query($on-laptop) {
-            font-size: 18px;
+            font-size: 24px;
         }
     }
 }
