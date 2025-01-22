@@ -116,14 +116,12 @@ This makes forging an alternative history difficult. If I'm an attacker trying t
 
 Note that the difficulty of the PoW puzzle dynamically increases or decreases, based on the participation in the mining process.It's shown in section 11 of the Bitcoin paper that an attacker attempting to compete with the main network's fork drops exponentially. 
 
-We end up with the following: **the (honest) collective has a stronger say than a resourceful attacker**. Alternatively put, Bitcoin solves a sort of anonymous voting problem, where what's being voted on contains a specific structure. The structure here is the chain and not an independent set of events, as it would be in the case of e.g. a series of independent referendums. 
-
-Finally, recall that we started by simulating (physical) gold mining with solving proof of work puzzles: if you're to create new gold, you mine. However, we've discovered that proof of work can be used for an entirely different purpose; and that is to seal a historical event line. We may then combine the two usages of proof of work:
+Finally, recall that we started by simulating (physical) gold mining with solving proof of work puzzles: if you're to create new gold, you mine. However, we've discovered that proof of work can be used for an entirely different purpose; and that is to seal a historical event line. We may then reuse the proof of work computation for two purposes:
 
 * To secure the event line on the ledger and
 * To emulate the process of gold mining
 
-Given that each block contains a solution to a proof of work puzzle, it is also made to mine new digital gold. 
+We ended up with the following: **the (honest) collective has a stronger say than a resourceful attacker** on a sort of **anonymous voting problem**, where what's being voted on **contains a specific structure**. The structure here is the chain and **not an independent set of events**, as it would be in the case of e.g. a series of independent referendums. Another difference from independent referendum voting is that "voting" in Bitcoin is **continually open**; this is to achieve flexibility and prevent permanent network forks. 
 
 [^1]: Proof of work can be thought of "soft" or "flexible" cryptography. In "regular" cryptography, access is gated with an unattainable number of operations such as `2^128`, in order to e.g. forge a cryptographic signature. Therefore, "regular" cryptography is a sort of "all or nothing" access cryptography, which idealizes what we have in the real world. In the real world, if someone _really_ wants to rob your house, they _could_ do so by paying a potentially high price and with lots of preparation. In the digital world, this could be modeled faithfully, by using a proof of work function instead of a "all or nothing" function. Access is gained with a substantial, but attainable number of operations, such as `2^24` to `2^72`. It turns out that, in some situations, solving the problem simply necessitates this "flexible" type of cryptography and not traditional "all or nothing" cryptography. We've already seen an example of that when we mentioned simulating mining of gold (together with the crazy idea of sending such solutions over chat apps or email). Anyone _can_ mine gold and it's _attainable in practice_. Proof of work is simply the right key for that keyhole. 
 
