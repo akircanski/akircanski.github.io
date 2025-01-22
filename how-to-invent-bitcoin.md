@@ -2,13 +2,15 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the 80-ties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his early teens, he saw a picture of _a computer connected to a telephone_ (in a local journal). That event triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
+Some years ago, a friend told me the following story. During the eighties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his teens, he saw a picture of _a computer connected to a telephone_ (in a local journal). That triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
 
-If there's something _general_ in the picture of a computer connected to a telephone which triggered such a reaction, then the same matter is present in the idea that a short blob of bytes in one's personal computer can carry monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside some device. You could imagine a young soul being drawn into hacking or computer science just with that. 
+If there's something _general_ in the picture of a computer connected to a telephone which triggered such a reaction, then the same matter is present in the idea that a short blob of bytes in one's personal computer can have monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside some device. You could imagine a young soul being drawn into hacking or computer science just with that. 
 
-As it's known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment almost 20 years ago, in which he realized that **this thing is actually possible** or **this may in fact work**. 
+As it's known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure Satoshi Nakamoto published the Bitcoin paper. Satoshi did not reveal his identity up to this point. We can, however, guess that Satoshi possibly had a moment before that, in which he realized that **this thing is actually possible** or **this may in fact work**. 
 
 It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
+
+**Note**: this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and "in translation". I do believe that other solutions in the space now carry the torch of the original idea. 
 
 ### 0. Physical gold: the spec
 
@@ -73,13 +75,13 @@ A hash function such as SHA2 can be used to summarize the state of the ledger. I
  <img src="other-pics/bitcoin/chained-hashing.png" alt="drawing" width="350" height="250"/>
 </div>
 
-Note that on the left, transaction processing means repeated re-hashing of the whole ledger. To optimize, recursive or _chained_ hashing is introduced[^2] (picture on the right). Now, nodes only hash the previous ledger hash and the new transaction content, as opposed to constantly re-hashing the whole ledger, which is much better[^3].
+Note that on the left, transaction processing means repeated re-hashing of the whole ledger. To optimize, recursive or _chained_ hashing is introduced[^2] (picture on the right). Now, nodes only hash the previous ledger hash and the new transaction content, as opposed to constantly re-hashing the whole ledger, which is better for efficiency[^3] and for reasons we'll see below. 
 
-Finally, to avoid ambiguity in transaction processing, we can also imagine for now that previous ledger hash is included inside each transaction. Also, each node will run a heuristic to ensure they're in sync with other nodes. Specifically, nodes occasionally exchange the last `n` hashes with neighbouring nodes and then fetch or contribute known transactions to establish the collective ledger.
+Finally, to avoid ambiguity in transaction processing, we can also imagine for now that previous ledger hash is included inside each transaction. Also, each node will run a heuristic to ensure they're in sync with other nodes. Specifically, nodes occasionally exchange the last `n` hashes with neighbouring nodes and then fetch or contribute known transactions to establish the collective ledger. 
 
 ### 5. The problem
 
-Previous steps were not unexpected engineering moves. The main problem is now in front of us. Recall that we have a P2P network that maintains a common chain of transactions. The ledger's progression over time represented as a sequences of hashes.
+Arguably, previous steps were **expected** engineering moves. The main problem is now in front of us. Recall that we have a P2P network that maintains a common chain of transactions. The ledger's progression over time represented as a sequences of hashes.
 
 The problem is that an arbitrary number of possible competing histories can be created, as shown in the picture. If you're a node in the network and a _different history_ is presented to you, how do you decide if that's your history, or not?
 
@@ -87,7 +89,7 @@ The problem is that an arbitrary number of possible competing histories can be c
 
 For example, such an alternative history may curiously lack a _certain_ transaction, which was already billed out in the real world. Therefore, switching between histories is dangerous; it can mean loss of huge amounts of funds and renders the system completely useless. Another variant of this attack includes broadcasting a double spend transaction to intentionally split the network. The network must be able to recover from such a split. 
 
-Observe that here the probelm is _not_ to _decide which historical fork is the right one_, as all forks are equally right. All of the transactions in all forks were signed by correct participants and therefore they're all correct. A criterion for accepting a historical fork is needed, such that these two propreties are satisfied:
+Observe that here the problem is _not_ to _decide which historical fork is the right one_, as all forks are equally right. All of the transactions in all forks were signed by correct participants and therefore they're all correct. A criterion for accepting a historical fork is needed, such that these two propreties are satisfied:
 
 * _Security_: it is not possible to double-spend. 
 * _Flexibility_: nodes can recover from network splits.
@@ -98,9 +100,9 @@ Let's explore some ways how malicious history alteration could be mitigated.
 
 Attempts to defend against variants of the double-spend attack are below. 
 
-1. Length-based cutoff: The longest chain is considered as the authoritative chain. In such a case, an attacker can artifically extend the chain to have the network swap back and forth between histories, resulting in a double-spend attack.
-2. Seal-based cutoff: The longest chain is authoritative, but a node will switch to a different chain only if the change doesn't go deeper than `n` (e.g. 50) hashes. Users will consider transactions _finalized_ only if they're buried underneath more than `n` hashes. With such a rigid rule, there's danger of a permanent network split. At each point, an attacker can present a competing chain forking off the existing chain about `n` hashes away, resulting in one part of the network accepting the first chain and the other the second chain. Now a double-spend can be processed _twice_ by two portions of the (split) network.
-3. Rule-based cutoff: Attempt to introduce some rule (independent of the ongoing state) that'll determine which fork is authoritiative. Say, we'll choose the fork whose hashes are a minimal in terms of alphabetical ordering. The problem is - an attacker can simply mine for favorable hashes and overtake any fork and thus double-spend. 
+1. **Length-based cutoff**: The longest chain is considered as the authoritative chain. In such a case, an attacker can artifically extend the chain to have the network swap back and forth between histories, resulting in a double-spend attack.
+2. **Seal-based cutoff**: The longest chain is authoritative, but a node will switch to a different chain only if the change doesn't go deeper than `n` (e.g. 50) hashes. Users will consider transactions _finalized_ only if they're buried underneath more than `n` hashes. With such a rigid rule, there's danger of a permanent network split. At each point, an attacker can present a competing chain forking off the existing chain about `n` hashes away, resulting in one part of the network accepting the first chain and the other the second chain. Now a double-spend can be processed _twice_ by two portions of the (split) network.
+3. **Rule-based cutoff**: Attempt to introduce some rule (independent of the ongoing state) that'll determine which fork is authoritiative. Say, we'll choose the fork whose hashes are a minimal in terms of alphabetical ordering. The problem is - an attacker can simply mine for favorable hashes and overtake any fork and thus double-spend. 
 
 None of the attempted solutions works, and it's unclear how to proceed. 
 
@@ -114,13 +116,13 @@ Satoshi's idea is to use the concept of "Proof of Work", which was an esoteric c
 
 This makes forging an alternative history difficult. If I'm an attacker trying to swap out the current history with my own sequence of events, I'll have to out-mine the network on over more than `n` blocks, before I get it to accept my chain. Thus, the _security_ property is satisfied. As for chain splits (the _flexibility_ property), if more than one competing chain exists, network nodes automatically choose the one with the most cumulative work. This makes any splits non-permanent, as the competition makes a single chain prevail.
 
-Note that the difficulty of the PoW puzzle dynamically increases or decreases, based on the participation in the mining process. ToIt's shown in section 11 of the Bitcoin paper that an attacker attempting to compete with the main network's fork drops exponentially. 
+Note that the difficulty of the PoW puzzle dynamically increases or decreases, based on the participation in the mining process.It's shown in section 11 of the Bitcoin paper that an attacker attempting to compete with the main network's fork drops exponentially. 
 
-We end up with the following: **the (honest) collective has a stronger say than a resourceful attacker**. Alternatively put, Bitcoin solves the anonymous voting problem, where what's being voted on contains a specific structure. The structure here is the chain and not an independent set of events, as it would be in the case of e.g. a series of independent referendums. 
+We end up with the following: **the (honest) collective has a stronger say than a resourceful attacker**. Alternatively put, Bitcoin solves a sort of anonymous voting problem, where what's being voted on contains a specific structure. The structure here is the chain and not an independent set of events, as it would be in the case of e.g. a series of independent referendums. 
 
-Finally, recall that we started by simulating (physical) gold mining with solving proof of work puzzles: if you're to create new gold, you have to mine. However, we've discovered that proof of work can be used for _an entirely different purpose_; and that is to seal a historical event line. We may then combine the two usages of proof of work:
+Finally, recall that we started by simulating (physical) gold mining with solving proof of work puzzles: if you're to create new gold, you mine. However, we've discovered that proof of work can be used for an entirely different purpose; and that is to seal a historical event line. We may then combine the two usages of proof of work:
 
-* To secure the event line on the ledger and 
+* To secure the event line on the ledger and
 * To emulate the process of gold mining
 
 Given that each block contains a solution to a proof of work puzzle, it is also made to mine new digital gold. 
@@ -137,6 +139,6 @@ Given that each block contains a solution to a proof of work puzzle, it is also 
 
 [3] _Bit gold_, Nick Szabo https://nakamotoinstitute.org/authors/nick-szabo/
 
-**Disclaimer**: this blog post doesn't endorse or suggest buying Bitcoin. On the contrary, I vaguely believe most of the original intent behind Bitcoin was lost over time and "in translation". I do believe that other solutions in the space now carry the torch of the original idea. 
+
 
 
