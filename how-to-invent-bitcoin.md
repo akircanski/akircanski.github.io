@@ -62,7 +62,7 @@ The `counter` value is such that there is `n`  leading zeros in the output of th
 
 This looks like a promising direction; there's nothing necessarily problematic that we're encountering yet. The mining process could be modulated in sponge-like manner; its difficulty can increase and decrease based on some function. Some transactions mine new gold, some send it off elsewhere. 
 
-### 4. Turn the light on, use a hash chain 
+### 4. How to create history
 
 There's a problem, however: nodes are in the dark on what exactly other nodes see as _their_ ledger. A node really has no way of knowing what other nodes see as their valid set of transactions. If a node goes offline, it doesn't know where to catch up from, what to ask for or what tranasctions should they include in their ledger.
 
