@@ -2,9 +2,9 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the eighties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his teens, he saw a picture of _a computer connected to a telephone_ (in a local journal). That triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
+Some years ago, a friend told me the following story. During the eighties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his teens, in a local journal, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind and as a result, he got permanently sucked into the world of computing. 
 
-If there's something _general_ in the picture of a computer connected to a telephone which had the potential to trigger such a reaction in a young person's mind, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can have monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a personal device. People will be attracted, only because of that and independently of any especially witty use-cases, stories of better future or, please no, high abuse potential of this technology. 
+If there's something _general_ in the picture of a computer connected to a telephone which had the potential to trigger such a reaction in a young person's mind, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can have monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a personal device. People will be attracted, only because of that and independently of any especially witty use-cases, stories of better future or, please no, abuse potential of this technology. 
 
 As is known, the key event was the invention of Bitcoin somewhere before 2008 when a mysterious figure [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto) published the Bitcoin [paper](https://bitcoin.org/bitcoin.pdf). Satoshi did not reveal his identity up to this point. We can, however, guess that at some point before that Satoshi had a moment, in which he realized that **this thing is actually possible** or **this may in fact work**. It was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. In this blog post, we'll attempt to recreate the process of discovering Bitcoin and note what was expected and what was unexpected in this effort. 
 
@@ -29,9 +29,9 @@ To model the latter two properties, it's necessary to use further mathematical w
 
 ### 1. Why not just send some hash preimages over email
 
-Let's start with a simplest thing possible. Satisfy (G3) by having digital gold be represented as a solution to a hard-to-solve equation. The equation is public, there are no shortcuts; it's not hard to find such a puzzle, take for example inverting a [hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). This is called [Proof of Work](https://en.wikipedia.org/wiki/Proof_of_work) and is a widely known concept nowdays. See the footnote[^1] for comparison between traditional or "all or nothing" cryptography and Proof of Work. 
+Let's start with a simplest thing possible. Satisfy (G3) by having digital gold be represented as a solution to a hard-to-solve equation. The idea is to mimic the process of physical gold mining using a mathematical equation. The equation is public, there are no shortcuts; it's not hard to find such a puzzle, take for example inverting a [hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). This is called [Proof of Work](https://en.wikipedia.org/wiki/Proof_of_work) and is a widely known concept nowdays. See the footnote[^1] for comparison between traditional or "all or nothing" cryptography and Proof of Work. 
 
-What do you do with solutions that represent digital gold? Send them over email or chat apps to exchange them for goods? That wouldn't work, as such digital gold could be arbitrarily copied and re-spent once it's received. There's no notion of who owns what; and thus we arrive to the notion of a non-tamperable notebook of who owns what: a [_ledger_](https://en.wikipedia.org/wiki/Ledger). 
+What do you do with solutions of that equation that represent digital gold? Send them over email or chat apps to exchange them for goods? That wouldn't work, as such digital gold could be arbitrarily copied and re-spent once it's received. There's no notion of who owns what; and thus we arrive to the notion of a non-tamperable notebook of who owns what: a [_ledger_](https://en.wikipedia.org/wiki/Ledger). 
 
 ### 2. How to make a ledger trustless
 
@@ -43,7 +43,7 @@ Participants ougthn't be able to appropriate other users' funds; a way to author
 
 Transactions are then signed messages that refer to existing entries on the ledger (so called _unspent outputs_ or [UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) in Bitcoin), spending the totality of a previous ledger entry and potentially sending it off to multiple new public keys. Transactions are broadcast on the network and in order to be in sync with the changes on the network, on each transaction, participants update their view of the ledger. 
 
-We can now visualize what we envisioned: the P2P network (on the left) and the state of the ledger (on the right). Nodes represent addresses (signature public keys) and edges represent transfers. This visualization does not capture entity ownership; in practice, many public keys can be held by a single entity. In fact, we can imagine that public keys are never reused, therefore the concept of ownership is completely hidden in the picture.
+We can now visualize what we envisioned: the P2P network (on the left) and the state of the ledger (on the right). Nodes on the right-hand picture represent addresses (signature public keys) and edges represent transfers. This visualization does not capture entity ownership; in practice, many public keys can be held by a single entity. In fact, we can imagine that public keys are never reused, which is completely fine.
 
 <div style="display: flex; justify-content: space-between;">
  <img src="other-pics/bitcoin/p2p-network.png" alt="drawing" width="350" height="250"/>
@@ -66,7 +66,7 @@ This looks like a promising direction; there's nothing necessarily problematic t
 
 There's a problem, however: nodes are in the dark on what exactly other nodes see as _their_ ledger. A node really has no way of knowing what other nodes see as their valid set of transactions. If a node goes offline, it doesn't know where to catch up from, what to ask for or what tranasctions should they include in their ledger.
 
-A hash function such as SHA2 can be used to summarize the state of the ledger. In the left-hand side of the picture, a hash of the whole ledger is computed after each transaction. A hash sequence thus uniquely represents the ledger's evolution: 
+A hash function which is a mathematical emulation of a real-world fingerprint, such as SHA2 can be used to summarize the state of the ledger. In the left-hand side of the picture, a hash of the whole ledger is computed after each transaction. A hash sequence thus uniquely represents the ledger's evolution: 
 
 <div style="display: flex; justify-content: space-between;">
  <img src="other-pics/bitcoin/indepedent-hashing.png" alt="drawing" width="350" height="250"/>
@@ -81,15 +81,15 @@ Finally, to avoid ambiguity in transaction processing, we can also imagine for n
 
 Arguably, previous steps were **expected** engineering moves. The main problem is now in front of us. Recall that we have a P2P network that maintains a common chain of transactions. The ledger's progression over time represented as a sequences of hashes.
 
-The problem is that an arbitrary number of possible competing histories can be created, as shown in the picture. If you're a node in the network and a _different history_ is presented to you, how do you decide if that's your history, or not?
+The problem is that an arbitrary number of possible competing histories can be created, as shown in the picture. If you're a node in the network and a _different history_ is presented to you, how do you decide if that's your history, or not? Note that this essentially voting problem doesn't have much to do with what we started with - physical gold's behavior, yet it emerges here. 
 
 <p align="center"> <img src="other-pics/bitcoin/event-timelines.png" alt="alternative histories"/></p>
 
-For example, such an alternative history may curiously lack a _certain_ transaction, which was already billed out in the real world. Therefore, switching between histories is dangerous; it can mean loss of huge amounts of funds and renders the system completely useless. Another variant of this attack includes broadcasting a double spend transaction to intentionally split the network. The network must be able to recover from such a split. 
+For example, such an alternative history may curiously lack a _certain_ transaction, which was already billed out in the real world. Therefore, switching between histories is dangerous; it can mean loss of huge amounts of funds and renders the system completely useless. Another variant of this attack includes broadcasting a double spend transaction to intentionally split the network; half of the network believes in one history, the other half in another history. The network must be able to recover from such a split. 
 
 Observe that here the problem is _not_ to _decide which historical fork is the right one_, as all forks are equally right. All of the transactions in all forks were signed by correct participants and therefore they're all correct. A criterion for accepting a historical fork is needed, such that these two propreties are satisfied:
 
-* _Security_: it is not possible to double-spend. 
+* _Security_: it's not possible to double-spend. 
 * _Flexibility_: nodes can recover from network splits.
 
 Let's explore some ways how malicious history alteration could be mitigated. 
@@ -121,7 +121,7 @@ Finally, recall that we started by simulating (physical) gold mining with solvin
 * To secure the event line on the ledger and
 * To emulate the process of gold mining
 
-We ended up with the following: **the (honest) collective has a stronger say than a resourceful attacker** on a sort of **anonymous voting problem**, where what's being voted on **contains a specific structure**. The structure here is the chain and **not an independent set of events**, as it would be in the case of e.g. a series of independent referendums. Another difference from independent referendum voting is that "voting" in Bitcoin is **continually open**; this is to achieve flexibility and prevent permanent network forks. 
+We ended up with the following: **the (honest) collective has a stronger say than a resourceful attacker** on a sort of **anonymous voting problem**, where what's being voted on **contains a specific structure**. The structure here is the a **cryptographically chained sequence** and **not an independent set of events**, as it would be in the case of e.g. a series of independent referendums. Another difference from independent referendum voting is that "voting" in Bitcoin is **continually open**; this is to achieve flexibility and prevent permanent network forks. 
 
 [^1]: Proof of work can be thought of "soft" or "flexible" cryptography. In "regular" cryptography, access is gated with an unattainable number of operations such as `2^128`, in order to e.g. forge a cryptographic signature. Therefore, "regular" cryptography is a sort of "all or nothing" access cryptography, which idealizes what we have in the real world. In the real world, if someone _really_ wants to rob your house, they _could_ do so by paying a potentially high price and with lots of preparation. In the digital world, this could be modeled faithfully, by using a proof of work function instead of a "all or nothing" function. Access is gained with a substantial, but attainable number of operations, such as `2^24` to `2^72`. It turns out that, in some situations, solving the problem simply necessitates this "flexible" type of cryptography and not traditional "all or nothing" cryptography. We've already seen an example of that when we mentioned simulating mining of gold (together with the crazy idea of sending such solutions over chat apps or email). Anyone _can_ mine gold and it's _attainable in practice_. Proof of work is simply the right key for that keyhole. 
 
