@@ -2,7 +2,7 @@
 title:  How to invent Bitcoin
 ---
 
-Some years ago, a friend told me the following story. During the eighties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his teens, on thelocal journal's frontpage, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind, strated off curiousity on how to use modems and he never looked back. 
+Some years ago, a friend told me the following story. During the eighties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his teens, on a local journal's frontpage, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind, strated off curiousity on how to use modems and he never looked back. 
 
 If there's something _general_ in the picture of a computer connected to a telephone which had the potential to trigger such a reaction in a young person's mind, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can have monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a personal device. People will be attracted, only because of that and independently of any use-cases, stories of better future or, please no, abuse potential of this technology. 
 
