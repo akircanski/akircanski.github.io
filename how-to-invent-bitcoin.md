@@ -4,7 +4,7 @@ title:  How to invent Bitcoin
 
 The Bitcoin [paper](https://bitcoin.org/bitcoin.pdf)  was published in 2008 by a mysterious figure [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto). Satoshi's identity remains unknown and is the source of endless speculation, most of which, frankly, is not that interesting and certainly not the topic of this text. 
 
-It's reasonable to assume that some time before 2008 (perhaps in 2005 or 2006?) Satoshi had a moment, in which he realized that **this thing is actually possible** or **this may in fact work**. Specifically, it was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. 
+It's reasonable to assume that some time before 2008 (perhaps in 2005 or 2006?) Satoshi had a moment, in which he realized that **this thing is actually possible** or **this may in fact work**. Specifically, it was an idea on how to resolve a specific problem that arises when you attempt to model the behavior of _physical gold_ in the digital world. Even though physical gold doesn't deal with history in any way, the key problem that arises is around getting a bunch of unrelated parties to agree on what's considered to be valid history. 
 
 In this blog post, I'll attempt to recreate the process of discovering Bitcoin and pinpoint that moment that Satoshi had. For some additional context on why electronic cash is interesting, check the first footnote[^0]. 
 
