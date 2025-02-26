@@ -75,7 +75,9 @@ A hash function which is a mathematical emulation of a real-world fingerprint, s
 
 Note that on the left, transaction processing means repeated re-hashing of the whole ledger. To optimize, recursive or _chained_ hashing is introduced[^2] (picture on the right). Now, nodes only hash the previous ledger hash and the new transaction content, as opposed to constantly re-hashing the whole ledger, which is better for efficiency[^3] and for reasons we'll see below. 
 
-Finally, to avoid ambiguity in transaction processing, we can also imagine for now that previous ledger hash is included inside each transaction. Also, each node will run a heuristic to ensure they're in sync with other nodes. Specifically, nodes occasionally exchange the last `n` hashes with neighbouring nodes and then fetch or contribute known transactions to establish the collective ledger. 
+Another consequence of the right hand design is that history is now "hardened" in that sense that you can't swap out a block with another block. If you were to change a block in the chained structure, you can do so, but you'll end up modifying all the subsequent hashes as well. 
+
+Also: to avoid ambiguity in transaction processing, we can also imagine for now that previous ledger hash is included inside each transaction. Each node will run a heuristic to ensure they're in sync with other nodes. Specifically, nodes occasionally exchange the last `n` hashes with neighbouring nodes and then fetch or contribute known transactions to establish the collective ledger. 
 
 ### 5. The problem
 
