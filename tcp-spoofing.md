@@ -1,5 +1,5 @@
 ---
-title: A security control that was - good enough
+title: A security control that was good enough
 ---
 
 Some security controls are more straightforward than others. The straightforward controls are those that are backed by direct and abundant trust assumptions. For example: server-side validation of JWT tokens. The server trusts a certain public key that the parties agreed on (direct trust assumption) and validates signatures according to that key.

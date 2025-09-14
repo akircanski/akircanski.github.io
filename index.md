@@ -24,4 +24,4 @@ Writing
 
 <a href="./how-to-invent-bitcoin">How to invent Bitcoin</a> 
 
-<a href="./tcp-spoofing">A security control that was - good enough</a>
+<a href="./tcp-spoofing">A security control that was good enough</a>
