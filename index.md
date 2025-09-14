@@ -16,9 +16,12 @@ Blog posts
 {% endfor %}
 </ul> 
 
+
 <br>
 Writing
 
-<a href="./in-school-they-do-not-teach">In school, they do (not) teach</a> </p>
+<a href="./in-school-they-do-not-teach">In school, they do (not) teach</a> 
 
 <a href="./how-to-invent-bitcoin">How to invent Bitcoin</a> 
+
+<a href="./tcp-spoofing">TCP spoofing mitigation: a midway security control</a>
