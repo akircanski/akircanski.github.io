@@ -6,9 +6,7 @@ Some security controls are more straightforward than others. The straightforward
 
 Some other security controls are not straightforward at all. The trust assumptions they operate with are scarce and unfriendly. For example, Bitcoin: it was in fact the very idea of Bitcoin to remove the direct trust assumption - a central server that's in charge of token issuance and transaction validity. In a way, Bitcoin managed to build strong security out of nothing. 
 
-In this blog post, we look at an ancient security control: the (early Internet) defense against TCP spoofing. To a degree, the TCP protocol manages to "authenticate" source IP addresses in TCP connections, despite the fact that there are no direct trust assumptions. For example, there are no pre-set private keys nor certificates.
-
-In this blog post, we'll take a look at TCP spoofing controls in basic network setups and on the Internet.
+In this blog post, we look at an ancient security control: the (early Internet) defense against TCP spoofing. To a degree, the TCP protocol manages to "authenticate" source IP addresses in TCP connections, despite the fact that there are no direct trust assumptions. For example, there are no pre-set private keys nor certificates. This is what makes this control interesting.
 
 ### 1. The hub 
 
