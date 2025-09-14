@@ -1,5 +1,5 @@
 ---
-title: TCP spoofing mitigation: a security control that was good enough
+title: TCP spoofing: a security control that was _good enough_
 ---
 
 Some security controls are more straightforward than others. The straightforward controls are those that are backed by direct and abundant trust assumptions. For example: server-side validation of JWT tokens. The server trusts a certain public key that the parties agreed on (direct trust assumption) and validates signatures according to that key.
