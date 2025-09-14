@@ -104,7 +104,7 @@ Attempts to defend against variants of the double-spend attack are below.
 2. **Seal-based cutoff**: The longest chain is authoritative, but a node will switch to a different chain only if the change doesn't go deeper than `n` (e.g. 50) hashes. Users will consider transactions _finalized_ only if they're buried underneath more than `n` hashes. With such a rigid rule, there's danger of a permanent network split. At each point, an attacker can present a competing chain forking off the existing chain about `n` hashes away, resulting in one part of the network accepting the first chain and the other the second chain. Now a double-spend can be processed _twice_ by two portions of the (split) network.
 3. **Rule-based cutoff**: Attempt to introduce some rule (independent of the ongoing state) that'll determine which fork is authoritiative. Say, we'll choose the fork whose hashes are a minimal in terms of alphabetical ordering. The problem is - an attacker can simply mine for favorable hashes and overtake any fork and thus double-spend. 
 
-None of the attempted solutions works, and it's unclear how to proceed. 
+None of the attempted solutions works, and it's unclear how to proceed. **It's here that Satoshi must have had his key realization.**
 
 ### 7. "Bitcoin: A Peer-to-Peer Electronic Cash System"
 
@@ -124,6 +124,8 @@ Finally, recall that we started by simulating (physical) gold mining with solvin
 * To emulate the process of gold mining
 
 We ended up with the following: **the (honest) collective has a stronger say than a resourceful attacker** on a sort of **anonymous voting problem**, where what's being voted on **contains a specific structure**. The structure here is the a **cryptographically chained sequence** and **not an independent set of events**, as it would be in the case of e.g. a series of independent referendums. The cryptographic structure of the chain makes outvoting the collective **exponentially hard** over the number of blocks, acheiving **sealing of history**. Another difference from independent referendum voting is that "voting" in Bitcoin is **continually open**; this is to achieve flexibility and prevent permanent network forks. 
+
+I'd like to thank my friend Jovan Todorović for reviewing this blog post and mentioning that I didn't explicitly TKTK
 
 [^0]: Some years ago, a friend told me the following story. During the eighties and the personal computer boom, he dabbled in computers. His enthusiasm for computers and related topics fluctuated up and down. However, at some point in his teens, on a local journal's frontpage, he saw a picture of _a computer connected to a telephone_. That triggered something in his adolescent mind, strated off curiousity on how to use modems and he never looked back. If there's something _general_ in the picture of a computer connected to a telephone which had the potential to trigger such a reaction in a young person's mind, then the same matter is certainly present in the idea that a short blob of bytes in one's personal computer can have monetary value. This is in fact a dream come true - bytes that extend into the real world, even though they exist exclusively inside a personal device. People will be attracted, only because of that and independently of any use-cases, stories of better future or the unfortunate abuse potential of this technology. 
 
