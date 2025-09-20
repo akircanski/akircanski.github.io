@@ -1,7 +1,6 @@
 ---
-title: TCP sequence numbers: A security control that was <em>good enough</em>
+title: TCP sequence numbers A security control that was <em>good enough</em>
 ---
-
 Some security controls are more straightforward than others. The straightforward controls are those that are backed by direct and abundant trust assumptions. For example: server-side validation of JWT tokens. The server trusts a certain public key that the parties agreed on (direct trust assumption) and validates signatures according to that key.
 
 Some other security controls are not straightforward at all. The trust assumptions they operate with are scarce and unfriendly. For example, Bitcoin: it was in fact the very idea of Bitcoin to remove the direct trust assumption - a central server that's in charge of token issuance and transaction validity. In a way, Bitcoin managed to build strong security out of nothing. 
