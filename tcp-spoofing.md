@@ -1,5 +1,5 @@
 ---
-title: A security control that was <em>good enough</em>
+title: Sequence numbers: A security control that was <em>good enough</em>
 ---
 Some security controls are more straightforward than others. The straightforward controls are those that are backed by direct and abundant trust assumptions. For example: server-side validation of JWT tokens. The server trusts a certain public key that the parties agreed on (direct trust assumption) and validates signatures according to that key.
 
@@ -56,7 +56,7 @@ From those assumptions, spoofing resistance for the TCP protocol is achieved. Th
 
 ### John Postel (1981), Robert Morris (1985) and Kevin Mitnick (1991)
 
-The TCP standard RFC 793 came about in 1981, but the Jon Postel mentions 9 (1) previous variants of ARPA TCP on which the standard is based on. Robert Morris wrote a paper about IP address spoofing in 1985. Kevin Mitnick exploited this together with other hackers (from Israel, according to his book) in about 1991. If you are aware of earlier exploitation of this bug, please let me know via email. 
+The TCP standard RFC 793 came about in 1981, but Jon Postel mentions 9 (1) previous variants of ARPA TCP on which the standard is based on. Robert Morris wrote a paper about IP address spoofing in 1985. Kevin Mitnick exploited this together with other hackers (from Israel, according to his book) in about 1994. It's likely that earlier exploitations of this bug came about If you are aware of earlier exploitation of this bug, please let me know via email
 
 * [RFC 793](https://datatracker.ietf.org/doc/rfc793/): does not prescribe that the sequence number should be chosen using a cryptographically secure RNG. Due to lack of specification in this regard, TCP implementations varied in how they choose the numbers. 
 ![rfc-793](other-pics/tcp-spoofing/rfc793.png)
