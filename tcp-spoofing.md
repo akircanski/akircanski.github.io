@@ -1,5 +1,5 @@
 ---
-title: Random TCP sequence numbers: A security control that was <em>good enough</em>
+title: TCP sequence numbers: A security control that was <em>good enough</em>
 ---
 
 Some security controls are more straightforward than others. The straightforward controls are those that are backed by direct and abundant trust assumptions. For example: server-side validation of JWT tokens. The server trusts a certain public key that the parties agreed on (direct trust assumption) and validates signatures according to that key.
@@ -76,6 +76,6 @@ This effectively results in a form of IP address spoofing resistence that's suff
 
 If you want to build security, attempt to achieve it  despite unfriendly and scarce trust assumptions. If you succeed,  you'll end up with a fascinating security control. 
 
-Thanks to Paul Bottinelli for a very helpful review and suggesting the title of this blog post.
+Thanks to Paul Bottinelli for revewing this blog post (and coming up with the final title)! 
 
 [^ipproto]: Sending out an IP packet over the Internet really is a shot in the dark. If the packet does not arrive at the destination, you don't know. As the packets travels over the Internet backbones, its TTL decrements and the packet dies out if the TTL drops to zero. If the packet does arrive to the destination, you don't know either - there's no "signal back" in the IP protocol. Intermediate hops are free to defragment the IP packet. As the sender, you don't know whether fragmentation took place or not; the receiving node are the ones that'll be responsible for reassembling the packet (in that sense, the IP protocol is not _completely_ stateless). Each IP packet claims a certain source address, but the intermediate and destination nodes have little idea if the source address is correct, or not. The TCP protocol takes this unreliable primitive (the IP packet) and transforms it into a reliable one. 
