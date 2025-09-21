@@ -58,7 +58,7 @@ From those assumptions, spoofing resistance for the TCP protocol is achieved. Th
 
 John Postel, Robert Morris and Kevin Mitnick all had a role in this story in about 1981, 1985 and 1991, approximately. 
 
-The TCP standard RFC 793 came about in 1981, but Jon Postel mentions 9 (1) previous variants of ARPA TCP on which the standard is based on. The standard did not mandate that the numbers are generated randomly. The r-suite of protocols (`rlogin`, `rsh`, etc) that blindly trusted source IP addresses came about in the early 80ties and was around in the 90ties. In 1985, Robert Morris wrote a paper about IP address spoofing; the paper reads almost as a scientific paper that can be submitted to a conference. Finally, at around 1994, Kevin Mitnick and some Israeli hackers exploited the bug. 
+The TCP standard RFC 793 came about in 1981, but Jon Postel mentions 9 (1) previous variants of ARPA TCP on which the standard is based on. The standard did not mandate that the numbers are generated randomly. The r-suite of protocols (`rlogin`, `rsh`, etc) that blindly trusted source IP addresses came about in the early 80ties and was around in the 90ties. In 1985, Robert Morris wrote a paper about IP address spoofing. Finally, at around 1994, Kevin Mitnick and some Israeli hackers exploited the bug. 
 
 It's possible, or even likely, that some time during the 80ties, somewhwere in the world, someone else realized that the bug exists and tried to tinker with it. That'd be good to know, if you're aware, please let me know by email (akircanski at gmail) and I'll add it to this blog post. 
 
