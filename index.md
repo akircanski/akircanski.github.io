@@ -25,3 +25,8 @@ Writing
 <a href="./how-to-invent-bitcoin">How to invent Bitcoin</a> 
 
 <a href="./tcp-spoofing">Random TCP sequence number: A security control that was good enough</a>
+
+<br>
+Other
+
+<a href="./DAGs">On the power of DAGs</a> 
