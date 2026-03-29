@@ -29,4 +29,4 @@ Writing
 <br>
 Other
 
-<a href="./DAGs">On the power of DAGs</a> 
+<a href="./DAGs">On DAGs and passage of time</a> 
