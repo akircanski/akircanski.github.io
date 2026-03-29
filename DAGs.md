@@ -3,7 +3,7 @@ title: On DAGs and passage of time
 ---
 Computer security people often use the following terms to describe movements in the hacking process: "vulnerability chaining", "horizontal/lateral movement", "escalation", etc. If there's some satisfaction in using those terms, it's because these terms refer to the processes' _internal structure_. This internal structure is very intuitive, even if it wasn't ever written down explicitly. 
 
-In this blog post, we look at what that underlying structure looks like. The struture is a restricted variant of acyclic graph (DAGs), morphed into a simpler structure with some graph nodes merged. Apart from that, in this blog post, based on our practical application of (restricted) DAGs, we hope to provide a lookout from which the full DAG generality becomes (at least partially) visible. 
+In this blog post, we look at what that underlying structure looks like. The structure is a restricted variant of acyclic graph (DAGs), morphed into a simpler structure with some graph nodes merged. Apart from that, in this blog post, based on our practical application of (restricted) DAGs, we hope to provide a lookout from which the full DAG generality becomes (at least partially) visible. 
 
 ### 1. Attackers don't play Mahjong 
 
@@ -79,4 +79,4 @@ Instead of a conclusion, let's focus on what DAGs can represnt in general (not j
 
 The type of real-world progression we looked at was well-modeled by the  restricted formof DAGs (power set or Boolean hyper cube, which is the same thing). But what type of real-world progression _requires a richer DAG structure_? Perhaps a DAG structure which involves interleaved connections and capability dependencies? That's an interesting question with which we'll end this blog post. Thank you for reading!
 
-I'd like to thank Miloš Milovanović for elucidating the role of time in processes described by mathematics.
+<!-- *I'd like to thank Miloš Milovanović for pointing out the importance of time in processes described by mathematics during our discussions in kafana Šindra in Belgrade.* -->
