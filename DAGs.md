@@ -19,7 +19,7 @@ The privilege escalation process follows a specific dynamic, not followed by som
 * it includes _sudden, dramatic changes_
 
 
-### 2. Sudden state changes 
+### 2. Unexpected state changes
 
 The first thing that comes to mind when representing a process with rapid changes is a transformation, over some state. Consider the following state trail:
 
@@ -69,14 +69,14 @@ With this information present, the graph becomes highly redundant. Nodes should 
 
 ### 5. DAGs encode progressions
 
-Instead of a conclusion, let's focus on what DAGs can represnt in general (not just power set graphs). Specifically, DAGs can be thoughts of models of arbitrary progressions:
+Instead of a conclusion, let's focus on what DAGs can represnt in general (not just power set graphs). Specifically, DAGs can be thought of models of arbitrary progressions:
 
 * DAGs have "orientation" and moving from the bottom to the top corresponds to passage of time
-* A DAG trail from bottom to top corresponds a choice of events that may have taken place
+* A DAG trail from bottom to top corresponds to a choice of events that may have taken place
 * The more complicated the DAG is, the more subtle event inter-dependencies are 
 * Power-sets or Boolean hyper-cubes are heavily restricted DAGs
 * Specifically, power-set graphs prevent "dependencies" between coordinates; in power-set graphs, it's possible to "unlock" a capability regardless of the ongoing state 
 
-The type of real-world progression we looked at was well-modeled by the  restricted formof DAGs (power set or Boolean hyper cube, which is the same thing). But what type of real-world progression _requires a richer DAG structure_? Perhaps a DAG structure which involves interleaved connections and capability dependencies? That's an interesting question with which we'll end this blog post. Thank you for reading!
+**The type of real-world progression we looked at was well-modeled by the  restricted form of DAGs (power set or Boolean hyper cube, which is the same thing). But what type of real-world progression _requires a richer DAG structure_?** Perhaps a DAG structure which involves interleaved connections and capability dependencies? That's an interesting question with which we'll end this blog post. Thank you for reading!
 
 <!-- *I'd like to thank Miloš Milovanović for pointing out the importance of time in processes described by mathematics during our discussions in kafana Šindra in Belgrade.* -->
