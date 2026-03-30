@@ -63,9 +63,11 @@ Our previous model fails to capture the "avalanche" property. A full (or large) 
 
 To model this, we add some back-propagating implications to the system. A capability "back-propagates" a number of other capabilities. For example, running code on the host system implies access to all application users, administrators as well as access to secrets in configuraiton files (three capabilities). This is modeled as `a => b, a => c, a => d` in the picture above. 
 
-With this information present, the graph becomes highly redundant. Nodes should be merged; in graph theory, this is called a Strongly Connectected Component (SCC) quotient graph of the original graph. There's a single state that includes `a` now, as shown on the picture on the picture. The super node is, for example, unrestricted code execution on a host. 
+With this information present, the graph becomes highly redundant. Nodes should be merged; in graph theory, this is called a Strongly Connectected Component (SCC) [quotient graph](https://en.wikipedia.org/wiki/Strongly_connected_component) of the original graph. There's a single state that includes `a` now, as shown on the picture on the picture. The super node is, for example, unrestricted code execution on a host. 
 
 <p align="center"> <img src="other-pics/DAGs/merged.png" alt="Merging nodes to get a more accurate graph"/></p>
+
+Nodes are grouped so that only elements not "covered" by the letters present in the implication define unique nodes. 
 
 ### 5. DAGs encode progressions
 

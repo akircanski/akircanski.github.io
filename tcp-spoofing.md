@@ -27,7 +27,7 @@ Switches are better than hubs in terms of security; packet vs. node separation i
 
 * **ARP cache poisoning**: When sending packets, nodes on a LAN translate IP addresses to MAC addresses. The translation is done via ARP. A node broadcasts a packet asking about an IP address and the correct node responds with a MAC address. The ARP response is simply trusted as valid, which makes it susceptible to attack. 
 * **ARP cache poisoning of the routing device cache**: The switch cache is filled out based on the information the switch has access to, which includes ARP and source address information. There's no a guarantee that this information is correct and thus can be poisoned.
-* **Blind packet spoofing**: A node on a LAN can claim arbitrary source MAC addresses. This attack is relevant in the context of [VLAN hopping](https://en.wikipedia.org/wiki/VLAN_hopping) which we leave for another discussion.
+* **Blind packet spoofing**: A node on a LAN can claim arbitrary source MAC addresses. This attack is relevant in the context of [VLAN hopping](https://en.wikipedia.org/wiki/VLAN_hopping) which we leave for another discussion. This attack is relevant in all types of ARP cache poisoning. 
 
 ### 3. The Internet
 
@@ -79,6 +79,6 @@ This effectively results in a form of IP address spoofing resistence that's suff
 
 If you want to build security, attempt to achieve it  despite unfriendly and scarce trust assumptions. If you succeed,  you'll end up with a fascinating security control. 
 
-Thanks to Miloš Vujanić for a review of this blog post and Paul Bottinelli for reviewing and coming up with the final title for this blog post. 
+Thanks to Vesselin Velichkov, Shawn Fitzgerald and  Miloš Vujanić for a review of this blog post and Paul Bottinelli for reviewing and coming up with the final title for this blog post. 
 
 [^ipproto]: Sending out an IP packet over the Internet really is a shot in the dark. If the packet does not arrive at the destination, you don't know. As the packets travels over the Internet backbones, its TTL decrements and the packet dies out if the TTL drops to zero. If the packet does arrive to the destination, you don't know either - there's no "signal back" in the IP protocol. Intermediate hops are free to defragment the IP packet. As the sender, you don't know whether fragmentation took place or not; the receiving node are the ones that'll be responsible for reassembling the packet (in that sense, the IP protocol is not _completely_ stateless). Each IP packet claims a certain source address, but the intermediate and destination nodes have little idea if the source address is correct, or not. The TCP protocol takes this unreliable primitive (the IP packet) and transforms it into a reliable one. 
