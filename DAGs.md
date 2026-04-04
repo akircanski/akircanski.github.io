@@ -1,11 +1,11 @@
 ---
 title: On DAGs and passage of time
 ---
-Computer security people often use the following terms to describe events in a computer breach: "vulnerability chaining", "horizontal/lateral movement", "escalation", etc. If there's some satisfaction in using those terms, that's because these terms refer to the processes' _internal structure_. This internal structure of the process attackers follow is very intuitive, even if it isn't noted down explicitly. 
+Computer security people often use the following terms to describe events relevant in a computer breach: "vulnerability chaining", "horizontal/lateral movement", "escalation", etc. If there's some satisfaction in using those terms, that's because they refer to the processes' _internal structure_. This internal structure of the process attackers follow is very intuitive, even if it isn't noted down explicitly. 
 
-We look at what this underlying structure or process looks like. In general, there are two axioms that shape process leading to a system breach: (1) attacker's movements are typically _cumulative_ and (2) the attacker's capability undergoes sudden changes (in terms of suddenly gaining vast capability). 
+We look at what this underlying structure looks like. In general, there are two axioms that shape process leading to a computer breach: (1) the process is _cumulative_ in nature and (2) the attacker's capability undergoes _sudden changes_. 
 
-What mathematical description best describes such a process? We set out to find that structure in this blog post. 
+What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time. 
 
 ### 1. Attackers don't play Mahjong 
 
@@ -97,6 +97,8 @@ In computer security breaches, the main currency we're dealing is privilege esca
 **The type of real-world progression  we looked at corresponds to a "morphed" partitive set graph (Boolean hypercube or a partial ordering relation)?** [Order theory](https://en.wikipedia.org/wiki/Order_theory) is an area which looks at partial orders systematically; DAGs are wider than that in scope. Either way, order theory and DAGs do not burden themselves with identifying real-world models, they take right off into deriving abstract properties of these structures. 
 
 Thank you for reading!
+
+Caveats: TBD
 
 Acknowledgments: TBD
 
