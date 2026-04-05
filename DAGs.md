@@ -18,7 +18,7 @@ However, Mohjang Solitaire follows a certain _steady pace_; unlocking Mahjong pi
 * It's usually _cumulative_ in terms of attacker's capability 
 * it includes _sudden, dramatic changes_
 
-### 2. Unexpected state changes
+### 2. Rapid privilege escalation
 
 The first thing that comes to mind when representing a process with rapid changes is a transformation, over some state. The mapping is monotone, as in bits only activate, they do not deactivate. Consider the following state trail:
 
@@ -62,7 +62,7 @@ That also means that some privilege escalations are known to be impossible, or s
 
 Such edges can be removed from the picture. You could say this _simplifies_ the graph, but you could also say deleted edges make the graph _more complicated_. The latter is probably true, as the graph is not the Boolean hypercube anymore and dependencies are introduced. The corresponding monotone Boolean function is more unpredictable. 
 
-### 4. Quotient of the power set graph
+### 4. Capability merge supernodes
 
 Our previous partitive set graph fails to capture the "avalanche" property. A full (or large) set of capabilities is often times gained suddenly, in one passage. Paradoxically, in order to gain a single capability (such as, a read from a database), often times, the attacker gains the full set of capabilities. 
 
@@ -72,7 +72,7 @@ In the partitive set model, back-propagation dictates that nodes should be merge
 
 <p align="center"> <img src="other-pics/DAGs/merged.png" alt="Merging nodes to get a more accurate graph"/></p>
 
-If the back-propagation is of the form `X, a => B`, where `X` and  `B` are capability subsets, each subset of X will correpsond to a node with all `{a} U B` elements. 
+If the back-propagation is of the form `X, a => B`, where `X` and  `B` are capability subsets, each subset of X will correpsond to a node with all `{a} U B` elements. Examples of super node in practice would be code execution, master key extraction
 
 ### 5. Capabilities are not limited to network vantage points
 
@@ -84,14 +84,14 @@ The neat thing about this approach is that it's versatile. Traditionally, comput
 
 ### 6. Conclusion
 
-In computer security breaches, the main currency we're dealing is privilege escalation. Everything else is a non-event. The narration of a computer security breach is a sequence of privilege escalations. 
+The main "currency" we dealth with is _privilege (or capability) escalation_. In the area we looked at, everything else is a non-event. The only way time passes in computer security is through privilege escalation. In those terms, the following rough notes about DAGs make sense:
 
 * (Connected) DAGs have "orientation" and moving from the bottom to the top corresponds to passage of time
 * A trail from the bottom to top corresponds to a choice of events that may have taken place
-* The more complicated the DAG is, the more subtle event inter-dependencies are 
-* Power-sets or Boolean hyper-cubes are heavily restricted DAGs; they allow "freely choosing" events at each step
-
-**The type of real-world progression  we looked at corresponds to a "morphed" partitive set graph (Boolean hypercube or a partial ordering relation)?** [Order theory](https://en.wikipedia.org/wiki/Order_theory) is an area which looks at partial orders systematically; DAGs are wider than that in scope. Either way, order theory and DAGs do not burden themselves with identifying real-world models, they take right off into deriving abstract properties of these structures. 
+* In some sense, DAG complexity increases when edges are removed, as it removes independence and adds information to the system
+* Power-sets or Boolean hyper-cubes are heavily restricted and simplistic DAGs
+[O
+**The type of real-world progression we looked at corresponds to a "morphed" partitive set graph (Boolean hypercube or a partial ordering relation)?** [Order theory](https://en.wikipedia.org/wiki/Order_theory) is an area which looks at partial orders systematically; DAGs are wider than that in scope. Either way, order theory and DAGs do not burden themselves with identifying real-world models, they take right off into deriving abstract properties of these structures. 
 
 Thank you for reading!
 
