@@ -13,9 +13,7 @@ In the [Mahjong Solitaire](https://en.wikipedia.org/wiki/Mahjong_solitaire) game
 
 One could consider that a privilege escalation process encountered in computer system hacking follows this pattern. After all, it _is_ true that the process is tedious and requires lots attention, so that basic thing does check out. One may also consider the hacking process to involve acquiring "gadgets", or "capabilities", similar to piece in the game. 
 
-However, Mohjang Solitaire follows a certain _steady pace_; unlocking Mahjong pieces does not include rapid state changes. This is where the Mahjong Solitaire analogy with the computer hacking fails. 
-
-As mentioned, the privilege escalation process follows a specific dynamic, not followed by some other processes out there. That dynamic has at least the following two properties:
+However, Mohjang Solitaire follows a certain _steady pace_; unlocking Mahjong pieces does not include rapid state changes. This is where the Mahjong Solitaire analogy with the computer hacking fails. As mentioned, the privilege escalation process follows a specific dynamic, not followed by some other processes out there. It can be described as such:
 
 * It's usually _cumulative_ in terms of attacker's capability 
 * it includes _sudden, dramatic changes_
@@ -62,28 +60,27 @@ It should be noted that the possibility of privilege escalation is probabilstic 
 
 That also means that some privilege escalations are known to be impossible, or simply don't make any sense in reality. A pair of capabilities may refer to completely independent system parts. In practice, these routes will simply be uninhabited over different attack attempts.
 
-Such edges can be removed from the picture. You could say this _simplifies_ the graph, but you could also say deleted edges make the graph more complicated. The latter is probably true, as the graph is not the Boolean hypercube anymore and dependencies are introduced. The corresponding monotone Boolean function is more unpredictable. 
+Such edges can be removed from the picture. You could say this _simplifies_ the graph, but you could also say deleted edges make the graph _more complicated_. The latter is probably true, as the graph is not the Boolean hypercube anymore and dependencies are introduced. The corresponding monotone Boolean function is more unpredictable. 
 
 ### 4. Quotient of the power set graph
 
-Our previous partitive set graph fails to capture the "avalanche" property. A full (or large) set of capabilities is often times gained suddenly, in one passage. Paradoxically, in order to gain a single capability (such as, read from a database), often times, the attacker gains the full set of capabilities. 
+Our previous partitive set graph fails to capture the "avalanche" property. A full (or large) set of capabilities is often times gained suddenly, in one passage. Paradoxically, in order to gain a single capability (such as, a read from a database), often times, the attacker gains the full set of capabilities. 
 
-For that, we add some back-propagations to the system. A capability "back-propagates" a number of other capabilities. For example, running code on the host system implies access to all application users, administrators as well as access to secrets in configuraiton files (three capabilities). This is represented as `a => b, a => c, a => d` in the picture above. 
+For that, we add some back-propagations to the system. A capability "back-propagates" a number of other capabilities. For example, running code on the host system implies access to all application users, administrators as well as access to secrets in configuration files (three capabilities). This is represented as `a => b, a => c, a => d` in the picture above. 
 
 In the partitive set model, back-propagation dictates that nodes should be merged (see the notion of Strongly Connectected Component (SCC) [quotient graph](https://en.wikipedia.org/wiki/Strongly_connected_component)). Since `a => c, d`, each node with just `a` and any subset of `{c, d}` is merged into one node. Another merge that follows from this implication is a node that contains both `a, b` and any subset of `{c, d}`. 
 
 <p align="center"> <img src="other-pics/DAGs/merged.png" alt="Merging nodes to get a more accurate graph"/></p>
 
-If the implication is of the form `X, a => B`, where `X` and  `B` are capability subsets, each subset of X will correpsond to a node with all `a U B` elements. 
+If the back-propagation is of the form `X, a => B`, where `X` and  `B` are capability subsets, each subset of X will correpsond to a node with all `{a} U B` elements. 
 
 ### 5. Capabilities are not limited to network vantage points
 
-The good thing about this approach is that it's versatile in the following sense. Traditionally, computer security dealt with notions such as "user access to host X", "foot hold in internal network Y". These notions are intuitive as network-wise proximity maps to physical (metric) proximity when the network is represented as a graph on paper. 
+The neat thing about this approach is that it's versatile. Traditionally, computer security deals with notions such as "user access to host X", "foothold in internal network Y". However, "capability" is very expressive and it also includes for example the following:
 
-However, notions of capability also express the following:
-
-* The ability to leak i-th bit from j-th round of a cryptographic primitive (or j-th round in a protocol run) vs. the ability to extract a bit of a cryptographic key
+* The ability to leak i-th bit from j-th round of a cryptographic primitive vs. the ability to extract a bit of a cryptographic key
 * Ability to run code in a browser sandbox on a mobile device vs. ability to run code in userland or kernel
+* Knowledge of exploitation of certain platform
 
 ### 6. Conclusion
 
