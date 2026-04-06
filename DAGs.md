@@ -84,7 +84,7 @@ The neat thing about this approach is that it's versatile. Traditionally, comput
 
 The choice of the initial set of capabilities is always subjective; there's no single "correct" choice. For example, it's always possible for capabilities to be more coarse or detailed. Some capabilities may be completely omitted from the system, which impacts how the graph looks like. 
 
-### 6. Conclusion
+### 6. Summary
 
 We started with Boolean hypercubes over a set of capabilities `{c1, .. cn}`. We then "edited" the hypercube, in order to add information specific to a given system. "Capabilities" are not limited to computer system or network access, they encode "capability as such", for example "the ability to leak bit N from round X of a cryptographic protocol run". 
 
