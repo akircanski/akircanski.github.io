@@ -1,11 +1,11 @@
 ---
 title: On DAGs and passage of time
 ---
-Computer security people often use the following terms to describe events relevant in a computer breach: "vulnerability chaining", "horizontal/lateral movement", "escalation", etc. If there's some satisfaction in using those terms, that's because they refer to the processes' _internal structure_. This internal structure of the process attackers follow is very intuitive, even if it isn't noted down explicitly. 
+In their work, computer security people rely terms such as: "vulnerability chaining", "horizontal/lateral movement", "escalation", etc. These terms describe events and techniuqes involved in a multi-step computer system breach. If there's some satisfaction in using those terms, it's because they refer to the processes' _internal structure_. This internal structure of the process attackers follow is very intuitive, even if it isn't noted down explicitly. 
 
-We look at what this underlying structure looks like. In general, there are two axioms that shape process leading to a computer breach: (1) the process is _cumulative_ in nature and (2) the attacker's capability undergoes _sudden changes_. 
+We look at what this underlying structure looks like. We identify two "axioms": (1) the process is cumulative in nature and (2) the attacker's capability undergoes sudden changes. Given that we're modeling a real-world process using Direct Acyclic Graphs (DAGs), we're in a position to say a few words on DAGs in general. 
 
-What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time. 
+What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time with all details removed. 
 
 ### 1. Attackers don't play Mahjong 
 
@@ -84,19 +84,21 @@ The neat thing about this approach is that it's versatile. Traditionally, comput
 
 ### 6. Conclusion
 
-The main "currency" we dealth with is _privilege (or capability) escalation_. In the area we looked at, everything else is a non-event. The only way time passes in computer security is through privilege escalation. In those terms, the following rough notes about DAGs make sense:
+We started with Boolean hypercubes over a set of capabilities `{c1, .. cn}`. We then "edited" the hypercube, in order to add information specific to a given system. "Capabilities" are not limited to computer system or network access, they encode "capability as such", for example "the ability to leak bit N from round X of a cryptographic protocol run". 
 
-* (Connected) DAGs have "orientation" and moving from the bottom to the top corresponds to passage of time
-* A trail from the bottom to top corresponds to a choice of events that may have taken place
-* In some sense, DAG complexity increases when edges are removed, as it removes independence and adds information to the system
-* Power-sets or Boolean hyper-cubes are heavily restricted and simplistic DAGs
-[O
-**The type of real-world progression we looked at corresponds to a "morphed" partitive set graph (Boolean hypercube or a partial ordering relation)?** [Order theory](https://en.wikipedia.org/wiki/Order_theory) is an area which looks at partial orders systematically; DAGs are wider than that in scope. Either way, order theory and DAGs do not burden themselves with identifying real-world models, they take right off into deriving abstract properties of these structures. 
+A threat modeling process that humans (or LLMs) may run in practice (independent of the method shown in this blog post) roughly follows the structure shown here. How succesful this process is will be determined by how realistic is the initial chosen set of capabilities is and how realistic the branches and trails considered turn out to be. 
+
+Some general notes on DAGs and partial orders:
+
+* The interesting aspect here is that the process is "cumulative", which leads to partial order graphs, which in turn leads us to Boolean hypercubes
+* The Boolean hypercube DAG allows "choosing" movements at each level, which is a strong DAG restriction
+* It is also a sort of "blank" DAG, to which information is added, to have a system containing actual information
+* Specifically, DAG complexity increases when edges are removed (or added at unexpected locations), as that removes the independence assumption
+* Any graph can be converted to a DAG (with information loss) where nodes that participate in cycles are collapsed into single nodes (see SCC quotient graphs)
+* As such, every graph encodes at least _some_ amount of "time" in itself
+* [Order theory](https://en.wikipedia.org/wiki/Order_theory) is a theory which studies partial orders, it overlaps with basic category theory (see e.g. this [book](https://arxiv.org/abs/1803.05316). 
 
 Thank you for reading!
 
-Caveats: TBD
-
-Acknowledgments: TBD
 
 
