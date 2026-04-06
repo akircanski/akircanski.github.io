@@ -82,6 +82,8 @@ The neat thing about this approach is that it's versatile. Traditionally, comput
 * Ability to run code in a browser sandbox on a mobile device vs. ability to run code in userland or kernel
 * Knowledge of exploitation of certain platform
 
+The choice of the initial set of capabilities is always subjective; there's no single "correct" choice. For example, it's always possible for capabilities to be more coarse or detailed. Some capabilities may be completely omitted from the system, which impacts how the graph looks like. 
+
 ### 6. Conclusion
 
 We started with Boolean hypercubes over a set of capabilities `{c1, .. cn}`. We then "edited" the hypercube, in order to add information specific to a given system. "Capabilities" are not limited to computer system or network access, they encode "capability as such", for example "the ability to leak bit N from round X of a cryptographic protocol run". 
@@ -96,7 +98,7 @@ Some general notes on DAGs and partial orders:
 * Specifically, DAG complexity increases when edges are removed (or added at unexpected locations), as that removes the independence assumption
 * Any graph can be converted to a DAG (with information loss) where nodes that participate in cycles are collapsed into single nodes (see SCC quotient graphs)
 * As such, every graph encodes at least _some_ amount of "time" in itself
-* [Order theory](https://en.wikipedia.org/wiki/Order_theory) is a theory which studies partial orders, it overlaps with basic category theory (see e.g. this [book](https://arxiv.org/abs/1803.05316). 
+* [Order theory](https://en.wikipedia.org/wiki/Order_theory) is a theory which studies partial orders, it overlaps with basic category theory (see e.g. this [book](https://arxiv.org/abs/1803.05316)). 
 
 Thank you for reading!
 
