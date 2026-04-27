@@ -103,4 +103,4 @@ Some general notes on DAGs and partial orders:
 Thank you for reading!
 
 
-Acknowledgments: I'd like to thank Miloš Milovanović for elucidating the importance of time in process modeling during our long discussions in Belgrade kafana Šindra during 2025. I'd also like to thank Vojin Jovanović for independently reaching the same conclusions on the improtance of DAGs - and for reviewing this blog post. 
+Acknowledgments: I'd like to thank Miloš Milovanović for elucidating the importance of time mathematics as such during our long discussions in Belgrade kafana Šindra during 2025. I'd also like to thank Vojin Jovanović for independently reaching similar conclusions via realizing the importance of DAGs - and for reviewing this blog post. 
