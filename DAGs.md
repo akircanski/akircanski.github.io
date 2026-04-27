@@ -7,6 +7,8 @@ We look at what this underlying structure looks like. We identify two "axioms": 
 
 What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time with all details removed. 
 
+*Acknowledgments*: I'd like to thank Miloš Milovanović for elucidating the importance of time mathematics as such during our long discussions in Belgrade kafana Šindra during 2025. I'd also like to thank Vojin Jovanović for independently reaching similar conclusions via realizing the importance of DAGs - and for reviewing this blog post. 
+
 ### 1. Attackers don't play Mahjong 
 
 In the [Mahjong Solitaire](https://en.wikipedia.org/wiki/Mahjong_solitaire) game, the goal is to identify duplicate pieces on the board, after which they're removed. The process is repeated until there are no pieces on the board. Mahjong can be seen as trimming a DAG. A leaf node of a DAG is removed which "frees up" other nodes, allowing their removal in one of the next steps. 
@@ -103,4 +105,4 @@ Some general notes on DAGs and partial orders:
 Thank you for reading!
 
 
-Acknowledgments: I'd like to thank Miloš Milovanović for elucidating the importance of time mathematics as such during our long discussions in Belgrade kafana Šindra during 2025. I'd also like to thank Vojin Jovanović for independently reaching similar conclusions via realizing the importance of DAGs - and for reviewing this blog post. 
+
