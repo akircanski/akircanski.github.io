@@ -7,7 +7,7 @@ We look at what this underlying structure looks like. We identify two "axioms": 
 
 What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time with all details removed. 
 
-*Acknowledgments*: I'd like to thank Miloš Milovanović for elucidating the importance of time mathematics as such during our long discussions in Belgrade kafana Šindra during 2025. I'd also like to thank Vojin Jovanović for independently reaching similar conclusions via realizing the importance of DAGs - and for reviewing this blog post. 
+*Acknowledgments*: I'd like to thank [Miloš Milovanović](https://turing.mi.sanu.ac.rs/~milosm/) for elucidating the importance of time mathematics as such during our long discussions in Belgrade kafana [Šindra](https://sindra-pivnica.rs/en/) during 2025. I'd also like to thank [Vojin Jovanović](https://github.com/vjovanov) for independently reaching similar conclusions via realizing the importance of DAGs - and for reviewing this blog post. 
 
 ### 1. Attackers don't play Mahjong 
 
