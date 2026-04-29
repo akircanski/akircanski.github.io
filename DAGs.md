@@ -3,7 +3,7 @@ title: On DAGs and passage of time
 ---
 In their work, computer security people use terms such as: "vulnerability chaining", "lateral movement", "escalation", etc. These terms describe events and techniuqes involved in a multi-step computer system breach. If there's some satisfaction in using those terms, it's because they refer to the processes' _internal structure_. This internal structure of the process attackers follow is very intuitive, even if it isn't noted down explicitly. 
 
-We look at what this underlying structure looks like. We identify two "axioms":
+We look at what this underlying structure looks like, based on two "axioms":
 
 * The process is cumulative in nature and 
 * Attackers' capability undergoes sudden changes. 
