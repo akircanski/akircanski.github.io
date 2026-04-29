@@ -3,9 +3,12 @@ title: On DAGs and passage of time
 ---
 In their work, computer security people use terms such as: "vulnerability chaining", "lateral movement", "escalation", etc. These terms describe events and techniuqes involved in a multi-step computer system breach. If there's some satisfaction in using those terms, it's because they refer to the processes' _internal structure_. This internal structure of the process attackers follow is very intuitive, even if it isn't noted down explicitly. 
 
-We look at what this underlying structure looks like. We identify two "axioms": (1) the process is cumulative in nature and (2) the attacker's capability undergoes sudden changes. Given that we're modeling a real-world process using Direct Acyclic Graphs (DAGs), we're in a position to say a few words on DAGs in general. 
+We look at what this underlying structure looks like. We identify two "axioms":
 
-What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time with all details removed. 
+* The process is cumulative in nature and 
+* Attackers' capability undergoes sudden changes. 
+
+Given that we're modeling a real-world process using Direct Acyclic Graphs (DAGs), we're in a position to say a few words on DAGs in general. What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time with all details removed. 
 
 *Acknowledgments*: I'd like to thank [Miloš Milovanović](https://turing.mi.sanu.ac.rs/~milosm/) for repeatedly pointing out the importance of time in mathematics as such, during our long discussions in Belgrade [kafana Šindra](https://sindra-pivnica.rs/en/) during 2025. I'd also like to thank [Vojin Jovanović](https://github.com/vjovanov) for independently reaching similar conclusions through DAGs - and for reviewing this blog post. 
 
