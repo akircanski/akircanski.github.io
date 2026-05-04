@@ -101,8 +101,8 @@ Some general notes on DAGs and partial orders:
 * The Boolean hypercube DAG allows "choosing" movements at each level, which is a strong DAG restriction
 * It is also a sort of "blank" DAG, to which information is added, to have a system containing actual information
 * DAG complexity increases when edges are removed (or added at unexpected locations), as that removes the independence assumption
-* Any graph can be converted to a DAG (with information loss) where nodes that participate in cycles are collapsed into single nodes (see SCC quotient graphs)
-* As such, every graph encodes a certain notion of one-directional "time" in itself (apart from the more obvious way time is present in graphs, hopping edges over cycles)
+* Any graph can be converted to a DAG (with information loss) where nodes that participate in cycles are collapsed into single nodes 
+* Every graph encodes a certain notion of one-directional "time", apart from the more obvious way time is present in graphs (which is by hopping over edges, allowing cycles)
 * [Order theory](https://en.wikipedia.org/wiki/Order_theory) studies partial orders, it overlaps with basic category theory (see e.g. this [book](https://arxiv.org/abs/1803.05316)). 
 
 Thank you for reading!
