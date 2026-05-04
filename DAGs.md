@@ -46,22 +46,22 @@ time         state
 The "avalanche" effect is the rule that a flip in bit k results in bit flips in all bits j < k. Avalanche is present in steps 8 and 10. A computer hack involves _capabilities_; for example the capability to authenticate as a system user or the capability to read an arbitrary file on disk. For a given system, we're looking at a set of capabilities:
 
 ```
-p1, p2, p3, ... p_n
+p_1, p_2, p_3, ... p_n
 ```
 Bit position k corresponds to `p_k` and `-` means that the actor does not yet posess the capability. An attack on say a Windows network progresses with the attacker's capability of running commands in a Docker container (step 1 on the picture), then expanding the capability to running code on a host in the network (2), access to internal services keys repository (step 7) and finally step 10 establishing control at the domain controller of the network, which allows access to all capabilities. 
 
 ### 3. Inside the Boolean hypercube
 
-The problem with the previous section is that it requires a `p_i => p_i-1` for all `p_i`. This does not correspond to reality; there may be multiple independent paths to the full capability or privilege set. To represent this, we use a "power set" (a set of all subsets) of the set of capabilities. 
+The problem with the previous section is that it requires a `p_i => p_i-1` for all `p_i`. This does not correspond to reality; there may be multiple independent paths to the full capability or privilege set. To represent this, we use a "power set" (a set of all subsets) of the set of capabilities. This is reminiscent to the problem of clause derivation in propositional logic. 
 
 <p align="center"> <img src="other-pics/DAGs/power-set.png" alt="The power set or Boolean cube graph"/></p>
-The power set forms a graph in which movement from the bottom towards the top of the graph signifies privilege escalation. For example, a file read on the local system may provide the attacker the ability to read a configuration file and authenticate to related database; this is represented as movement from `a` to `{a,b}`. 
+The power set forms a graph in which movement from the bottom towards the top of the graph signifies privilege escalation. For example, a file read on the local system may provide the attacker the ability to read a configuration file and authenticate to related database; this is represented as movement from `{a}` to `{a,b}`. 
 
 A general note about graphs: each movement the power-set graph is "coordinate-wise" in the sense that from every node it's possible to "choose" a capability and add it to the set. This is is why [Boolean hyper-cubes](https://en.wikipedia.org/wiki/Hypercube_graph) are a good alternative way of representing power sets. Capabilities are identified with positions in an n-tuple and from each capability set. It's possible to independently "unlock" or "lock" any capability from any node in the graph.
 
 ### 3. Deleting impossible edges
 
-It should be noted that the possibility of privilege escalation is probabilstic in nature. For example, an XSS payload may or may not execute. A phishing attempt succeeds with a certian probability. An ASLR bypass such as a sprayed heap may yield to a desired outcome, or may not. An LLM may or may not identify an exploit that allows escalation. 
+It should be noted that the possibility of privilege escalation is probabilstic in nature. For example, an [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting) payload may or may not execute. A phishing attempt succeeds with a certian probability. An [ASLR](https://en.wikipedia.org/wiki/Address_space_layout_randomization) bypass such as a sprayed heap may yield to a desired outcome, or may not. An LLM may or may not identify an exploit that allows escalation. 
 
 That also means that some privilege escalations are known to be impossible, or simply don't make any sense in reality. A pair of capabilities may refer to completely independent system parts. In practice, these routes will simply be uninhabited over different attack attempts.
 
@@ -69,11 +69,11 @@ Such edges can be removed from the picture. You could say this _simplifies_ the 
 
 ### 4. Capability merge supernodes
 
-Our previous partitive set graph fails to capture the "avalanche" property. A full (or large) set of capabilities is often times gained suddenly, in one passage. Paradoxically, in order to gain a single capability (such as, a read from a database), often times, the attacker gains the full set of capabilities. 
+Our previous power set graph fails to capture the "avalanche" property. A full (or large) set of capabilities is often times gained suddenly, in one passage. Paradoxically, in order to gain a single capability (such as, a read from a database), often times, the attacker gains the full set of capabilities. 
 
 For that, we add some back-propagations to the system. A capability "back-propagates" a number of other capabilities. For example, running code on the host system implies access to all application users, administrators as well as access to secrets in configuration files (three capabilities). This is represented as `a => b, a => c, a => d` in the picture above. 
 
-In the partitive set model, back-propagation dictates that nodes should be merged (see the notion of Strongly Connectected Component (SCC) [quotient graph](https://en.wikipedia.org/wiki/Strongly_connected_component)). Since `a => c, d`, each node with just `a` and any subset of `{c, d}` is merged into one node. Another merge that follows from this implication is a node that contains both `a, b` and any subset of `{c, d}`. 
+In the power set model, back-propagation dictates that nodes should be merged (see the notion of Strongly Connectected Component (SCC) [quotient graph](https://en.wikipedia.org/wiki/Strongly_connected_component)). Since `a => c, d`, each node with just `a` and any subset of `{c, d}` is merged into one node. Another merge that follows from this implication is a node that contains both `a, b` and any subset of `{c, d}`. 
 
 <p align="center"> <img src="other-pics/DAGs/merged.png" alt="Merging nodes to get a more accurate graph"/></p>
 
@@ -91,7 +91,7 @@ The choice of the initial set of capabilities is always subjective; there's no s
 
 ### 6. Summary
 
-We started with Boolean hypercubes over a set of capabilities `{c1, .. cn}`. We then "edited" the hypercube, in order to add information specific to a given system. "Capabilities" are not limited to computer system or network access, they encode "capability as such", for example "the ability to leak bit N from round X of a cryptographic protocol run". 
+We started with Boolean hypercubes over a set of capabilities `{c_1, .. c_n}`. We then "edited" the hypercube, in order to add information specific to a given system. "Capabilities" are not limited to computer system or network access, they encode "capability as such", for example "the ability to leak bit N from round X of a cryptographic protocol run". 
 
 A threat modeling process that humans (or LLMs) may run in practice (independent of the method shown in this blog post) roughly follows the structure shown here. How succesful this process is will be determined by how realistic is the initial chosen set of capabilities is and how realistic the branches and trails considered turn out to be. 
 
@@ -100,10 +100,10 @@ Some general notes on DAGs and partial orders:
 * The interesting aspect here is that the process is "cumulative", which leads to partial order graphs, which in turn leads us to Boolean hypercubes
 * The Boolean hypercube DAG allows "choosing" movements at each level, which is a strong DAG restriction
 * It is also a sort of "blank" DAG, to which information is added, to have a system containing actual information
-* Specifically, DAG complexity increases when edges are removed (or added at unexpected locations), as that removes the independence assumption
+* DAG complexity increases when edges are removed (or added at unexpected locations), as that removes the independence assumption
 * Any graph can be converted to a DAG (with information loss) where nodes that participate in cycles are collapsed into single nodes (see SCC quotient graphs)
-* As such, every graph encodes at least _some_ amount of "time" in itself
-* [Order theory](https://en.wikipedia.org/wiki/Order_theory) is a theory which studies partial orders, it overlaps with basic category theory (see e.g. this [book](https://arxiv.org/abs/1803.05316)). 
+* As such, every graph encodes a certain notion of one-directional "time" in itself (apart from the more obvious way time is present in graphs, hopping edges over cycles)
+* [Order theory](https://en.wikipedia.org/wiki/Order_theory) studies partial orders, it overlaps with basic category theory (see e.g. this [book](https://arxiv.org/abs/1803.05316)). 
 
 Thank you for reading!
 
