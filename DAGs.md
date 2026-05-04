@@ -10,7 +10,7 @@ We look at what this underlying structure looks like, based on two "axioms":
 
 Given that we're modeling a real-world process using Direct Acyclic Graphs (DAGs), we're in a position to say a few words on DAGs in general. What mathematical description best describes this process? Think before reading, how would you represent cumulativeness and sudden changes over time with all details removed. 
 
-*Acknowledgments*: I'd like to thank [Miloš Milovanović](https://turing.mi.sanu.ac.rs/~milosm/) for repeatedly pointing out the importance of time in mathematics as such, during our long discussions in Belgrade [kafana Šindra](https://sindra-pivnica.rs/en/) during 2025. I'd also like to thank [Vojin Jovanović](https://github.com/vjovanov) for independently reaching similar conclusions through DAGs - and for reviewing this blog post. 
+*Acknowledgments*: I'd like to thank [Miloš Milovanović](https://turing.mi.sanu.ac.rs/~milosm/) for repeatedly pointing out the importance of time in mathematics, during our long discussions in Belgrade [kafana Šindra](https://sindra-pivnica.rs/en/) during 2025. I'd like to thank [Vojin Jovanović](https://github.com/vjovanov) for arriving to the same conclusions about DAGs and discussing them with me. Finally I'd like to thank [Miodrag Živković](https://scholar.google.com/citations?user=1h-yrnEAAAAJ&hl=en) for pointing out the connection to propositional logic which should be looked at in more detail. 
 
 ### 1. Attackers don't play Mahjong 
 
