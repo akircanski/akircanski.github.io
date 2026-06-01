@@ -7,7 +7,7 @@ This is a gorge located in the middle of the Balkans,  where the Dinaric mountai
 
 The main thing I want to draw attention to in this blog post is what I believe _may_ be an incorrect hiking signage at a specifically dangerous spot in the gorge. That's at where about the hiker should work towards closing the hike and safely exiting the gorge (assuming they're hiking from the Mileševa monastery direction). Fast-forward to the end of the blog post for just that; otherwise, read on for details on this gorge. 
 
-### The Milesevka gorge whereabouts
+### The Mileševka gorge whereabouts
 
 I am a semi-experienced hiker, with some number of trips at mountains throughout Serbia. However, this is the first time I'm on a solo hiking trip. This was a weekend project; I planned to explore the mountain [Golija](https://en.wikipedia.org/wiki/Golija_(Serbia)), but I mentioned this to my sister / cousin [Iva](https://www.instagram.com/mountainhorsesserbia/) who lives in the mountains, some 25 km from the gorge. She said no, you should go to the Mileševka gorge, it has abandoned tunnels and is of supreme beauty. 
 
@@ -28,12 +28,11 @@ Packed with a tent and a sleeping bag, I embarked a bus early Friday from [Belgr
 
 <img src="other-pics/milesevka/sale.jpg" alt="Second Image" width="50%">
 
-
 I reached the [Mileševa monastery](https://en.wikipedia.org/wiki/Mile%C5%A1eva_Monastery), but I did not feel a spiritual urge; I went in, briefly glanced at the [White Angel](https://en.wikipedia.org/wiki/White_Angel) and went out. The monastery was in busy mode; there was a group of visitors from China headed by a guide and as it was Saturday morning, a gardening activity with what appeared to be an external gardening contractor. I sat in the monastery garden and ate a sandwich watching the lawnmowers cut the grass around the monastery.
 
 I walked away from the monastery to the nearby entrance to the gorge. I encountered a local embarking lumber on a small truck and asked him about the gorge. He uttered something that read like a warning: that the track is unmaintained and there are snakes. At this point, I can't tell whether the number of snakes is higher than one would expect; the local population, who almost never goes through the whole gorge probably _could_ overestimate the snake danger. Still, having encountered [Vipera ammodytes](https://en.wikipedia.org/wiki/Vipera_ammodytes) recently on other hiking trips, I decided to undertake systematic measures to scare off the snakes in front of me, using a wooden stick with leaves at the tip.
 
-### The abandoned project: road from Prijepolje to Sjenica 
+### The abandoned project: the road from Prijepolje to Sjenica 
 
 The hiking track unravels ahead as an abandoned road construction project: the road to [Prijepolje](https://en.wikipedia.org/wiki/Prijepolje) to [Sjenica](https://en.wikipedia.org/wiki/Sjenica). Prijepolje and Senica are colorful cities in deep south of Serbia; they both have a significant Muslim community, as that's a place where the Ottoman empire left strong traces through the history of this region. These towns can be seen as gateways between the two historical empires (the Ottoman on the one hand, and the European on the other) which results in bustling diversity. If a person from the West travels towards the east through the Balkans, those types of towns are exactly the first places where they'll spot a mosque. 
 
