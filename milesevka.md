@@ -9,7 +9,7 @@ The main thing I want to draw attention to in this blog post is what I believe _
 
 <table>
   <tr>
-    <td><img src="other-pics/milesevka/signpost.jpg" alt="First Image" width="100%"></td>
+    <td><img src="other-pics/milesevka/signpost.jpg" alt="First Image" width="50%"></td>
     <td><img src="other-pics/milesevka/map-zoomed.png" alt="Second Image" width="100%"></td>
   </tr>
 </table>
