@@ -7,15 +7,13 @@ So, this is a gorge located in the middle of the Balkans; in southern Serbia,  w
 
 The main thing I want to draw attention to in this blog post is what I believe _may_ be an incorrect hiking signage at a specifically dangerous spot in the gorge. That's at where about the hiker should work towards closing the hike and safely exiting the gorge (assuming they're hiking from the Mileševa monastery direction). See the signage on the left; it says that you can exit the gorge in several directions.
 
-<!-- 
-<div class="image-container">
-  <div class="image-column">
-    <img src="signpost.jpg" alt="Description of first image">
-  </div>
-  <div class="image-column">
-    <img src="map-zoomed.png" alt="Description of second image">
-  </div>
-</div>
+<table>
+  <tr>
+    <td><img src="signpost.jpg" alt="First Image" width="100%"></td>
+    <td><img src="map-zoomed.png" alt="Second Image" width="100%"></td>
+  </tr>
+</table>
+
 
 I tried this in practice and reached what appears to be a trail dead-end; by the TKTK brook in the thick of foliage and forest, the trail signage appears to just cease. I tried looking for the extension but could not find it. Could it be that this is an trail dead end that the automatic trail trace algorithms from hiking apps identified? 
 
@@ -25,6 +23,7 @@ It is also possible that I'm just wrong and that there was an extension of the t
 
 I am a semi-experienced hiker, with some number of trips to mountains throughout Serbia. However, this is the first time I'm on a solo hiking trip. This was a weekend project; I planned to explore the mountain [Golija](https://en.wikipedia.org/wiki/Golija_(Serbia)), but I mentioned this to my sister / cousin Iva who lives in the mountains, some 25 km from the gorge. She said no, you should go to the Mileševka gorge, it has abandoned tunnels and is of supreme beauty. 
 
+<!-- 
 Indeed, she was right. The Mileševka gorge is a steep cut through the rock, made by the river Mileševka over millions of years. The gorge is located in the southern part of the mountain Zlatar. I'm borrowing some pictures from out there:
 
 <div class="image-container">
@@ -38,7 +37,7 @@ Indeed, she was right. The Mileševka gorge is a steep cut through the rock, mad
 
 At certain locations, the gorge is more than 300m deep, needless to mention the number of species that live there, including wolves, bears, eagles, etc. Notably, the gorge the second largest location where [_Picea omorika_](https://en.wikipedia.org/wiki/Picea_omorika) lives; it is a rare and beautiful plant; in the gorge, you can see them grow out of rock cliffs. 
 
-### Solo hiking the Mileševka gorge
+### Solo hiking the Milesevka gorge
 
 Packed with a tent and a sleeping bag, I embarked a bus early Friday from [Belgrade](https://en.wikipedia.org/wiki/Belgrade) to [Prijepolje](https://en.wikipedia.org/wiki/Prijepolje). I landed in a cheap motel for truckers in the outskirts of Prijepolje, where I worked from until Friday evening. In the evening, I realized I was nervous about the adventure ahead, it being somewhat difficult. I went to sleep at about 10pm and woke up about 7am, with a feeling of uncertainty on how exactly to execute the trip - I was unceratin should I break through the full gorge or retreat when I reach the last tunnel (see below for tunnels in the gorge). 
 
