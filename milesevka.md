@@ -26,12 +26,7 @@ I am a semi-experienced hiker, with some number of trips to mountains throughout
  
 Indeed, she was right. The Mileševka gorge is a steep cut through the rock, made by the river Mileševka over millions of years. The gorge is located in the southern part of the mountain Zlatar. I'm borrowing some pictures from out there:
 
-<table>
-  <tr>
-    <td><img src="other-pics/milesevka/turizam-prijepolje.png" alt="First Image" width="100%"></td>
-    <td><img src="other-pics/milesevka/zzps.rs.png" alt="Second Image" width="100%"></td>
-  </tr>
-</table>
+<img src="other-pics/milesevka/turizam-prijepolje.png" alt="First Image" width="100%">
 
 At certain locations, the gorge is more than 300m deep, needless to mention the number of species that live there, including wolves, bears, eagles, etc. Notably, the gorge the second largest location where [_Picea omorika_](https://en.wikipedia.org/wiki/Picea_omorika) lives; it is a rare and beautiful plant; in the gorge, you can see them grow out of rock cliffs. 
 
