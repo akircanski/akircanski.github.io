@@ -26,9 +26,10 @@ Writing
 
 <a href="./tcp-spoofing">Random TCP sequence number: A security control that was good enough</a>
 
-<br>
-Other
-
 <a href="./DAGs">On DAGs and passage of time</a> 
+
+<br>
+
+Other
 
 <a href="./milesevka">In the Mileševka gorge</a> 
