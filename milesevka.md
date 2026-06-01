@@ -29,7 +29,7 @@ Indeed, she was right. The Mileševka gorge is a steep cut through the rock, mad
 <table>
   <tr>
     <td><img src="other-pics/milesevka/turizam-prijepolje.png" alt="First Image" width="70%"></td>
-    <td><img src="other-pics/milesevka/zzps.rs.png" alt="Second Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/zzps.rs.jpg" alt="Second Image" width="70%"></td>
   </tr>
 </table>
 
@@ -73,7 +73,7 @@ The first one is when you enter the last tunnel - the track goes out through the
 <table>
   <tr>
     <td><img src="other-pics/milesevka/tunnel-3.jpg" alt="First Image" width="70%"></td>
-    <td><img src="other-pics/milesevka/tunnel-10.png" alt="Second Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/tunnel-10.jpg" alt="Second Image" width="70%"></td>
   </tr>
 </table>
 
@@ -95,7 +95,7 @@ Two random pictures for the end:
 <table>
   <tr>
     <td><img src="other-pics/milesevka/tunnel-5.jpg" alt="First Image" width="70%"></td>
-    <td><img src="other-pics/milesevka/tunnel-6.png" alt="Second Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/tunnel-6.jpg" alt="Second Image" width="70%"></td>
   </tr>
 </table>
 
