@@ -93,7 +93,7 @@ In short, I _think_ the Međani sign is wrong; I couldn't find the trail extensi
 Anyway, I reached the trail dead-end. I had two choices; go back or press forward by walking up the riverbed of the Međani brook. I opted for the latter - I managed to soldier through the foliage and waterfalls by hopping from rock to rock and walking through the thick foliage by the brook, where possible. At some point, I decided to wet my shoes to be able to move through what appeared to be impenetrable thickery of plants, waterfalls and rock. I do not recommend going this path; the risk of injury is high. Instead, I'd now take the 3rd route from the signpost - unfortunately I cannot remember the exact name of the third signpost goal, but it is a "Česma" (source of water).
 
 
-### Bonus pictures
+### Hard becomes easy
 
 After the gorge, I met some locals who offered me water and food (I didn't need any food). I marched forward to a church without anyone on its property (it was 8:30 pm anyway) and decided to camp in there. Here's where I slept:
 
@@ -108,3 +108,4 @@ I woke up at 4:30 in the morning and walked some 20 km north to [Nova Varoš](ht
   </tr>
 </table>
 
+After adventures like this what was supposed to be hard becomes easy. 
