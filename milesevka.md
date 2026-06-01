@@ -97,14 +97,14 @@ Anyway, I reached the trail dead-end. I had two choices; go back or press forwar
 
 After the gorge, I met some locals who offered me water and food (I didn't need any food). I marched forward to a church without anyone on its property (it was 8:30 pm anyway) and decided to camp in there. Here's where I slept:
 
-<img src="other-pics/milesevka/church.png" alt="First Image" width="70%">
+<img src="other-pics/milesevka/church.png" alt="First Image" width="50%">
 
 I woke up at 4:30 in the morning and walked some 20 km north to [Nova Varoš](https://en.wikipedia.org/wiki/Nova_Varo%C5%A1). The only road is the main one, but there were no cars at that hour. It rained, but I didn't mind, even without any rain gear. 
 
 <table>
   <tr>
-    <td><img src="other-pics/milesevka/tunnel-5.jpg" alt="First Image" width="70%"></td>
-    <td><img src="other-pics/milesevka/tunnel-6.jpg" alt="Second Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/tunnel-5.jpg" alt="First Image" width="100%"></td>
+    <td><img src="other-pics/milesevka/tunnel-6.jpg" alt="Second Image" width="100%"></td>
   </tr>
 </table>
 
