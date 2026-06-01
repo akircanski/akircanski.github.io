@@ -23,17 +23,15 @@ It is also possible that I'm just wrong and that there was an extension of the t
 
 I am a semi-experienced hiker, with some number of trips to mountains throughout Serbia. However, this is the first time I'm on a solo hiking trip. This was a weekend project; I planned to explore the mountain [Golija](https://en.wikipedia.org/wiki/Golija_(Serbia)), but I mentioned this to my sister / cousin Iva who lives in the mountains, some 25 km from the gorge. She said no, you should go to the Mileševka gorge, it has abandoned tunnels and is of supreme beauty. 
 
-<!-- 
+ 
 Indeed, she was right. The Mileševka gorge is a steep cut through the rock, made by the river Mileševka over millions of years. The gorge is located in the southern part of the mountain Zlatar. I'm borrowing some pictures from out there:
 
-<div class="image-container">
-  <div class="image-column">
-    <img src="turizam-prijepolje.png" alt="Description of first image">
-  </div>
-  <div class="image-column">
-    <img src="zzps.rs.png" alt="Description of second image">
-  </div>
-</div>
+<table>
+  <tr>
+    <td><img src="other-pics/milesevka/turizam-prijepolje.png" alt="First Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/zzps.rs.png" alt="Second Image" width="70%"></td>
+  </tr>
+</table>
 
 At certain locations, the gorge is more than 300m deep, needless to mention the number of species that live there, including wolves, bears, eagles, etc. Notably, the gorge the second largest location where [_Picea omorika_](https://en.wikipedia.org/wiki/Picea_omorika) lives; it is a rare and beautiful plant; in the gorge, you can see them grow out of rock cliffs. 
 
@@ -57,14 +55,12 @@ The hiking track thus goes through about 8-10 abandoned tunnels. The sequence of
 
 Some tunnel pictures:
 
-<div class="image-container">
-  <div class="image-column">
-    <img src="tunnel-1.jpg" alt="Description of first image">
-  </div>
-  <div class="image-column">
-    <img src="tunnel-2.png" alt="Description of second image">
-  </div>
-</div>
+<table>
+  <tr>
+    <td><img src="other-pics/milesevka/tunnel-1.jpg" alt="First Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/tunnel-2.png" alt="Second Image" width="70%"></td>
+  </tr>
+</table>
 
 The 9th or 10th tunnel is a dead-end tunnel; I was not brave enough to walk all the way in as it's scarily dark and abandoned. That must have been the point where the workers who drilled the rock were told that the project is abandoned, in the middle of their work. For no reason at all, I wondering what their days looked like and where they were transferred after the project was stopped. 
 
@@ -74,14 +70,12 @@ Heigh-wise, the track is dangerous by itself and probably should not be hiked if
 
 The first one is when you enter the last tunnel - the track goes out through the hole in the tunnel, see the picture below. When you go through that hole, you should make sure to not accelerate when coming down. Stay closer to the tunnel and do not accelerate or roll downwards:
 
-<div class="image-container">
-  <div class="image-column">
-    <img src="tunnel-3.jpg" alt="Description of first image">
-  </div>
-  <div class="image-column">
-    <img src="tunnel-10.jpg" alt="Description of second image">
-  </div>
-</div>
+<table>
+  <tr>
+    <td><img src="other-pics/milesevka/tunnel-3.jpg" alt="First Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/tunnel-10.png" alt="Second Image" width="70%"></td>
+  </tr>
+</table>
 
 The second dangerous spot is a makeshift wooden stick over a hole in the ground. The hole is not dangerous by itself, but stumbling down the hole (god forbid) would risk stumbling down the cliff. The third dangerous spot is where the rockslide damaged the track; there's about half a meter of space between the rock wall and the cliff. 
 
@@ -97,12 +91,11 @@ Anyway, I reached the trail dead-end. I had two choices; go back or press forwar
 
 Two random pictures for the end:
 
-<div class="image-container">
-  <div class="image-column">
-    <img src="tunnel-5.jpg" alt="Description of first image">
-  </div>
-  <div class="image-column">
-    <img src="tunnel-6.jpg" alt="Description of second image">
-  </div>
-</div>
--->
+
+<table>
+  <tr>
+    <td><img src="other-pics/milesevka/tunnel-5.jpg" alt="First Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/tunnel-6.png" alt="Second Image" width="70%"></td>
+  </tr>
+</table>
+
