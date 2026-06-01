@@ -1,5 +1,5 @@
 ---
-title: In the Mileševka gorge
+title: In the gorge of Mileševka
 ---
 I just came back from a solo hiking trip in the Mileševka gorge; the gorge is in southwestern Serbia, in the central Balkans. I am _stunned_ by the beauty I saw in the gorge. Even though a somewhat experienced hiker, I've never seen anything like this before. 
 
@@ -58,7 +58,7 @@ Some tunnel pictures:
 <table>
   <tr>
     <td><img src="other-pics/milesevka/tunnel-1.jpg" alt="First Image" width="70%"></td>
-    <td><img src="other-pics/milesevka/tunnel-2.png" alt="Second Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/tunnel-2.jpg" alt="Second Image" width="70%"></td>
   </tr>
 </table>
 
