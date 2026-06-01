@@ -29,9 +29,9 @@ In the evening, I realized I was nervous about the adventure ahead, it being som
 
 Anyway, I took off early Saturday morning on May 30th 2026. I reached the [Mileševa monastery](https://en.wikipedia.org/wiki/Mile%C5%A1eva_Monastery), but did not feel a spiritual urge; I went in, briefly glanced at the [White Angel](https://en.wikipedia.org/wiki/White_Angel) and went out. The monastery was in busy mode; there was a group of visitors from China headed by a guide and as it was Saturday morning, a gardening activity with what appeared to be a gardening contractor took place. I sat in the monastery garden and ate a sandwich, watching the lawnmowers cut the grass around the monastery.
 
-I walked away from the monastery to the nearby entrance to the gorge. I encountered a local, loading lumber on a small truck and asked him about the gorge. He uttered something that read like a warning: that the track is unmaintained and there are snakes. I pressed forward and encountered the first tunnel.
-
 <img src="other-pics/milesevka/sale.jpg" alt="Second Image" width="50%">
+
+I walked away from the monastery to the nearby entrance to the gorge. I encountered a local, loading lumber on a small truck and asked him about the gorge. He uttered something that read like a warning: that the track is unmaintained and there are snakes. I pressed forward and encountered the first tunnel.
 
 At this point, I can't tell whether the number of snakes is higher than one would expect; the local population, who almost never goes through the whole gorge probably _could_ overestimate the snake danger. Still, having encountered [Vipera ammodytes](https://en.wikipedia.org/wiki/Vipera_ammodytes) recently on other hiking trips, I decided to undertake systematic measures to scare off the snakes in front of me, using a wooden stick with leaves at the tip.
 
@@ -108,4 +108,4 @@ I woke up at 4:30 in the morning and walked some 20 km north to [Nova Varoš](ht
   </tr>
 </table>
 
-After adventures like this what was supposed to be hard becomes easy. 
+After adventures like this, what was supposed to be hard becomes easy. 
