@@ -28,8 +28,8 @@ Indeed, she was right. The Mileševka gorge is a steep cut through the rock, mad
 
 <table>
   <tr>
-    <td><img src="other-pics/milesevka/turizam-prijepolje.png" alt="First Image" width="70%"></td>
-    <td><img src="other-pics/milesevka/zzps.rs.jpg" alt="Second Image" width="70%"></td>
+    <td><img src="other-pics/milesevka/turizam-prijepolje.png" alt="First Image" width="100%"></td>
+    <td><img src="other-pics/milesevka/zzps.rs.png" alt="Second Image" width="100%"></td>
   </tr>
 </table>
 
@@ -52,8 +52,6 @@ Back to the construction of the road: it involved carving tunnels through the ro
 ### Hiking through the tunnels
 
 The hiking track thus goes through about 8-10 abandoned tunnels. The sequence of tunnels, interchanged with narrow paths, is just aside the the sharp cliff drop, about 300m high, at places. The first obstacle the hiker faces are the rocks that blockaded the trail; they collect the rockslides that happened in the last 70 years.
-
-Some tunnel pictures:
 
 <table>
   <tr>
