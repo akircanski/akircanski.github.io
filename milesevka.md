@@ -1,5 +1,5 @@
 ---
-title: In the gorge of Mileševka
+title: In the Mileševka gorge
 ---
 I just came back from a solo hiking trip in the Mileševka gorge; the gorge is in southwestern Serbia, in the central Balkans. I am _stunned_ by the beauty I saw in the gorge. Even though a somewhat experienced hiker, I've never seen anything like this before. 
 
@@ -33,7 +33,7 @@ Anyway, I took off early Saturday morning on May 30th 2026. I reached the [Mile�
 
 I walked away from the monastery to the nearby entrance to the gorge. I encountered a local, loading lumber on a small truck and asked him about the gorge. He uttered something that read like a warning: that the track is unmaintained and there are snakes. I pressed forward and encountered the first tunnel.
 
-At this point, I can't tell whether the number of snakes is higher than one would expect; the local population, who almost never goes through the whole gorge probably _could_ overestimate the snake danger. Still, having encountered [Vipera ammodytes](https://en.wikipedia.org/wiki/Vipera_ammodytes) recently on other hiking trips, I decided to undertake systematic measures to scare off the snakes in front of me, using a wooden stick with leaves at the tip.
+At this point, I can't tell whether the number of snakes is higher than one would expect; the local population, who almost never goes through the whole gorge may overestimate number of snakes. After all, there's no reason for this number to be higher than it was any time in the last 50 years. They're obviously there, but their population is probably more or less constant. Anyway, having encountered [Vipera ammodytes](https://en.wikipedia.org/wiki/Vipera_ammodytes) recently on other hiking trips, I decided to undertake systematic measures to scare off the snakes in front of me, using a wooden stick with leaves at the tip.
 
 ### The abandoned project: road from Prijepolje to Sjenica 
 
@@ -67,17 +67,17 @@ The first one is when you need to bypass the last (dead-end) tunnel - the track 
   </tr>
 </table>
 
-The second dangerous spot is a makeshift wooden rod over a hole in the ground. The hole is not dangerous by itself, but stumbling down the hole would possibly (god forbid) result in stumbling down the cliff. I don't have a picture of the wooden rod, but I've seen it at some sites; will post it here when I find the right one. When I ended the hike, a local from a nearby village asked me if the rod broke already; I responded that I think there may be a steel strenghtening inside the rod, but the local thought otherwise; I can't tell at this point. 
+The second dangerous spot is a makeshift wooden rod over a hole in the ground. The hole is not dangerous by itself, but stumbling down the hole would possibly (god forbid) result in stumbling down the cliff. The picture of the wooden rod can be found on the Internet, I'll put it here when I find it. When I ended the hike, a local from a nearby village asked me if the rod broke already; I responded that I think there may be a steel strenghtening inside the rod. The local thought otherwise; I can't tell at this point. 
 
 The third dangerous spot some time after the wooden rod; it is where the trail rock eroded; there's about half a meter of space left between the rock wall and the cliff; with a backpack, it is dangerous to cross it. 
 
-All in all, you're on your own if you decide to hike this; be careful especially if you're carrying a heavy backpack with a tent or a sleeping bag extension, as it can interfere with straight walking. 
+All in all, you're on your own if you decide to hike the gorge; be careful especially if you're carrying a heavy backpack with a tent or a sleeping bag extension, as it can interfere with straight walking. 
 
 ### The seemingly incorrect signpost
 
-Despite the dangers, most of the trail is still well marked. As I mentioned at the beginning of the blog post, there's a dangerous exception to this. 
+Most of the trail is well marked, but as I mentioned at the beginning of the blog post, there's a dangerous exception to this. 
 
-Towards the end of the hike when coming from the monastery direction, the trail descends into the cliff and crosses Mileševka. It leads to a place with a wooden bench and a signpost. It is quite surreal to see a wooden bench there, but the bench is likely maintained by folks that approach it from the _other_ direction, which does not require going through the gorge. 
+Towards the end of the hike when coming from the monastery direction, the trail descends into the cliff and crosses Mileševka. It leads to a place with a wooden bench and a signpost. It is quite surreal to see a wooden bench there, but the bench is likely maintained by folks that approach it from the _other_ direction, which does not require going through the gorge. The picture on the right shows the signpost.
 
 <table>
   <tr>
@@ -86,12 +86,11 @@ Towards the end of the hike when coming from the monastery direction, the trail 
   </tr>
 </table>
 
-After some debate I followed the Međani sign (see the pictures at the beginning of this blog post). I reached the location which, supposedly, is a dead-end - and I couldn't find the path extension -  which agrees to the hiking app trail map (see the hiking app picture on the right).
+After some debate I followed the Međani sign (see the pictures at the beginning of this blog post). I reached the location which, supposedly, is a dead-end - and I couldn't find the path extension -  which agrees to the hiking app trail map (see the hiking app picture on the right). See how the path on the trail app ends without extension. 
 
 In short, I _think_ the Međani sign is wrong; I couldn't find the trail extension and the app which blindly tracks hikers' movement appears to indicate so. I cannot tell if I'm right with certainity. I'll leave it for the future to tell (I'll try to contact the folks responsible for trails to find out and will update the post if anything noteworthy comes up). 
 
-Anyway, I reached the trail dead-end. I had two choices; go back or press forward by walking up the riverbed of the Međani brook. I opted for the latter - I managed to soldier through the foliage and waterfalls by hopping from rock to rock and walking through the thick foliage by the brook, where possible. At some point, I decided to wet my shoes to be able to move through what appeared to be impenetrable thickery of plants, waterfalls and rock. I do not recommend going this path; the risk of injury is high. Instead, I'd now take the 3rd route from the signpost - unfortunately I cannot remember the exact name of the third signpost goal, but it is a "Česma" (source of water).
-
+Anyway, I reached the trail dead-end. I had two choices; go back or press forward by walking up the riverbed of the Međani brook. I opted for the latter - I managed to soldier through the foliage and waterfalls by hopping from rock to rock and walking through the thick foliage by the brook, where possible. At some point, I decided to wet my shoes to be able to move through what appeared to be impenetrable thickery of plants, waterfalls and rock. Do not go this path; the risk of injury is high, it's barely doable. Instead, take the 3rd route from the signpost - unfortunately I cannot remember the exact name of the third signpost goal, but it is a "Česma" (source of water).
 
 ### Hard becomes easy
 
