@@ -9,7 +9,7 @@ The main thing I want to draw attention to in this blog post is what I believe _
 
 ### The Mileševka gorge whereabouts
 
-I am a semi-experienced hiker, with some number of trips at mountains throughout Serbia. However, this is the first time I'm on a solo hiking trip. This was a weekend project; I planned to explore the mountain [Golija](https://en.wikipedia.org/wiki/Golija_(Serbia)), but I mentioned this to my cousin [Iva](https://www.instagram.com/mountainhorsesserbia/) who lives in the mountains, some 25 km from the gorge. She said no, you should go to the Mileševka gorge, it has abandoned tunnels and is of supreme beauty. 
+I am a semi-experienced hiker, with some number of trips at mountains throughout Serbia. However, this is the first time I'm on a solo hiking trip. This was a weekend project; I planned to explore the mountain [Golija](https://en.wikipedia.org/wiki/Golija_(Serbia)), but I mentioned this to my cousin [Iva](https://www.instagram.com/mountainhorsesserbia/) who lives in the mountains, some 50 km from the gorge. She said no, you should go to the Mileševka gorge, it has abandoned tunnels and is of supreme beauty. 
 
 The Mileševka gorge is a steep cut through the rock, made by the river Mileševka over millions of years. I'm borrowing some pictures (from _Turizam Prijepolje_ and _ZZPS_):
 
