@@ -6,7 +6,7 @@ In this blog post, we introduce some explicit discussion of _abstractions_ as su
 
 We discuss how _quotient maps_ are the simplest notion for expressing abstractions, note a few papers that explicitly use different abstrations for the same problem (hash function collision search) and what can they be used for. We arrive at a lookout from which the possibility of identifying unexpected abstractions emerges, which is exciting. 
 
-This research is inspired by some topics in cryptographic hash function research, but really doesn't have much to do with cryptography; more on that later. Let's first define what's the target of our notion of abstraction: a disrete mathematical transformation which has a start and end state. 
+This research is inspired by some topics in cryptographic hash function research, but really doesn't have much to do with cryptography; more on that later. As for the hash collision search background, see this blog [post](https://akircanski.github.io/collision-research).  Let's first define what's the target of our notion of abstraction: a disrete mathematical transformation which has a start and end state. 
 
 ### Mappings as arbitrary processes
 
@@ -45,7 +45,7 @@ The green part of the graph represents the original, intractable process evolvin
 
 We look at some examples: how working on the abstracted view results in finding solutions for a specific problem, whereas attempting to solve the problem itself (the green line on the commutative diagram) is intractable. 
 
-Omitting various details from a cryptographic hash function such as SHA-2, it can be seen as a recurrence relation under influence of user-controlled messages, see this hash function introductory blog post TKTK. The question is whether it's possible to find a pair of recurrence expansions, so that they end up with same values in last expanded registers. 
+Omitting various details from a cryptographic hash function such as SHA-2, it can be seen as a recurrence relation under influence of user-controlled messages, see this hash function introductory blog post: [SHA-x collision search and DPLL](https://akircanski.github.io/collision-research). The question is whether it's possible to find a pair of recurrence expansions, so that they end up with same values in last expanded registers. 
 
 Note that a natural way a human thinks about the collision problems involves abstractions, right from the beginning. A human will not think in terms of specific values for the two hash executions traces, rather, a unified view is visualized with `x` at difference positions. The first breakthroughs in hash function cryptanalysis already treated the problem by unifying the two hash functions executions into a single one.   Difference propagation becomes a probabilistic process as opposed to deterministic, as it the expansion changes depending on which underlying values the hash takes.
 
