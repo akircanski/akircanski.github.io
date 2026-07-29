@@ -24,11 +24,11 @@ Given the mapping `f`, consider a problem such as inverting `f` for a given outp
 
 The natural attempt to solve such a problem is to intentionally omit some details and attempt to solve a "blurred" variant of the problem (and then populate the details). The right formalism here is the quotient map (picture from [Math Online](http://mathonline.wikidot.com/topological-quotients-review)):
 
-<img src="other-pics/quotient/quotient.png" alt="First Image" width="50%">
+<p align="center"> <img src="other-pics/quotient/quotient.png" alt="First Image" width="70%"> </p> 
 
 Instead of working with specific inputs and outputs `x`, `y`, we work with sets that contain `X` and `Y`. On the picture, the original mapping is denoted with `q` and the condition is then:
 
-For each `x --q--> y$, we have $[x] --Q--> [y]$. 
+For each `x --q--> y`, we have `[x] --Q--> [y]`. 
 
 In other words, if `x` is mapped to `y` by the original map, the corresponding "blurred" version of $x
 $ and $y$ must be in correspondence with the quotient map `Q`. 
@@ -37,7 +37,7 @@ The set $X$ partition and mappings $q$ and $Q$ represent an abstraction: if all 
 
 Another way to put this is using a commutative diagram.
 
-<p align="center"> <img src="other-pics/quotient/comm.png" alt="First Image" width="50%"> </p>
+<p align="center"> <img src="other-pics/quotient/comm.png" alt="First Image" width="70%"> </p>
 
 The green part of the graph represents the original, intractable process evolving through time. The abstraction function $F$ leaves details out of the process via partitioning it into subsets, yielding the new transformation $Q$. The process in blue may be an easier target to solve. 
 
@@ -53,19 +53,19 @@ The evolution of languages for tracking difference in hash functions can be trac
 
 **Modular addition differences, Wang et al [1]:"** In this breakthrough work on MD4, MD5 and SHA-1, Wang and Yu consider _additive_ differences (see [1]):
 
-<p align="center"> <img src="other-pics/quotient/wang.png" alt="First Image" width="50%"> </p>
+<p align="center"> <img src="other-pics/quotient/wang.png" alt="First Image" width="70%"> </p>
 
 The actual pairs their differentials specify are those for which inner registers _subtract_ (modulo word size) to specific values. 
 
 **Bitwise differences, De Canniere et al. [2]:** All possible bit combinations are assigned a sign, for example `(0,0)` and `(1,1)` are assigned the symbol `-` and `(0,1)` and `(1,0)` the symbol `x`, [2].  The differential path problem then takes the form:
 
-<p align="center">  <img src="other-pics/quotient/single-bit.png" alt="First Image" width="50%"> </p>
+<p align="center">  <img src="other-pics/quotient/single-bit.png" alt="First Image" width="70%"> </p>
 
 Since these are bit-wise conditions, they need to be complemented with carry bit information; that's a separate representation, not shown on the graph (and commonly not shown in the papers on hash functions). 
 
 **Multi-bit constraints [3]:** Laurent extends the bit-wise constraints to multi-bit constraints. The rationale is - multi-bit constraints capture dependencies lost by single-bit constraints, see the explanation from the paper:
 
-<p align="center"> <img src="other-pics/quotient/gaetan.png" alt="First Image" width="50%"> </p>
+<p align="center"> <img src="other-pics/quotient/gaetan.png" alt="First Image" width="70%"> </p>
 
 ### Research project: how to derive an abstraction
 
