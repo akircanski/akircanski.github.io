@@ -43,28 +43,29 @@ The green part of the graph represents the original, intractable process evolvin
 
 ### Application in hash function cryptanalysis
 
-We look at some examples: how working on the blue line in the previous graph resulted in solutions, whereas attempting to solve the problem itself (the green line) was intractable. 
+We look at some examples: how working on the abstracted view results in finding solutions for a specific problem, whereas attempting to solve the problem itself (the green line on the commutative diagram) is intractable. 
 
 Omitting various details from a cryptographic hash function such as SHA-2, it can be seen as a recurrence relation under influence of user-controlled messages, see this hash function introductory blog post TKTK. The question is whether it's possible to find a pair of recurrence expansions, so that they end up with same values in last expanded registers. 
 
-A natural way a human thinks about the collision problem involves an abstraction. The first breakthroughs in hash function cryptanalysis already treated the problem by unifying the two hash functions executions into a single one.  Specifically, instead of thinking about the two hash traces at the same time, a human will consider only the expansion differentials. Difference propagation becomes a probabilistic process as opposed to deterministic, as it the expansion changes depending on which underlying values the hash takes.
+Note that a natural way a human thinks about the collision problems involves abstractions, right from the beginning. A human will not think in terms of specific values for the two hash executions traces, rather, a unified view is visualized with `x` at difference positions. The first breakthroughs in hash function cryptanalysis already treated the problem by unifying the two hash functions executions into a single one.   Difference propagation becomes a probabilistic process as opposed to deterministic, as it the expansion changes depending on which underlying values the hash takes.
 
-The evolution of languages for tracking differential trails in hash functions can be traced as follows:
+The evolution of languages for tracking difference in hash functions can be traced as follows:
 
 **Modular addition differences, Wang et al [1]:"** In this breakthrough work on MD4, MD5 and SHA-1, Wang and Yu consider _additive_ differences (see [1]):
 
-<img src="other-pics/quotient/wang.png" alt="First Image" width="50%">
+<p align="center"> <img src="other-pics/quotient/wang.png" alt="First Image" width="50%"> </p>
 
 The actual pairs their differentials specify are those for which inner registers _subtract_ (modulo word size) to specific values. 
 
 **Bitwise differences, De Canniere et al. [2]:** All possible bit combinations are assigned a sign, for example `(0,0)` and `(1,1)` are assigned the symbol `-` and `(0,1)` and `(1,0)` the symbol `x`, [2].  The differential path problem then takes the form:
 
-<img src="other-pics/quotient/single-bit.png" alt="First Image" width="50%">
+<p align="center">  <img src="other-pics/quotient/single-bit.png" alt="First Image" width="50%"> </p>
 
 Since these are bit-wise conditions, they need to be complemented with carry bit information; that's a separate representation, not shown on the graph (and commonly not shown in the papers on hash functions). 
 
 **Multi-bit constraints [3]:** Laurent extends the bit-wise constraints to multi-bit constraints. The rationale is - multi-bit constraints capture dependencies lost by single-bit constraints, see the explanation from the paper:
-<img src="other-pics/quotient/gaetan.png" alt="First Image" width="50%">
+
+<p align="center"> <img src="other-pics/quotient/gaetan.png" alt="First Image" width="50%"> </p>
 
 ### Research project: how to derive an abstraction
 
