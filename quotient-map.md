@@ -1,8 +1,8 @@
 ---
-title: How to find unexpected abstractions
+title: On the possibility of finding unexpected abstractions
 ---
 
-In this blog post, we introduce some explicit discussion of _abstrations_ as such. Abstractions are a natural part of reasoning, but they are not that often discussed explicitly. By an abstration, we mean omitting details from a process in view, so that the process transformation  becomes simpler, but remains faithful to the original process. 
+In this blog post, we introduce some explicit discussion of _abstrations_ as such. Abstractions are a natural part of any reasoning, but they are not that often discussed explicitly. By an abstration, we mean omitting details from a process in view, so that the process transformation  becomes simpler, but remains faithful to the original process. 
 
 We discuss how _quotient maps_ are the simplest notion for expressing abstractions, note a few papers that explicitly use different abstrations for the same problem (hash function collision search) and what can they be used for. We arrive at a lookout from which the possibility of identifying unexpected abstractions emerges, which is exciting. 
 
@@ -24,22 +24,22 @@ Given the mapping `f`, consider a problem such as inverting `f` for a given outp
 
 The natural attempt to solve such a problem is to intentionally omit some details and attempt to solve a "blurred" variant of the problem (and then populate the details). The right formalism here is the quotient map (picture from [Math Online](http://mathonline.wikidot.com/topological-quotients-review)):
 
-<p align="center"> <img src="other-pics/quotient/quotient.png" alt="First Image" width="70%"> </p> 
+<p align="center"> <img src="other-pics/quotient/quotient.png" alt="First Image" width="55%"> </p> 
 
 Instead of working with specific inputs and outputs `x`, `y`, we work with sets that contain `X` and `Y`. On the picture, the original mapping is denoted with `q` and the condition is then:
 
 For each `x --q--> y`, we have `[x] --Q--> [y]`. 
 
-In other words, if `x` is mapped to `y` by the original map, the corresponding "blurred" version of $x
-$ and $y$ must be in correspondence with the quotient map `Q`. 
+In other words, if `x` is mapped to `y` by the original map, the corresponding "blurred" version of `x`
+ and `y` must be in correspondence with each other via Q via the quotient map. 
 
-The set $X$ partition and mappings $q$ and $Q$ represent an abstraction: if all we're seeing is the partition and $Q$, then we lost some details from the original problem. 
+The set `X` partition and mappings `q` and `Q` represent an abstraction: if all we're seeing is the partition and `Q`, then we lost some details from the original problem. 
 
 Another way to put this is using a commutative diagram.
 
 <p align="center"> <img src="other-pics/quotient/comm.png" alt="First Image" width="70%"> </p>
 
-The green part of the graph represents the original, intractable process evolving through time. The abstraction function $F$ leaves details out of the process via partitioning it into subsets, yielding the new transformation $Q$. The process in blue may be an easier target to solve. 
+The green part of the graph represents the original, intractable process evolving through time. The abstraction function `F` leaves details out of the process via partitioning it into subsets, yielding the new transformation `Q`. The process in blue may be an easier target to solve. 
 
 ### Application in hash function cryptanalysis
 
@@ -71,20 +71,19 @@ Since these are bit-wise conditions, they need to be complemented with carry bit
 
 In the previous section, we saw that the first abstraction (Wang et al.) was derived from the internal structure of the hash: the modular addition is the main function in a hash. In some sense, Wang's abstraction follows the natural flow of the process. 
 
-The bit-wise differences make sense as, apart from modular addition, all other hash found operations are bit-wise. It also makes sense from human perception viewpoint, where one would write an X where a bit is "activated", that is, where a difference is injected. The multi-bit differences are a natural extension of single-bit differences.
+As for the bit-wise differences from the other two papers, they are natural as, apart from modular addition, all other hash found operations are bit-wise. It also makes sense from human perception viewpoint, where one would write an X where a bit is "activated", that is, where a difference is injected. The multi-bit differences are a natural extension of single-bit differences.
 
-This all leads to the following intuition: **it is more than plausible that a generic procedure from which the three abstractions discussed in the previous section can be derived**. We put forward a research project, some of which questions were likely answered in literature, as it usually is the case:
+This all leads to the following intuition: **it is very likely a generic procedure exists, from which the three abstractions discussed in the previous section can be derived**. We put forward a research project, some of which questions were (possibly) discussed in literature, perhaps in another form:
 
-* Determine the systematic procedure used to derive abstractions such as the three above. If such a derivation exists in literature, connect it to the hash function papers and explain the transformation. Otherwise, derive the transformation yourself and deduce the abstractions from the papers. 
-* Related: this problem was likely looked at in the past: consider a  map for discrete function f: X->X on a finite domain X. Given a partition of X, the corresponding set mapping on the partition will either be a quotient map, or not. That's defined by the quotient condition. So, for the given map, is there an algorithm to determine all possible partitions that are proper quotient maps? However, it is unlikely that such is efficient, since it disregards the potential known inner structure of the origin mapping. 
-* Specifically to hash function differential trail search heuristics: which abstraction is _optimal_ in the sense that it is not too heavy-weight on memory/cache/CPU and yet derives solutions? There's a clear tradeoff here, as the memory tables holding abstracted language propagation rules grow exponentially.
-* Is there a generic procedure, given an abstraction, makes it more or less coarse; how can abstractions be tuned along a fixed axis? Do different abstractions live across axes, or are independent creatures?
-* What mappings are at the ends of the spectrum in the number of abstractions they amend to, vs. those that have a minimal number of abstractions. Could the unabstractable mappings correspond to S-boxes in cryptography? Non-linearity?
-* Study a math problem of your choice (such as, a difficult Diophantine equation) and introduce a novel abstraction which sheds new light on the problem. 
+* Determine the systematic procedure used to derive abstractions such as the three above. If such a derivation already exists, connect it to the hash function papers and explain the transformation. Otherwise, derive the transformation yourself and deduce the abstractions from the papers. 
+* Specifically to hash function differential trail search heuristics: which abstraction is _optimal_ in the sense that it is not too heavy-weight on memory/cache/CPU and yet derives solutions? There's a clear tradeoff here, as the memory tables holding abstracted language propagation rules grow exponentially. This can be tested in practice with hash functions. From the existing literature, it is not clear how to determine the "optimal" language for searching for collisions. 
+* Given an existing abstraction that works, is there a generic procedure or a closure that make it more or less coarse; how can abstractions be tuned along a fixed axis? Do different abstractions live across axes, or are independent?
+* What mappings are at the ends of the spectrum in the number of abstractions they amend to, vs. those that have a minimal number of abstractions. Could mappings without any meaningful abstractions correspond to something like to S-boxes in cryptography? Non-linearity?
+* Study a problem of your choice (such as, a difficult Diophantine equation) and introduce a novel abstraction which sheds new light on the problem. 
 
-[1]: [How to Break MD5 and Other Hash Functions](https://iacr.org/archive/eurocrypt2005/34940019/34940019.pdf)
-[2]: [Finding SHA-1 Characteristics: General Results and Applications](https://link.springer.com/chapter/10.1007/11935230_1)
-[3]: [Analysis of Differential Attacks in ARX Constructions](https://who.rocq.inria.fr/Gaetan.Leurent/files/ARX_AC12_full.pdf)
+1: [How to Break MD5 and Other Hash Functions](https://iacr.org/archive/eurocrypt2005/34940019/34940019.pdf)
+2: [Finding SHA-1 Characteristics: General Results and Applications](https://link.springer.com/chapter/10.1007/11935230_1)
+3: [Analysis of Differential Attacks in ARX Constructions](https://who.rocq.inria.fr/Gaetan.Leurent/files/ARX_AC12_full.pdf)
 
 
 
