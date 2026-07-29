@@ -4,13 +4,13 @@ title: What SHA-x collision research looks like
 
 There was an excursion from the cryptographic hash function research into the area of search heuristics, similar to the [DPLL procedure](https://en.wikipedia.org/wiki/DPLL_algorithm). The interesting thing about this excursion is that the SAT solver applied directly does not work well, whereas the fine-tuned search does work and is useful. Note: it is unlikely that this line of research will break full SHA-2. When we say "works well", we mean it works much better than direct search against round-reduced SHA-2 variants.
 
-In this blog post, we aim to show how collision search algorithms look like. We intentionally ignore many of the details and attempt to only convey the form this things look like. 
+In this blog post, we share the flavor of what hash collision search algorithms look like. We intentionally ignore many of the details to make the exposition more straightforward. 
 
 ### The (simplified) SHA-2 compression function 
 
 The SHA-2 hash function is a [Merkle-Damgard](https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction) construction built off of a [Davis-Meyer](https://en.wikipedia.org/wiki/One-way_compression_function) compression function, which itself is built out of a simple recurrence relation. It's a bit of a matryoshka, but as mentioned, we're leaving many details out, so we'll just leave the "heart" of transformation: the recurrence relation inside the Davis-Meyer construction. 
 
-There's a set of words, which constitute the hash function state. For example, 8 `2^64` words, `x_0`, .. `x_7`) and the input message $m_0$, .. $m_15$. The form of the recurrence (for a 3-word state example): `k: x_k = F(x_k-1, x_k-2, x_k-3, m_k)`. 
+There's a set of words, which constitute the hash function state. For example, 8 `2^64` words, `x_0`, .. `x_7`) and the input message `m_0`, .. `m_15`. The form of the recurrence (for a 3-word state example): `k: x_k = F(x_k-1, x_k-2, x_k-3, m_k)`. 
 
 ```
  ????????     
@@ -34,7 +34,7 @@ More details on the message that's being hashed `m`:  the `m_k` value are derive
 
 assuming there's 80 compression function steps. These are the values that fed into `F` in each step. 
 
-**For the end of this section, we cannot but not note that the diagram above is a very general one. We have a stream of bits flowing according to some rule, which is deterministic in this case. Optionally, the flow can be influence from the outside (by message bits). It is hard to imagine which process does _not_ follow this pattern and in that sense this research clearly generalizes out of hash functions.**
+Note: The diagram above is a very general one. We have a stream of bits flowing according to some rule, which is deterministic in this case. Optionally, the flow can be influence from the outside (by message bits). It is hard to imagine which process does _not_ follow this pattern and in that sense this research clearly generalizes out of hash functions.
 
 ### Why finding collisions is hard
 
@@ -68,9 +68,9 @@ Let's omit even more details and replace the compression function with just modu
    ------- y
    ---xx-- z = x + y
 ```
-This picture determines all specific triplets (x,y,z) and (x', y', z'), such that `x XOR x' = 0000100 = 4 `and `z XOR z' = 00001100 = 2^4 + 2^8`. It is a correct differential trail over modular addition; the difference from one bit in `x` to two bits in `z`, because of the carry bit at that position. 
+This picture determines all specific triplets `(x,y,z)` and `(x', y', z')`, such that `x XOR x' = 0000100 = 4 `and `z XOR z' = 00001100 = 2^4 + 2^8`. It is a correct differential trail over modular addition; the difference from one bit in `x` to two bits in `z`, because of the carry bit at that position. 
 
-An example of an impossible differntial trail would be, as no specific values exist that satisfy it:
+An example of an impossible differential trail would be the following (no solutions):
 
 ```
    ----x-- x
@@ -86,13 +86,13 @@ Our grammar for specifying differential trails includes only `-` and `x` symbols
 ```
 The two bit positions are unspecified, however, they can be deduced via _difference propagation rules_: the two symbols have to be `x`, as that's the only way bit 5 in `z` can be active (be an `x`).
 
-Importantly, the notation introduced in this section roughly corresponds to what any human would naturally do when studying difference propagations. The human would think in terms of "there's a difference in position 5, to which other positions is it going to propagate in the hash function trace?". Or, "under what conditions will there be a difference in bit X if a difference was injected in past rounds in position 5".
+**Importantly, the notation introduced in this section roughly corresponds to what any human would naturally do when studying difference propagations.** The human would think in terms of "there's a difference in position 5, to which other positions is it going to propagate in the hash function trace?". Or, "under what conditions will there be a difference in bit X if a difference was injected in past rounds in position 5".
 
 ### Local collision search
 
 Here's an example of a differential trail search problem from an [important paper](https://csrc.nist.rip/groups/ST/hash/documents/RECHB_FindingSHA1Characteristics_NIST.pdf) on the topic. 
 
-<img src="other-pics/quotient/single-bit.png" alt="First Image" width="50%">
+<p align="center"> <img src="other-pics/quotient/single-bit.png" alt="First Image" width="70%"> </p>
 
 In the light of previous sections, we can understand what's going on in the picture:
 
@@ -105,7 +105,7 @@ In the light of previous sections, we can understand what's going on in the pict
 
 Note: the modular addition carry state is left out. The carry states are tracked by an additional diagram equally important to the shown one. There should be an additional diagram to this one, however, hash function cryptanalysis papers usually omit the carry propagation diagrams. Possible carry states for each bit position at each step are represented as graphs. We won't go into details on that. 
 
-The search operates as follows:
+The search runs as follows, see this [paper](https://csrc.nist.rip/groups/ST/hash/documents/RECHB_FindingSHA1Characteristics_NIST.pdf) on the topic (many papers followed): 
 
 * Choose a random question mark in the state
 * Replace it with `-`, or, with less probability, with `x`
@@ -119,7 +119,7 @@ The search procedure reminds of a DPLL SAT solver. However, it does not work on 
 
 ### Differences and similarities with DPLL
 
-**The main finding of research  is that the differential trail search algorithm performs much better than the direct SAT methodology.**
+**The main finding of research  is that the differential trail search algorithm performs better than the "direct" SAT methodology.**
 Compare the previous algorithm with the following "direct" DPLL method for finding local collisions:
 
 * Encode the two hash function executions as a logical formula

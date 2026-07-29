@@ -2,7 +2,7 @@
 title: On the possibility of finding unexpected abstractions
 ---
 
-In this blog post, we introduce some explicit discussion of _abstrations_ as such. Abstractions are a natural part of any reasoning, but they are not that often discussed explicitly. By an abstration, we mean omitting details from a process in view, so that the process transformation  becomes simpler, but remains faithful to the original process. 
+In this blog post, we introduce some explicit discussion of _abstractions_ as such. Abstractions are a natural part of any reasoning, but they are not that often discussed explicitly. By an abstration, we mean omitting details from a process in view, so that the process transformation  becomes simpler, but remains faithful to the original process. 
 
 We discuss how _quotient maps_ are the simplest notion for expressing abstractions, note a few papers that explicitly use different abstrations for the same problem (hash function collision search) and what can they be used for. We arrive at a lookout from which the possibility of identifying unexpected abstractions emerges, which is exciting. 
 
