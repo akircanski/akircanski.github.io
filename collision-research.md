@@ -1,10 +1,10 @@
 ---
-title: What SHA-x collision search heuristics look like
+title: SHA-x collision search and DPLL
 ---
 
-There was an excursion from the cryptographic hash function research into the area of search heuristics, similar to the [DPLL procedure](https://en.wikipedia.org/wiki/DPLL_algorithm). The interesting thing about this excursion is that the SAT solver applied directly does not work well, whereas the fine-tuned search does work and is useful. Note: it is unlikely that this line of research will break full SHA-2. When we say "works well", we mean it works much better than direct search against round-reduced SHA-2 variants.
+There was an excursion from the cryptographic hash function research into the area of search heuristics, similar to the [DPLL procedure](https://en.wikipedia.org/wiki/DPLL_algorithm). The interesting thing about this excursion is that the SAT solver applied directly does not work well, whereas the fine-tuned search does work and is useful. Note: it is unlikely that this line of research will break full SHA-2. When we say "works well", we mean it works much better than direct search against round-reduced SHA-2 variants. 
 
-In this blog post, we share the flavor of what hash collision search algorithms look like. We intentionally ignore many of the details to make the exposition more straightforward. 
+In this blog post, we share the flavor of what hash collision search algorithms look like. We intentionally ignore many of the details to make the exposition more straightforward. This blog post is an intro for this text: [On the possibility of finding unexpected abstractions](https://akircanski.github.io/quotient-map). 
 
 ### The (simplified) SHA-2 compression function 
 
