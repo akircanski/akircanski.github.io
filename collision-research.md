@@ -1,5 +1,5 @@
 ---
-title: What SHA-x collision research looks like
+title: What SHA-x collision search heuristics look like
 ---
 
 There was an excursion from the cryptographic hash function research into the area of search heuristics, similar to the [DPLL procedure](https://en.wikipedia.org/wiki/DPLL_algorithm). The interesting thing about this excursion is that the SAT solver applied directly does not work well, whereas the fine-tuned search does work and is useful. Note: it is unlikely that this line of research will break full SHA-2. When we say "works well", we mean it works much better than direct search against round-reduced SHA-2 variants.
